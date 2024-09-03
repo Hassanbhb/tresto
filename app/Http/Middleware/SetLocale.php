@@ -20,6 +20,8 @@ class SetLocale
         // dd(app()->getLocale());
         if($request->session()->has('locale')) {
             App::setLocale($request->session()->get('locale'));
+        }else{
+            App::setLocale('ar');
         }
 
         return $next($request);

@@ -1,5 +1,5 @@
 <x-layouts.front>
-  <div class="">
+  <div>
     <section class="overflow-hidden bg-tresto-600 pb-24">
       <div class="border-b border-tresto-500">
         <div class="container px-4 mx-auto">
@@ -22,9 +22,9 @@
                 </a>
               </li>
               <li class="text-white hover:text-opacity-70 transition duration-200"><a
-                  href="#">{{ __('Features') }}</a></li>
+                  href="#features">{{ __('Features') }}</a></li>
               <li class="text-white hover:text-opacity-70 transition duration-200"><a
-                  href="#">{{ __('Pricing') }}</a></li>
+                  href="#pricing">{{ __('Pricing') }}</a></li>
               <li>
                 <a class="flex items-center flex-wrap gap-2 group" href="#">
                   <span
@@ -111,7 +111,7 @@
           </div>
           <ul class="flex flex-col gap-12 py-12">
             <li>
-              <a class="flex items-center flex-wrap gap-2 group" href="#">
+              <a class="flex items-center flex-wrap gap-2 group" href="/">
                 <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Home') }}</span>
                 {{-- <div class="group-hover:text-opacity-70 transition duration-200">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"
@@ -122,8 +122,8 @@
                 </div> --}}
               </a>
             </li>
-            <li class="hover:text-opacity-70 transition duration-200"><a href="#">{{ __('Features') }}</a></li>
-            <li class="hover:text-opacity-70 transition duration-200"><a href="#">{{ __('Pricing') }}</a></li>
+            <li class="hover:text-opacity-70 transition duration-200"><a href="#features">{{ __('Features') }}</a></li>
+            <li class="hover:text-opacity-70 transition duration-200"><a href="#pricing">{{ __('Pricing') }}</a></li>
             <li>
               <a class="flex items-center flex-wrap gap-2 group" href="#">
                 <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>
@@ -149,7 +149,7 @@
 
       <div class="container px-4 mx-auto relative">
         <div class="relative z-20">
-          <h1 class="text-center text-white text-5xl lg:text-7xl font-bold font-heading mb-6 mt-14 max-w-4xl mx-auto">
+          <h1 class="text-center text-white text-5xl lg:text-7xl font-bold ltr:font-mono rtl:font-body mb-6 mt-14 max-w-4xl mx-auto">
             <span>{{ __('Créez votre menu en quelques clics avec') }} <span class="text-secondary">Tresto</span>
               {{ __('Today!') }}</span>
             {{-- <span></span> --}}
@@ -158,7 +158,7 @@
             {{ __('Créez facilement votre menu en ligne, générez des QR codes, et recevez des commandes directement via votre site web ou WhatsApp.') }}
           </p>
           <div class="flex justify-center lg:pb-56"><a
-              class="w-full sm:w-auto text-center h-16 inline-flex items-center justify-center py-4 px-6 rounded-full bg-secondary border border-tresto-600 hover:border-secondary shadow font-bold font-heading text-black hover:text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
+              class="w-full sm:w-auto text-center h-16 inline-flex items-center justify-center py-4 px-6 rounded-full bg-secondary border border-tresto-600 hover:border-secondary shadow font-bold ltr:font-mono rtl:font-body text-black hover:text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
               href="/register">{{ __('Get Started For FREE Now!') }}</a></div>
           <div class="hidden lg:block absolute bottom-9 left-0 z-10">
             <div class="bg-tresto-50 rounded-3xl pt-6 px-12 relative">
@@ -236,9 +236,9 @@
 
     <section class="py-24">
       <div class="container mx-auto px-4">
-        <p class="text-center text-tresto-500 text-sm font-bold font-heading mb-6">{{ __('HOW IT WORKS') }}</p>
-        <h1 class="text-center text-3xl lg:text-5xl font-bold font-heading mb-24 max-w-sm lg:max-w-xl mx-auto">
-          {{ __('What steps do I need to take to start?') }}</h1>
+        <p class="text-center text-tresto-500 text-sm font-bold ltr:font-mono rtl:font-body mb-6">{{ __('HOW IT WORKS') }}</p>
+        <h1 class="text-center text-3xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-24 max-w-sm lg:max-w-xl mx-auto">
+          {{ __('Quelles sont les étapes à suivre pour commencer ?') }}</h1>
         <div class="flex flex-wrap items-center -mx-4">
           <div class="w-full lg:w-2/3 p-4">
             <img class="w-full" src="solstice-assets/images/how-it-works/picture-full-primary.png" alt="">
@@ -247,9 +247,9 @@
             <a href="#">
               <div class="py-6 pr-10 mb-3 group hover:bg-tresto-50 rounded-2xl transition duration-200">
                 <div class="border-l-4 border-transparent group-hover:border-tresto-500 pl-10 transition duration-200">
-                  <h2 class="text-lg font-bold font-heading mb-2">{{ __('Step 1') }}</h2>
+                  <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Inscrivez-vous et personnalisez') }}</h2>
                   <p class="text-gray-600">
-                    {{ __('Create an account, enter your name, email, a secure password, and hit Create Account.') }}
+                    {{ __('Créez votre compte et concevez un menu qui reflète l’image de votre restaurant.') }}
                   </p>
                 </div>
               </div>
@@ -257,16 +257,16 @@
             <a href="#">
               <div class="bg-tresto-50 rounded-2xl py-6 pr-10 mb-3">
                 <div class="border-l-4 border-tresto-500 pl-10">
-                  <h2 class="text-lg font-bold font-heading mb-2">{{ __('Step 2') }}</h2>
-                  <p class="text-gray-600">{{ __('choose a plan that fits your needs') }}</p>
+                  <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Publiez et partagez ') }}</h2>
+                  <p class="text-gray-600">{{ __('Mettez votre menu en ligne et partagez le lien sur votre site web et vos réseaux sociaux.') }}</p>
                 </div>
               </div>
             </a>
             <a href="#">
               <div class="py-6 pr-10 group hover:bg-tresto-50 rounded-2xl transition duration-200">
                 <div class="border-l-4 border-transparent group-hover:border-tresto-500 pl-10 transition duration-200">
-                  <h2 class="text-lg font-bold font-heading mb-2">{{ __('Step 3') }}</h2>
-                  <p class="text-gray-600">{{ __('start creating your online menu.') }}</p>
+                  <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Recevez des commandes') }}</h2>
+                  <p class="text-gray-600">{{ __('Vos clients passant commande via votre site web ou Whatsapp pour une gestion simplifiée.') }}</p>
                 </div>
               </div>
             </a>
@@ -275,48 +275,48 @@
       </div>
     </section>
 
-    <section class="py-24 bg-tresto-50">
+    <section id="pricing" class="py-24 bg-tresto-50">
       <div class="container mx-auto px-4">
-        <h1 class="text-center text-5xl lg:text-6xl font-bold font-heading mb-6">{{ __('Pricing') }}</h1>
+        <h1 class="text-center text-5xl lg:text-6xl font-bold ltr:font-mono rtl:font-body mb-6">{{ __('Tarifs') }}</h1>
         <p class="text-gray-600 text-lg text-center mb-24 max-w-lg mx-auto">
-          {{ __('Simple pricing that fits Restaurants of all sizes') }}</p>
+          {{ __("Une tarification simple qui s'adapte aux restaurants de toutes tailles") }}</p>
         <div class="overflow-x-auto mb-24">
           <div class="flex min-w-max">
             <div class="w-96 lg:w-1/3 p-4">
               {{-- <div class="pb-10 border-b border-gray-200">
                 <div class="flex flex-wrap items-center gap-4 mb-4">
-                  <p class="text-lg font-bold font-heading">Monthly</p>
+                  <p class="text-lg font-bold ltr:font-mono rtl:font-body">Monthly</p>
                   <div class="p-1 w-14 h-8 bg-tresto-500 rounded-full">
                     <div class="relative">
                       <input class="custom-switch-1 opacity-0 absolute z-10 h-8 w-14 top-0 left-0" type="checkbox">
                       <div class="absolute left-0 transform w-6 h-6 bg-white rounded-full"></div>
                     </div>
                   </div>
-                  <p class="text-lg font-bold font-heading">Annually</p>
+                  <p class="text-lg font-bold ltr:font-mono rtl:font-body">Annually</p>
                 </div>
                 <div class="inline-block px-4 py-2 rounded-full bg-tresto-100 text-tresto-700">SAVE 15% with annual
                   billing</div>
               </div> --}}
-              <h2 class="mt-10 mb-24 text-lg font-bold font-heading">{{ __('What you’ll get') }}</h2>
+              <h2 class="mt-10 mb-24 text-lg font-bold ltr:font-mono rtl:font-body">{{ __('What you’ll get') }}</h2>
               <ul class="flex flex-col gap-9">
-                <li class="text-lg font-medium">{{ __('Showcase your dishes') }}</li>
+                <li class="text-lg font-medium">{{ __('Présentation de vos plats') }}</li>
                 <li class="text-lg font-medium">{{ __('Mises à jour en temps réel') }}</li>
                 <li class="text-lg font-medium">{{ __('Génération de QR Codes') }}</li>
                 <li class="text-lg font-medium">{{ __('Gestion des commandes simplifiée') }}</li>
-                <li class="text-lg font-medium">{{ __('Customers can start placing orders immediately') }}</li>
-                <li class="text-lg font-medium">{{ __('Grow your business with minimal effort') }}</li>
+                <li class="text-lg font-medium">{{ __('Les clients peuvent commencer à passer commande immédiatement') }}</li>
+                <li class="text-lg font-medium">{{ __("Développez votre activité avec un minimum d'efforts") }}</li>
                 {{-- <li class="text-lg font-medium">Invite up to 100 people to learn together</li> --}}
               </ul>
             </div>
             <div class="w-96 lg:w-1/3 p-4">
               <div class="border border-gray-200 bg-white rounded-3xl px-8 pb-8 pt-10 h-full">
-                <h2 class="text-center text-xl font-bold font-heading mb-4">Starter</h2>
+                <h2 class="text-center text-xl font-bold ltr:font-mono rtl:font-body mb-4">Starter</h2>
                 <div class="flex items-end justify-center gap-3 mb-8">
-                  <h2 class="text-5xl font-bold font-heading">799 {{ __('Dhs') }}</h2>
+                  <h2 class="text-5xl font-bold ltr:font-mono rtl:font-body">799 {{ __('Dhs') }}</h2>
                   <p class="text-gray-400 text-lg font-medium pb-2">/ 12 {{ __('months')}}</p>
                 </div>
                 <a class="h-14 inline-flex items-center justify-center w-full text-center py-4 px-6 rounded-full border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200 mb-8"
-                  href="#">{{ __('Create a FREE Account') }}</a>
+                  href="#">{{ __('Créer un compte GRATUIT') }}</a>
                 <div class="bg-tresto-50 rounded-3xl p-6 flex flex-col items-center gap-8">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
                     fill="none">
@@ -353,14 +353,14 @@
             </div>
             <div class="w-96 lg:w-1/3 p-4">
               <div class="bg-tresto-500 rounded-3xl px-8 pb-8 pt-10 h-full">
-                <h2 class="text-center text-white text-xl font-bold font-heading mb-4">Infinity</h2>
+                <h2 class="text-center text-white text-xl font-bold ltr:font-mono rtl:font-body mb-4">Infinity</h2>
                 <div class="flex items-end justify-center gap-3 mb-8">
-                  <h2 class="text-white text-5xl font-bold font-heading">1900 {{ __('Dhs') }}</h2>
+                  <h2 class="text-white text-5xl font-bold ltr:font-mono rtl:font-body">1900 {{ __('Dhs') }}</h2>
                   <p class="text-tresto-200 text-lg font-medium pb-2">/ 12 {{ __('months') }}</p>
                 </div>
                 <a class="w-full text-center h-14 py-4 px-6 rounded-full bg-white border border-gray-200 shadow hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200 mb-8 flex rtl:flex-row-reverse items-center justify-center gap-2"
                   href="#">
-                  <span class="text-sm font-semibold ">{{ __('Start Today!') }}</span>
+                  <span class="text-sm font-semibold ">{{ __("Commencez aujourd'hui !") }}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewbox="0 0 21 20"
                     fill="none">
                     <path d="M5.50002 10H15.9167M15.9167 10L10.9167 5M15.9167 10L10.9167 15" stroke="#282828"
@@ -403,17 +403,17 @@
             </div>
           </div>
         </div>
-        {{-- <h2 class="text-4xl font-bold font-heading mb-14">Pricing FAQs</h2>
+        {{-- <h2 class="text-4xl font-bold ltr:font-mono rtl:font-body mb-14">Pricing FAQs</h2>
         <div class="flex flex-wrap -mx-4">
           <div class="w-full lg:w-1/2 px-4">
             <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold font-heading mb-2">What payment options are there?</h2>
+              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">What payment options are there?</h2>
               <p class="text-gray-600">You can pay by credit card, PayPal, or Stripe.</p>
             </div>
           </div>
           <div class="w-full lg:w-1/2 px-4">
             <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold font-heading mb-2">Are there a free trial?</h2>
+              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">Are there a free trial?</h2>
               <p class="text-gray-600">Yes! We offer 14-days of trial. Free and no credit card required.</p>
             </div>
           </div>
@@ -421,14 +421,14 @@
         <div class="flex flex-wrap -mx-4">
           <div class="w-full lg:w-1/2 px-4">
             <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold font-heading mb-2">What type of pricing plans does Solstice offer?</h2>
+              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">What type of pricing plans does Solstice offer?</h2>
               <p class="text-gray-600">We only have one monthly subscription plan, costs no more than the price of a
                 cup of coffee</p>
             </div>
           </div>
           <div class="w-full lg:w-1/2 px-4">
             <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold font-heading mb-2">Why am I paying a monthly basis over a one-time payment?
+              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">Why am I paying a monthly basis over a one-time payment?
               </h2>
               <p class="text-gray-600">This is our way of keeping your costs low while giving you access to our
                 platform level quality and peace of mind.</p>
@@ -488,9 +488,9 @@
       </div>
     </section>
 
-    <section class="bg-tresto-50 pt-24">
+    <section id="features" class="bg-tresto-50 pt-24">
       <div class="container mx-auto px-4">
-        <h1 class="text-center text-4xl lg:text-5xl font-bold font-heading mb-4">{{ __('Découvrez les fonctionnalités') }}</h1>
+        <h1 class="text-center text-4xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Découvrez les fonctionnalités') }}</h1>
         <p class="text-center text-gray-600 mb-28">{{ __('Des fonctionnalités innovantes conçues pour améliorer l\'experience de vos clients') }}
         </p>
         <div class="flex flex-wrap -mx-4">
@@ -508,7 +508,7 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">{{ __('Conception de menu personnalisable')}}</h2>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Conception de menu personnalisable')}}</h2>
               <p class="text-gray-600">{{ __("Adaptez votre menu en ligne à l'image de votre restaurant. Choisissez parmi une variété de modèles, de couleurs et de polices pour créer un menu qui reflète votre style unique.")}}</p>
             </div>
           </div>
@@ -526,7 +526,7 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">{{ __('Mises à jour du menu en temps réel')}}</h2>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Mises à jour du menu en temps réel')}}</h2>
               <p class="text-gray-600">{{ __("Mettez votre menu à jour instantanément depuis n'importe quel appareil. Ajoutez de nouveaux plats, modifiez les prix ou mettez en avant les plats du jour en quelques clics.")}}</p>
             </div>
           </div>
@@ -544,7 +544,7 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">{{ __("Interface adaptée aux mobiles")}}</h2>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Interface adaptée aux mobiles")}}</h2>
               <p class="text-gray-600">{{ __("Veillez à ce que votre menu soit agréable à regarder sur n'importe quel appareil. Le design responsive de Tresto garantit une expérience de navigation transparente pour les clients sur smartphones, tablettes ou ordinateurs de bureau.")}} </p>
             </div>
           </div>
@@ -564,8 +564,8 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">{{ __("Commande en ligne intégrée")}} </h2>
-              <p class="text-gray-600">{{ ('Allow customers to place orders directly from your menu. Increase sales by offering takeout, delivery, or pre-order options, all integrated within the platform.')}} </p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Commande en ligne intégrée")}} </h2>
+              <p class="text-gray-600">{{ ('Permettez aux clients de passer des commandes directement à partir de votre menu. Augmentez vos ventes en proposant des options de vente à emporter, de livraison ou de pré-commande, le tout intégré dans la plateforme.')}} </p>
             </div>
           </div>
         </div>
@@ -590,7 +590,7 @@
             </div>
              <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">{{ __("Analytics") }}</h2>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Analytics") }}</h2>
               <p class="text-gray-600">{{ __("Suivez les préférences des clients, les plats populaires et les tendances des ventes grâce aux analyses intégrées de Tresto. Utilisez ces informations pour optimiser votre menu et prendre des décisions basées sur des données.")}} </p>
             </div>
           </div>
@@ -608,9 +608,8 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">{{ __('Multi-Language Support') }}</h2>
-              <p class="text-gray-600">Cater to a diverse customer base by offering your menu in multiple languages.
-                Tresto makes it easy to translate and display your menu in the languages your customers speak.</p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Support multilingue') }}</h2>
+              <p class="text-gray-600">{{ __("Répondez aux besoins d'une clientèle diversifiée en proposant votre menu en plusieurs langues. Tresto facilite la traduction et l'affichage de votre menu dans les langues parlées par vos clients.") }}</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 p-4">
@@ -627,9 +626,8 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">Loyalty Program Integration:</h2>
-              <p class="text-gray-600">Reward your customers and encourage repeat business by integrating loyalty
-                programs directly with your menu. Offer discounts, points, or special deals to keep them coming back.
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Intégration des programmes de fidélisation:")}}</h2>
+              <p class="text-gray-600">{{ __("Récompensez vos clients et encouragez-les à revenir en intégrant des programmes de fidélisation directement dans votre menu. Offrez des réductions, des points ou des offres spéciales pour les inciter à revenir.") }}
               </p>
             </div>
           </div>
@@ -649,9 +647,8 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold font-heading mb-4">See progress. Achieve more.</h2>
-              <p class="text-gray-600">Track your daily progress through Stats and the Dashboard. Get Insights, and
-                stay motivated as your business grows.</p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Voir les progrès. Réalisez davantage.") }}</h2>
+              <p class="text-gray-600"> {{ __("Suivez vos progrès quotidiens grâce aux statistiques et au tableau de bord. Obtenez des informations et restez motivé au fur et à mesure que votre entreprise se développe.") }} </p>
             </div>
           </div>
         </div>
@@ -688,11 +685,11 @@
                   stroke="#FFC96D" stroke-width="4" stroke-miterlimit="10"></path>
               </svg>
             </div> --}}
-            <h1 class="text-4xl lg:text-5xl mb-10 font-bold font-heading text-center max-w-lg lg:max-w-3xl mx-auto">
-              What are you waiting for? Join now and Grow Your Bursiness!</h1>
+            <h1 class="text-4xl lg:text-5xl mb-10 font-bold ltr:font-mono rtl:font-body text-center max-w-lg lg:max-w-3xl mx-auto">
+              {{ __("Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant") }}</h1>
             <div class="flex justify-center"><a
-                class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-                href="/register">Create an account for FREE now!</a></div>
+                class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold ltr:font-mono rtl:font-body text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
+                href="/register">{{ __("Créez un compte GRATUIT maintenant !") }}</a></div>
           </div>
         </div>
       </div>
@@ -710,12 +707,10 @@
             </div>
             <div class="flex flex-wrap gap-8 -mx-4">
               <ul class="flex flex-col gap-6 p-4">
-                <li class="text-white font-medium">Platform</li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Features</a>
+                <li class="text-white font-medium">{{ __("Platform")}}</li>
+                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#features">{{ __("Features")}}</a>
                 </li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">How it
-                    works</a></li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Pricing</a>
+                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#pricing">{{ __("Pricing")}}</a>
                 </li>
                 <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Events</a></li>
               </ul>
@@ -726,7 +721,7 @@
                 </li>
                 <li class="flex items-center flex-wrap gap-2">
                   <a class="text-tresto-200 hover:text-white transition duration-200" href="#">Careers</a>
-                  <div class="bg-tresto-500 py-1 px-2 rounded-md text-white text-xs font-bold font-heading uppercase">
+                  <div class="bg-tresto-500 py-1 px-2 rounded-md text-white text-xs font-bold ltr:font-mono rtl:font-body uppercase">
                     HIRING</div>
                 </li>
                 <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Contact</a>
