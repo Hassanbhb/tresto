@@ -1,165 +1,22 @@
 <x-layouts.front>
   <div>
+    
     <section class="overflow-hidden bg-tresto-600 pb-24">
-      <div class="border-b border-tresto-500">
-        <div class="container px-4 mx-auto">
-          <div class="flex items-center justify-between py-6">
-            <a href="#">
-              <img src="images/logo-04.png" alt="" class="h-8">
-            </a>
-            <ul class="hidden lg:flex items-center gap-8">
-              <li>
-                <a class="flex items-center flex-wrap gap-2 group" href="#">
-                  <span
-                    class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Home') }}</span>
-                  {{-- <div class="text-white group-hover:text-opacity-70 transition duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"
-                      fill="none">
-                      <path d="M13 5.5L8 10.5L3 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </div> --}}
-                </a>
-              </li>
-              <li class="text-white hover:text-opacity-70 transition duration-200"><a
-                  href="#features">{{ __('Features') }}</a></li>
-              <li class="text-white hover:text-opacity-70 transition duration-200"><a
-                  href="#pricing">{{ __('Pricing') }}</a></li>
-              <li>
-                <a class="flex items-center flex-wrap gap-2 group" href="#">
-                  <span
-                    class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>
-                  {{-- <div class="text-white group-hover:text-opacity-70 transition duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"
-                      fill="none">
-                      <path d="M13 5.5L8 10.5L3 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </svg>
-                  </div> --}}
-                </a>
-              </li>
-              <li class="text-white hover:text-opacity-70 transition duration-200"><a
-                  href="#">{{ __('Blog') }}</a></li>
-            </ul>
-            <div class="flex gap-3 items-center">
-              <div x-data="{ open: false }" class="relative inline-block text-left">
-                <div>
-                  <button @click="open = !open" type="button"
-                    class="inline-flex justify-center w-full px-4 py-2 bg-tresto-600 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tresto-200"
-                    id="options-menu" aria-haspopup="true" aria-expanded="true">
-                    <span>{{ session()->get('locale') }}</span>
-                    <svg class="mr-2 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                      fill="currentColor">
-                      <path fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                </div>
-                <div x-cloak x-show="open" x-transition:enter="transition ease-out duration-100"
-                  x-transition:enter-start="transform opacity-0 scale-95"
-                  x-transition:enter-end="transform opacity-100 scale-100"
-                  x-transition:leave="transition ease-in duration-75"
-                  x-transition:leave-start="transform opacity-100 scale-100"
-                  x-transition:leave-end="transform opacity-0 scale-95"
-                  class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                  role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                  <div class="py-1" role="none">
-                    <a href="{{ route('change.language', 'ar') }}"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                      role="menuitem">{{ __('Arabic') }}</a>
-                    {{-- <a href="{{ route('change.language', 'en') }}"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                      role="menuitem">{{ __('English') }}</a> --}}
-                    <a href="{{ route('change.language', 'fr') }}"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                      role="menuitem">{{ __('French') }}</a>
-                  </div>
-                </div>
-              </div>
-              <a class="hidden lg:block py-3 px-5 rounded-full bg-tresto-900 border border-tresto-700 shadow text-sm font-semibold text-white hover:bg-tresto-800 focus:ring focus:ring-tresto-800 transition duration-200"
-                href="/register">{{ __('Get Started') }}</a>
-            </div>
-            <div class="lg:hidden">
-              <a href="#">
-                <svg class="navbar-burger text-tresto-500" width="51" height="51" viewbox="0 0 56 56"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="56" height="56" rx="28" fill="currentColor"></rect>
-                  <path d="M37 32H19M37 24H19" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {{-- mobile --}}
-      <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
-        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
-        <nav class="relative z-10 px-9 py-8 h-full overflow-y-auto bg-white flex flex-col justify-between">
-          <div class="flex items-center justify-between">
-            <a href="#">
-              <img class="w-4/5" src="images/logo-01.png" alt="">
-            </a>
-            <a class="navbar-burger" href="#">
-              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </a>
-          </div>
-          <ul class="flex flex-col gap-12 py-12">
-            <li>
-              <a class="flex items-center flex-wrap gap-2 group" href="/">
-                <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Home') }}</span>
-                {{-- <div class="group-hover:text-opacity-70 transition duration-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"
-                    fill="none">
-                    <path d="M13 5.5L8 10.5L3 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </div> --}}
-              </a>
-            </li>
-            <li class="hover:text-opacity-70 transition duration-200"><a href="#features">{{ __('Features') }}</a></li>
-            <li class="hover:text-opacity-70 transition duration-200"><a href="#pricing">{{ __('Pricing') }}</a></li>
-            <li>
-              <a class="flex items-center flex-wrap gap-2 group" href="#">
-                <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>
-                {{-- <div class="group-hover:text-opacity-70 transition duration-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"
-                  fill="none">
-                  <path d="M13 5.5L8 10.5L3 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                </svg>
-              </div> --}}
-              </a>
-            </li>
-            <li class="hover:text-opacity-70 transition duration-200"><a href="#">{{ __('Blog') }}</a></li>
-
-          </ul>
-          <div>
-
-            <a class="block text-center py-3 px-5 rounded-full bg-white border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200"
-              href="/register">{{ __('Get Started') }}</a>
-          </div>
-        </nav>
-      </div>
+      <x-front.nav />
 
       <div class="container px-4 mx-auto relative">
         <div class="relative z-20">
-          <h1 class="text-center text-white text-5xl lg:text-7xl font-bold ltr:font-mono rtl:font-body mb-6 mt-14 max-w-4xl mx-auto">
+          <h1 class="text-center text-white text-5xl lg:text-7xl font-bold ltr:font-mono rtl:font-body rtl:leading-relaxed mb-6 mt-14 max-w-4xl mx-auto">
             <span>{{ __('Créez votre menu en quelques clics avec') }} <span class="text-secondary">Tresto</span>
-              {{ __('Today!') }}</span>
             {{-- <span></span> --}}
+              {{ __('Today!') }}</span>
           </h1>
           <p class="text-center text-white text-lg mb-10 max-w-lg mx-auto">
-            {{ __('Créez facilement votre menu en ligne, générez des QR codes, et recevez des commandes directement via votre site web ou WhatsApp.') }}
+            {{ __('Des commandes en ligne aux repas sur place, simplifiez vos opérations et améliorez la satisfaction de vos clients grâce à notre plateforme intuitive.') }}
           </p>
           <div class="flex justify-center lg:pb-56"><a
               class="w-full sm:w-auto text-center h-16 inline-flex items-center justify-center py-4 px-6 rounded-full bg-secondary border border-tresto-600 hover:border-secondary shadow font-bold ltr:font-mono rtl:font-body text-black hover:text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-              href="/register">{{ __('Get Started For FREE Now!') }}</a></div>
+              href="#">{{ __('Commencez GRATUITEMENT !') }}</a></div>
           <div class="hidden lg:block absolute bottom-9 left-0 z-10">
             <div class="bg-tresto-50 rounded-3xl pt-6 px-12 relative">
               <img src="solstice-assets/images/hero/woman-picture.png" alt="">
@@ -236,7 +93,7 @@
 
     <section class="py-24">
       <div class="container mx-auto px-4">
-        <p class="text-center text-tresto-500 text-sm font-bold ltr:font-mono rtl:font-body mb-6">{{ __('HOW IT WORKS') }}</p>
+        <p class="text-center text-tresto-500 text-sm font-bold ltr:font-mono rtl:font-body mb-6">{{ __('COMMENT ÇA MARCHE') }}</p>
         <h1 class="text-center text-3xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-24 max-w-sm lg:max-w-xl mx-auto">
           {{ __('Quelles sont les étapes à suivre pour commencer ?') }}</h1>
         <div class="flex flex-wrap items-center -mx-4">
@@ -689,67 +546,12 @@
               {{ __("Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant") }}</h1>
             <div class="flex justify-center"><a
                 class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold ltr:font-mono rtl:font-body text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-                href="/register">{{ __("Créez un compte GRATUIT maintenant !") }}</a></div>
+                href="#">{{ __("Créez un compte GRATUIT maintenant !") }}</a></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="pt-24 bg-tresto-900">
-      <div class="container mx-auto px-4">
-        <div class="bg-tresto-800 rounded-t-3xl pt-10 pb-36 px-10">
-          <div class="flex justify-between flex-wrap gap-8">
-            <div>
-              <a href="#">
-                <img class="mb-6 h-12" src="images/logo-04.png" alt="">
-              </a>
-              <p class="text-tresto-200 text-sm">© 2023 Solstice. All rights reserved.</p>
-            </div>
-            <div class="flex flex-wrap gap-8 -mx-4">
-              <ul class="flex flex-col gap-6 p-4">
-                <li class="text-white font-medium">{{ __("Platform")}}</li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#features">{{ __("Features")}}</a>
-                </li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#pricing">{{ __("Pricing")}}</a>
-                </li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Events</a></li>
-              </ul>
-              <ul class="flex flex-col gap-6 p-4">
-                <li class="text-white font-medium">Company</li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">About</a></li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Our Mission</a>
-                </li>
-                <li class="flex items-center flex-wrap gap-2">
-                  <a class="text-tresto-200 hover:text-white transition duration-200" href="#">Careers</a>
-                  <div class="bg-tresto-500 py-1 px-2 rounded-md text-white text-xs font-bold ltr:font-mono rtl:font-body uppercase">
-                    HIRING</div>
-                </li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Contact</a>
-                </li>
-              </ul>
-              <ul class="flex flex-col gap-6 p-4">
-                <li class="text-white font-medium">Resources</li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Tutorials</a>
-                </li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Blog</a></li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Help Center</a>
-                </li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Support</a>
-                </li>
-              </ul>
-              <ul class="flex flex-col gap-6 p-4">
-                <li class="text-white font-medium">Community</li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Discord
-                    Server</a></li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Slack Group</a>
-                </li>
-                <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Zoom Room</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <x-front.footer />
   </div>
 </x-layouts.front>
