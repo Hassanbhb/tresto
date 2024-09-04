@@ -1,51 +1,135 @@
 {
   "Arabic": "العربية",
   "French": "الفرنسية",
+  "Créez des menus en ligne, gérez vos commandes et générez des QR codes pour simplifier la gestion de votre restaurant.": "يمكنك إنشاء قوائم الطعام عبر الإنترنت، وإدارة طلباتك، وإنشاء رموز QR لتبسيط إدارة مطعمك.",
+  "© 2024 Tresto. All rights reserved.": "© 2024 Tresto. جميع الحقوق محفوظة.",
+
   "Créez votre menu en quelques clics avec": "أنشيئ قائمة مطعمك بسهولة مع",
   "Today!": "اليوم!",
-  "Home": "الرئيسية",
+  "Accueil": "الرئيسية",
   "Features": "المميزات",
-  "Pricing": "التسعير",
+  "Tarifs": "التسعير",
   "Contact": "اتصل بنا",
   "Blog": "المدونة",
+  "platform": "المنصة",
+  "Social Media": "وسائل التواصل الاجتماعي",
   "Get Started": " ابدأ الأن",
   "Des commandes en ligne aux repas sur place, simplifiez vos opérations et améliorez la satisfaction de vos clients grâce à notre plateforme intuitive.": "بدءاً من الطلبات عبر الإنترنت ووصولاً إلى تناول الطعام في المطعم، يمكنك تبسيط عملياتك وتعزيز رضا العملاء من خلال منصتنا سهلة الاستخدام.",
-  "Get Started For FREE Now!": "ابدأ الان مجانا !",
+  "Commencez GRATUITEMENT !": "ابدأ الان مجانا !",
 
-  "HOW IT WORKS": "كيف أبدأ",
-  "What steps do I need to take to start?": "ما هي الخطوات التي أنفذها لأبدأ؟",
-  "Inscrivez-vous et personnalisez": "الخطوة الأولى",
-  "Créez votre compte et concevez un menu qui reflète l’image de votre restaurant.": "أنشئ حسابا وادخل اسمك، بريدك الالكتروني، وكلمة مرور سريعة، واضغط على انشاء حساب.",
-  "Publiez et partagez ": "الخطوة الثانية",
-  "Mettez votre menu en ligne et partagez le lien sur votre site web et vos réseaux sociaux.": "اختر باقتك التي تناسب احتياجاتك",
-  "Recevez des commandes": "الخطوة الثالثة",
-  "Vos clients passant commande via votre site web ou Whatsapp pour une gestion simplifiée.": "ابدأ بانشاء قائمة مطعمك على الانترنت",
+  "COMMENT ÇA MARCHE": "كيف أبدأ",
+  "Quelles sont les étapes à suivre pour commencer ?": "ما هي الخطوات التي أنفذها لأبدأ؟",
+  "Inscrivez-vous et personnalisez": "تسجل و صمم قائمتك",
+  "Créez votre compte et concevez un menu qui reflète l’image de votre restaurant.": "أنشئ حسابك وصمم قائمة طعام تعكس صورة مطعمك.",
+  "Publiez et partagez": "النشر والمشاركة",
+  "Mettez votre menu en ligne et partagez le lien sur votre site web et vos réseaux sociaux.": "ضع قائمتك على الإنترنت وشارك الرابط على موقعك الإلكتروني وشبكات التواصل الاجتماعي.",
+  "Recevez des commandes": "تلقي الطلبات",
+  "Vos clients passant commande via votre site web ou Whatsapp pour une gestion simplifiée.": "يقوم عملاؤك بتقديم الطلبات عبر موقعك الإلكتروني أو واتساب لإدارة مبسطة.",
 
   "Une tarification simple qui s'adapte aux restaurants de toutes tailles": "أثمنة مناسبة لجميع المطاعم",
-  "What you’ll get": "ستستفيد من",
-  "Showcase your dishes": "عرض أطباق مطعمك على الأنترنت",
-  "Génération de QR Codes": "انشاء QR Codes",
+  "Ce que vous obtiendrez": "ستستفيد من",
+  "Simplifiez les Commandes via le Site Web ou WhatsApp": "عرض أطباق مطعمك على الأنترنت",
+  "Des rapports détaillés sur les visites et les ventes": "تقارير مفصلة عن الزيارات والمبيعات",
   "Gestion des commandes simplifiée": "ادارة طلبات واضحة و سهلة",
   "Mises à jour en temps réel": "قم بالتعديل على قائمة مطعمك بسرعة",
-  "Customers can start placing orders immediately": "الزبناء يمكنهم وضع طلبياتهم مباشرة",
-  "Grow your business with minimal effort": "طور مطعمك بمجهود أقل",
+  "Gestion des Zones de Livraison et des Frais": "إدارة مناطق التوصيل والرسوم",
+  "Les clients peuvent commencer à passer commande immédiatement": "يمكن للعملاء بدء الطلب فوراً",
+  "Augmentez la Satisfaction des Clients": "زيادة رضا العملاء",
 
+  "Créer un compte GRATUIT": "أنشئ حساباً مجاناً",
+  "Commencez aujourd'hui !": "ابدأ اليوم !",
   "Dhs": "د.م",
   "months": "شهر",
-  "Create a FREE Account": "أنشئ حسابك مجانا",
-  "Start Today!": "ابدأ اليوم !",
+  
   "Découvrez les fonctionnalités": "تعرف على مميزاتنا",
-  "Des fonctionnalités innovantes conçues pour améliorer l'experience de vos clients": "مميزات جديدة تم انشاؤها خصيصا لتحسين تجربة عملائك",
-  "Conception de menu personnalisable": "قائمة طعام قابلة للتخصيص",
-  "Adaptez votre menu en ligne à l'image de votre restaurant. Choisissez parmi une variété de modèles, de couleurs et de polices pour créer un menu qui reflète votre style unique.": "صمم قائمة الطعام الخاصة بك على الإنترنت لتتناسب مع العلامة التجارية لمطعمك. اختر من بين مجموعة متنوعة من القوالب والألوان والخطوط لإنشاء قائمة تعكس أسلوبك الفريد.",
-  "Mises à jour du menu en temps réel": "تحديثات القائمة في الوقت الحقيقي",
-  "Mettez votre menu à jour instantanément depuis n'importe quel appareil. Ajoutez de nouveaux plats, modifiez les prix ou mettez en avant les plats du jour en quelques clics.": "حدِّث قائمتك على الفور من أي جهاز. أضف أطباقاً جديدة أو غيِّر الأسعار أو أبرز العروض اليومية الخاصة ببضع نقرات فقط.",
+  "Des fonctionnalités innovantes conçues pour améliorer l'experience de vos clients": "ميزات مبتكرة مصممة لتحسين تجربة عملائك",
+
+  "Plus de 6 Designs de Menus": "أكثر من 6 تصميمات لقائمة الطعام",
+  "Choisissez parmi plus de 6 modèles de menus élégants et professionnels, adaptés à votre style et à l'image de votre restaurant.": "اختر من بين أكثر من 6 تصميمات قائمة أنيقة واحترافية تناسب أسلوبك وصورة مطعمك.",
+
+  "Réception des Commandes via WhatsApp et Website": "تلقي الطلبات عبر واتساب والموقع الإلكتروني",  
+  "Permettez à vos clients de passer des commandes directement via WhatsApp pour une expérience de commande encore plus conviviale.": "اسمح لزبائنك بتقديم الطلبات مباشرةً عبر واتساب للحصول على تجربة طلب أكثر سهولة في الاستخدام.",
+
+  "Rapports Détaillés sur les Visiteurs et les Ventes": "تقارير الزوار والمبيعات التفصيلية",
+  "Obtenez des analyses approfondies sur les visiteurs de votre menu en ligne et suivez vos ventes en temps réel pour optimiser vos opérations.": "احصل على تحليل متعمق لزوار قائمتك عبر الإنترنت وتتبع مبيعاتك في الوقت الفعلي لتحسين عملياتك.",
+
   "Interface adaptée aux mobiles": "واجهة متوافقة مع الجوّال",
   "Veillez à ce que votre menu soit agréable à regarder sur n'importe quel appareil. Le design responsive de Tresto garantit une expérience de navigation transparente pour les clients sur smartphones, tablettes ou ordinateurs de bureau.": "تأكد من أن قائمتك تبدو رائعة على أي جهاز. يضمن تصميم Tresto سريع الاستجابة تجربة تصفح سلسة للعملاء على الهواتف الذكية أو الأجهزة اللوحية أو أجهزة الكمبيوتر المكتبية.",
-  "Commande en ligne intégrée": "الطلب المتكامل عبر الإنترنت",
-  "Allow customers to place orders directly from your menu. Increase sales by offering takeout, delivery, or pre-order options, all integrated within the platform.": "اسمح للعملاء بتقديم الطلبات مباشرةً من قائمتك. قم بزيادة المبيعات من خلال تقديم خيارات الطلبات الخارجية أو التوصيل أو الطلب المسبق، وكلها مدمجة داخل المنصة.",
-  "Analyse": "التحليلات",
-  "Suivez les préférences des clients, les plats populaires et les tendances des ventes grâce aux analyses intégrées de Tresto. Utilisez ces informations pour optimiser votre menu et prendre des décisions basées sur des données.": "تتبَّع تفضيلات العملاء والأطباق الشائعة واتجاهات المبيعات باستخدام تحليلات Tresto المدمجة. استخدم هذه الرؤى لتحسين قائمة طعامك واتخاذ قرارات قائمة على البيانات.",
-  "hh": "",
-  "h": ""
+  
+  "Gestion Simplifiée des Commandes": "إدارة مبسطة للطلبات",
+  "Gérez toutes vos commandes, qu'elles soient sur place, à emporter ou en livraison, depuis un seul tableau de bord intuitif.": "قم بإدارة جميع طلباتك، سواء في الموقع أو الطلبات الخارجية أو التوصيل، من لوحة تحكم واحدة سهلة الاستخدام.",
+
+  "Génération de QR Codes": "إنشاء رموز QR Code",
+  "Créez facilement des QR codes personnalisés pour vos menus, permettant à vos clients d'accéder rapidement à vos plats.": "يمكنك بسهولة إنشاء رموز QR مخصصة لقوائم الطعام الخاصة بك، مما يتيح لعملائك الوصول السريع إلى أطباقك.",
+
+  "Définissez facilement les zones de livraison et ajustez les frais en fonction de chaque secteur pour une gestion optimale des livraisons.": "حدد مناطق التوصيل بسهولة واضبط الرسوم وفقاً لكل قطاع من أجل إدارة مثالية للتوصيل.",
+
+  "Réception des Commandes via WhatsApp et website": "استقبال الطلبات عبر الواتساب و الموقع الالكتروني",
+
+  "Ajout et Modification des Articles et Prix du Menu": "إضافة وتعديل عناصر القائمة والأسعار",
+
+  "Mettez à jour vos menus en quelques clics. Ajoutez de nouveaux plats ou modifiez les prix à tout moment, sans aucune difficulté.": "حدِّث قوائمك ببضع نقرات فقط. أضف أطباقاً جديدة أو غيِّر الأسعار في أي وقت وبكل سهولة.",
+
+  "Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant": "ابدأ اليوم - حسِّن من عمليات مطعمك", 
+
+  "Créez un compte GRATUIT maintenant !": "أنشئ حساباً مجاناً الآن!",
+
+  "FEATURES":"المزايا",
+  "Fonctionnalités Spéciales de Tresto": "ميزات Tresto الخاصة",
+  
+  "Comment ça marche?": "كيف يعمل؟",
+  "Quelles sont les étapes à suivre pour adhérer ?": "ما هي خطوات الانضمام؟",
+
+  "Etape I": "الخطوة 1",
+  "Inscription Facile": "تسجيل سهل",
+  "Créez votre compte en un clin d'œil ! Il vous suffit de quelques informations, et vous êtes prêt à partir. Aucun besoin de carte de crédit pour commencer.": "أنشئ حسابك في غمضة عين! كل ما تحتاجه هو بعض التفاصيل وستكون جاهزاً للانطلاق. لا تحتاج إلى بطاقة ائتمان للبدء.",
+
+  "Etape II": "الخطوة 2",
+  "Personnaliser le menu":"تخصيص قائمتك",
+  "Ajoutez vos plats, ajustez les prix, et choisissez un design qui vous plaît. Notre interface est super intuitive, donc tout est prêt en un rien de temps.":"أضف أطباقك، واضبط الأسعار، واختر التصميم الذي يعجبك. واجهتنا بديهية للغاية، لذا كل شيء جاهز في لمح البصر.",
+
+  "Etape III": "الخطوة 3",
+  "Lancement": "الانطلاق",
+  "Mettez votre menu en ligne et commencez à recevoir des commandes tout de suite. Vous gérez tout depuis un tableau de bord clair et accessible depuis n'importe quel appareil.": "ضع قائمتك على الإنترنت وابدأ في تلقي الطلبات على الفور. يمكنك إدارة كل شيء من لوحة تحكم واضحة يمكن الوصول إليها من أي جهاز.",
+
+  "Explorez Nos Outils Puissants et Simplifiez Votre Gestion – Commencez Maintenant !": "استكشف أدواتنا القوية وبسّط إدارتك ابدأ الآن!",
+  "Crée un compte gratuitement": "أنشئ حساب مجاني",
+
+  "Contactez nous": "اتصل بنا",
+  "Soumettez vos informations et nous vous contacterons dès que possible.": "أرسل بياناتك وسوف نتواصل معك في أقرب وقت ممكن",
+  "Notre équipe est disponible par téléphon & WhatsApp": "فريقنا متاح عبر الهاتف والواتساب",
+  "Prendre contact": "تواصل معنا",
+  "Fill out the form to connect with a member of our team.": "املأ النموذج للتواصل مع أحد أعضاء فريقنا",
+  "Prénom":"الاسم الشخصي",
+  "Nom":"الاسم العائلي",
+  "Email": "البريد الإلكتروني",
+  "Message": "الرسالة",
+  "Enter your message": "أكتب رسالتك",
+  "Submit": "إرسال",
+  "Nous traitons vos informations conformément à notre politique de confidentialité": "نقوم بمعالجة معلوماتك وفقًا لسياسة الخصوصية الخاصة بنا",
+
+  "FAQ": "الأسئلة الشائعة",
+  "Vous avez encore des questions ?": "هل لا يزال لديك أسئلة؟",
+
+  "Est-ce que je peux personnaliser l'apparence de mon menu en ligne ?": "هل يمكنني تخصيص مظهر قائمتي على الإنترنت؟",
+  "Tout à fait. Vous avez la possibilité de choisir parmi plus de 6 designs de menus et de personnaliser les couleurs, les polices et la mise en page pour refléter l'identité de votre restaurant.": "نعم، يمكنك ذلك. يمكنك الاختيار من بين أكثر من 6 تصميمات لقائمة الطعام وتخصيص الألوان والخطوط والتخطيط لتعكس هوية مطعمك.",
+
+  "Combien de temps faut-il pour configurer mon menu en ligne ?": "كم من الوقت يستغرق إعداد قائمتي على الإنترنت؟",
+  "La configuration de votre menu en ligne est rapide et simple. En quelques clics, vous pouvez ajouter des articles, télécharger des images, et ajuster les prix. La plupart des utilisateurs peuvent configurer leur menu en moins de 30 minutes.": "إعداد قائمتك على الإنترنت سريع وسهل. فببضع نقرات فقط، يمكنك إضافة العناصر وتحميل الصور وتعديل الأسعار. يمكن لمعظم المستخدمين تهيئة قائمتهم في أقل من 30 دقيقة.",
+
+  "Comment la plateforme facilite-t-elle la gestion des commandes ?": "كيف تجعل المنصة إدارة الطلبات أسهل؟",
+  "Notre tableau de bord centralisé regroupe toutes les commandes en un seul endroit, ce qui simplifie leur suivi et leur gestion. Vous pouvez visualiser les commandes en cours, traiter les paiements, et gérer les livraisons sans effort.": "تجمع لوحة التحكم المركزية لدينا جميع طلباتك معاً في مكان واحد، مما يسهل تتبعها وإدارتها. يمكنك عرض الطلبات قيد التنفيذ، ومعالجة المدفوعات وإدارة عمليات التسليم دون عناء.",
+
+  "Puis-je accéder à la plateforme depuis n'importe quel appareil ?": "هل يمكنني الوصول إلى المنصة من أي جهاز؟",
+  "Oui, Tresto est accessible depuis n'importe quel appareil avec une connexion internet, que ce soit un ordinateur, une tablette ou un smartphone. Vous pouvez gérer votre restaurant en toute simplicité, où que vous soyez.": "نعم، يمكن الوصول إلى Tresto من أي جهاز متصل بالإنترنت، سواء كان جهاز كمبيوتر أو جهاز لوحي أو هاتف ذكي. يمكنك إدارة مطعمك بكل سهولة أينما كنت.",
+
+  "Rejoignez-nous et améliorer l'efficacité de votre restaurant.": "انضم إلينا وحسِّن كفاءة مطعمك.",
+  "Crée un compte gratuitement !": "أنشئ حساباً مجاناً!",
+  "Sign up Now": "اشترك الآن",
+
+  "Discover the latest news, stories & insights": "اكتشف أحدث الأفكار",
+  "Latest articles": "أحدث المقالات",
+  "Next": "التالي",
+  "Prev": "السابق",
+  "Back to Blog": "العودة للمدونة"
 }

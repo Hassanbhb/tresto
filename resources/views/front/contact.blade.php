@@ -51,7 +51,7 @@
                   <h2 class="text-xl font-bold font-heading mb-6">{{ __("Notre équipe est disponible par téléphon & WhatsApp")}}</h2>
                   <a class="w-full sm:w-auto h-12 py-3 px-5 rounded-full bg-tresto-600 border border-tresto-700 hover:bg-tresto-800 focus:ring focus:ring-tresto-800 transition duration-200 inline-flex items-center justify-center gap-2"
                     href="tel:+212664645348">
-                    <span class="text-white text-sm font-semibold">+212 6 64 64 53 48</span>
+                    <span dir="ltr" class="text-white text-sm font-semibold">+212 6 64 64 53 48</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                       fill="none">
                       <path d="M5 10H15.4167M15.4167 10L10.4167 5M15.4167 10L10.4167 15" stroke="white"
@@ -94,9 +94,7 @@
                 class="py-4 px-6 rounded-full w-full h-14 inline-flex items-center justify-center text-center mb-8 bg-tresto-500 border border-tresto-600 font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
                 type="submit">{{ __("Submit") }}</button>
               <p class="text-gray-500 text-sm">
-                <span>{{("Nous traitons vos informations conformément à notre")}}</span>
-                <span></span>
-                <span class="text-sm font-semibold">{{ __("politique de confidentialité")}}</span>
+                <span>{{ __("Nous traitons vos informations conformément à notre politique de confidentialité") }}</span>
               </p>
             </div>
           </form>
@@ -146,7 +144,7 @@
               <summary
                 class="flex cursor-pointer items-center justify-between gap-1.5 rounded-3xl bg-white text-black p-6"
               >
-                <h2 class="text-lg font-bold font-heading">{{ __(" Combien de temps faut-il pour configurer mon menu en ligne ?") }} </h2>
+                <h2 class="text-lg font-bold font-heading">{{ __("Combien de temps faut-il pour configurer mon menu en ligne ?") }} </h2>
           
                 <svg
                   class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
@@ -248,7 +246,7 @@
           <h1 class="text-4xl lg:text-5xl mb-10 font-bold font-heading text-center max-w-lg lg:max-w-3xl mx-auto">{{ __("Rejoignez-nous et améliorer l'efficacité de votre restaurant.") }}</h1>
           <div class="flex justify-center"><a
               class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-              href="#">{{ __(" Crée un compte gratuitement !") }}</a></div>
+              href="#">{{ __("Crée un compte gratuitement !") }}</a></div>
         </div>
       </div>
     </div>

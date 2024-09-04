@@ -8,7 +8,7 @@
         <ul class="hidden lg:flex items-center gap-8">
           <li>
             <a class="flex items-center flex-wrap gap-2 group" href="{{ route('home') }}">
-              <span class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Acceuil') }}</span>
+              <span class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Accueil') }}</span>
             </a>
           </li>
           <li class="text-white hover:text-opacity-70 transition duration-200"><a
@@ -92,11 +92,11 @@
       <ul class="flex flex-col gap-12 py-12">
         <li>
           <a class="flex items-center flex-wrap gap-2 group" href="/">
-            <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Acceuil') }}</span>
+            <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Accueil') }}</span>
           </a>
         </li>
         <li class="hover:text-opacity-70 transition duration-200"><a href="{{ route('features') }}">{{ __('Features') }}</a></li>
-        <li class="hover:text-opacity-70 transition duration-200"><a href="{{route('home')}}#pricing">{{ __('Pricing') }}</a></li>
+        <li class="hover:text-opacity-70 transition duration-200"><a href="{{route('home')}}#pricing">{{ __('Tarifs') }}</a></li>
         <li>
           <a class="flex items-center flex-wrap gap-2 group" href="{{ route('contact') }}">
             <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>

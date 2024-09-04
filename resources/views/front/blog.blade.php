@@ -22,10 +22,10 @@
             style="background:linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.10) 100%);">
           </div>
         </div>
-        <p class="uppercase text-center font-bold font-heading text-sm text-tresto-50 mb-6">Blog</p>
+        <p class="uppercase text-center font-bold font-heading text-sm text-tresto-50 mb-6">{{ __("Blog") }}</p>
         <h1
-          class="text-center text-white font-bold font-heading text-4xl lg:text-6xl max-w-md lg:max-w-4xl mx-auto pb-32 lg:pb-0">
-          Discover the latest news, stories &amp; insights</h1>
+          class="rtl:leading-relaxed text-center text-white font-bold font-heading text-4xl lg:text-6xl max-w-md lg:max-w-4xl mx-auto pb-32 lg:pb-0">
+          {{ __("Discover the latest news, stories & insights") }}</h1>
       </div>
       <div class="container px-4 mx-auto">
         <a class="bg-white border border-gray-100 hover:border-tresto-500 transition duration-200 shadow rounded-3xl transform -translate-y-1/2 flex flex-wrap"
@@ -47,24 +47,8 @@
           </div>
           <div class="w-full lg:w-1/2 relative">
             <div class="relative" style="height: 396px;">
-              <div class="absolute top-0 left-0 z-10">
-                <svg xmlns="http://www.w3.org/2000/svg" width="155" height="154" viewbox="0 0 155 154"
-                  fill="none">
-                  <path
-                    d="M-34 79.9324V153.361C-34 153.714 -33.7141 154 -33.3615 154H17.62C17.9724 154 18.2585 153.714 18.2585 153.361V94.299C18.2585 55.5087 56.5087 17.2585 95.299 17.2585H154.361C154.714 17.2585 155 16.9724 155 16.62V-34.3615C155 -34.7139 154.714 -35 154.361 -35H80.9324C17.4572 -35 -34 16.4572 -34 79.9324Z"
-                    fill="#FFF2D6"></path>
-                </svg>
-              </div>
-              <div class="absolute bottom-0 right-0 z-10">
-                <svg class="rounded-br-3xl" xmlns="http://www.w3.org/2000/svg" width="154" height="158"
-                  viewbox="0 0 154 158" fill="none">
-                  <path
-                    d="M189 74.0676V0.638514C189 0.286054 188.714 0 188.361 0H137.38C137.028 0 136.742 0.286054 136.742 0.638514V59.701C136.742 98.4913 98.4914 136.742 59.701 136.742H0.638514C0.286054 136.742 0 137.028 0 137.38V188.361C0 188.714 0.286054 189 0.638514 189H74.0676C137.543 189 189 137.543 189 74.0676Z"
-                    fill="#FFF2D6"></path>
-                </svg>
-              </div>
               <img
-                class="absolute inset-0 w-full h-full object-cover lg:rounded-tr-3xl rounded-br-3xl rounded-bl-3xl lg:rounded-bl-none"
+                class="absolute inset-0 w-full h-full object-cover lg:rounded-tl-3xl lg:rounded-tr-3xl rounded-br-3xl rounded-bl-3xl"
                 src="solstice-assets/images/blog/picture-large.png" alt="">
             </div>
           </div>
@@ -73,7 +57,7 @@
           <div class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-200 h-px w-full"></div>
           <div
             class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 py-3 px-8 rounded-2xl bg-gray-50 border border-gray-200 text-lg lg:text-2xl font-bold font-heading whitespace-nowrap">
-            Latest articles</div>
+            {{ __("Latest articles") }}</div>
         </div>
         <div class="flex flex-wrap mb-8 -mx-4">
           <div class="w-full md:w-1/2 lg:w-1/3 p-4">
@@ -361,7 +345,7 @@
         </div>
         <div class="hidden sm:flex flex-wrap items-center justify-between gap-4 pb-32">
           <a class="inline-block py-3 px-4 rounded-full bg-white border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200"
-            href="#">Prev</a>
+            href="#">{{ __("Prev") }}</a>
           <div class="flex items-center flex-wrap gap-1"><a
               class="w-8 h-8 flex items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 hover: transition duration-200"
               href="#">1</a><a class="w-8 h-8 flex items-center justify-center rounded-lg text-sm bg-gray-100 "
@@ -373,7 +357,7 @@
               class="w-8 h-8 flex items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 hover: transition duration-200"
               href="#">10</a></div>
           <a class="inline-block py-3 px-4 rounded-full bg-white border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200"
-            href="#">Next</a>
+            href="#">{{ __("Next") }}</a>
         </div>
         <div class="sm:hidden pb-32">
           <div class="flex items-center justify-center flex-wrap gap-1 mb-8"><a
@@ -388,9 +372,9 @@
               href="#">10</a></div>
           <div class="flex flex-wrap items-center justify-center gap-4"><a
               class="inline-block py-3 px-4 rounded-full bg-white border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200"
-              href="#">Prev</a><a
+              href="#">{{ __("Prev") }}</a><a
               class="inline-block py-3 px-4 rounded-full bg-white border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200"
-              href="#">Next</a></div>
+              href="#">{{ __("Next") }}</a></div>
         </div>
       </div>
     </section>
@@ -411,7 +395,7 @@
             <img class="h-16 sm:h-20 md:h-auto" src="solstice-assets/images/cta/men-picture2.png" alt="">
           </div>
           <div class="relative z-10">
-            <div class="flex justify-center mb-6">
+            {{-- <div class="flex justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="68" height="34" viewbox="0 0 68 34"
                 fill="none">
                 <path
@@ -424,12 +408,12 @@
                   d="M16.1339 34C16.1339 29.2617 18.0162 24.7174 21.3667 21.3669C24.7173 18.0163 29.2616 16.134 33.9999 16.134C38.7383 16.134 43.2826 18.0163 46.6331 21.3669C49.9836 24.7174 51.8659 29.2617 51.8659 34"
                   stroke="#FFC96D" stroke-width="4" stroke-miterlimit="10"></path>
               </svg>
-            </div>
+            </div> --}}
             <h1 class="text-4xl lg:text-5xl mb-10 font-bold font-heading text-center max-w-lg lg:max-w-3xl mx-auto">
-              What are you waiting for?Join now and learn together!</h1>
+              {{ __("Rejoignez-nous et améliorer l'efficacité de votre restaurant.")}}</h1>
             <div class="flex justify-center"><a
                 class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-                href="#">Sign Up Now</a></div>
+                href="#">{{ __("Crée un compte gratuitement !") }}</a></div>
           </div>
         </div>
       </div>

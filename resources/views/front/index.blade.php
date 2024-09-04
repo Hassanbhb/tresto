@@ -44,7 +44,7 @@
 
           <div x-data="{ open: 1 }" class="flex flex-wrap items-center -mx-4">
             <div class="w-full lg:w-2/3 p-4">
-              <img class="w-full" src="solstice-assets/images/how-it-works/picture-full-primary.png" alt="online menu Tresto">
+              <img class="w-full rounded-2xl" src="images/product/themes.gif" alt="online menu Tresto">
             </div>
             <div class="w-full lg:w-1/3 p-4">
               <!-- First Section -->
@@ -63,7 +63,7 @@
               <a href="#" @click.prevent="open = open === 2 ? null : 2">
                 <div :class="{'bg-tresto-50': open === 2, 'py-6 pr-10 mb-3': true}" class="rounded-2xl transition duration-200">
                   <div :class="{'border-tresto-500': open === 2, 'border-transparent': open !== 2}" class="border-l-4 pl-10">
-                    <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Publiez et partagez ') }}</h2>
+                    <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Publiez et partagez') }}</h2>
                     <p class="text-gray-600">
                       {{ __('Mettez votre menu en ligne et partagez le lien sur votre site web et vos réseaux sociaux.') }}
                     </p>
@@ -380,7 +380,7 @@
               <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Gestion des Zones de Livraison et des Frais') }}
               </h2>
               <p class="text-gray-600">
-                {{ 'Définissez facilement les zones de livraison et ajustez les frais en fonction de chaque secteur pour une gestion optimale des livraisons.' }}
+                {{ __('Définissez facilement les zones de livraison et ajustez les frais en fonction de chaque secteur pour une gestion optimale des livraisons.') }}
               </p>
             </div>
           </div>
@@ -424,7 +424,7 @@
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
               <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">
-                {{ __(' Génération de QR Codes') }}</h2>
+                {{ __('Génération de QR Codes') }}</h2>
               <p class="text-gray-600">
                 {{ __("Créez facilement des QR codes personnalisés pour vos menus, permettant à vos clients d'accéder rapidement à vos plats.") }}
               </p>

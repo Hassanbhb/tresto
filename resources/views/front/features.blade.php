@@ -16,14 +16,14 @@
         <div class="flex flex-wrap -mx-4">
           <div class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
-              <div class="pb-4">
-                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ml-4">
+              <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
+                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z"/></svg>
                 </div>
               </div>
-              <div class="relative pl-4 pb-12 border-l border-dashed border-gray-100 flex-1">
-                <div class="absolute top-0 -left-px bg-tresto-500 w-0.5 h-6"></div>
-                <h2 class="text-2xl font-bold font-heading mb-4">{{ __(" Rapports Détaillés sur les Visiteurs et les Ventes") }}</h2>
+              <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
+                <div class="absolute top-0 -left-px rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Rapports Détaillés sur les Visiteurs et les Ventes") }}</h2>
                 <p class="text-gray-600">{{ __("Obtenez des analyses approfondies sur les visiteurs de votre menu en ligne et suivez vos ventes en temps réel pour optimiser vos opérations.") }}</p>
               </div>
             </div>
@@ -31,12 +31,12 @@
           <div class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 border-l border-dashed border-gray-100 lg:border-transparent">
-                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ml-4">
+                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="m20 7l.94-2.06L23 4l-2.06-.94L20 1l-.94 2.06L17 4l2.06.94zM8.5 7l.94-2.06L11.5 4l-2.06-.94L8.5 1l-.94 2.06L5.5 4l2.06.94zM20 12.5l-.94 2.06l-2.06.94l2.06.94l.94 2.06l.94-2.06L23 15.5l-2.06-.94zm-2.29-3.38l-2.83-2.83c-.2-.19-.45-.29-.71-.29s-.51.1-.71.29L2.29 17.46a.996.996 0 0 0 0 1.41l2.83 2.83c.2.2.45.3.71.3s.51-.1.71-.29l11.17-11.17c.39-.39.39-1.03 0-1.42m-3.54-.7l1.41 1.41L14.41 11L13 9.59zM5.83 19.59l-1.41-1.41L11.59 11L13 12.41z"/></svg>
                 </div>
               </div>
-              <div class="relative pl-4 pb-12 border-l border-dashed border-gray-100 flex-1">
-                <div class="absolute top-0 -left-px bg-tresto-500 w-0.5 h-6"></div>
+              <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
+                <div class="absolute top-0 -left-px rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
                 <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Gestion Simplifiée des Commandes") }}</h2>
                 <p class="text-gray-600">{{ __("Gérez toutes vos commandes, qu'elles soient sur place, à emporter ou en livraison, depuis un seul tableau de bord intuitif.") }}</p>
               </div>
@@ -45,12 +45,12 @@
           <div class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 border-l border-dashed border-gray-100">
-                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ml-4">
+                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="m8.1 13.34l2.83-2.83L3.91 3.5a4.01 4.01 0 0 0 0 5.66zm6.78-1.81c1.53.71 3.68.21 5.27-1.38c1.91-1.91 2.28-4.65.81-6.12c-1.46-1.46-4.2-1.1-6.12.81c-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88l1.41-1.41L13.41 13z"/></svg>
                 </div>
               </div>
-              <div class="relative pl-4 pb-12 border-l border-dashed border-gray-100 flex-1">
-                <div class="absolute top-0 -left-px bg-tresto-500 w-0.5 h-6"></div>
+              <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
+                <div class="absolute top-0 -left-px rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
                 <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Plus de 6 Designs de Menus")}} </h2>
                 <p class="text-gray-600">{{ __("Choisissez parmi plus de 6 modèles de menus élégants et professionnels, adaptés à votre style et à l'image de votre restaurant.") }}</p>
               </div>
@@ -69,7 +69,7 @@
                 </div>
               </div>
               <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
-                <div class="absolute top-0 -left-px rtl:right-0  bg-tresto-500 w-0.5 h-6"></div>
+                <div class="absolute top-0 -left-px rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
                 <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Réception des Commandes via WhatsApp et website") }}</h2>
                 <p class="text-gray-600">{{ __("Permettez à vos clients de passer des commandes directement via WhatsApp pour une expérience de commande encore plus conviviale.") }}</p>
               </div>
@@ -153,7 +153,7 @@
                 <span class="text-white text-sm font-medium">{{ __("Etape II") }}</span>
               </div>
               <h2 class="text-3xl font-bold font-heading mb-6">{{ __("Personnaliser le menu") }}</h2>
-              <p class="text-gray-600 pb-40">{{ __("Ajoutez vos plats, ajustez les prix, et choisissez un design qui vous plaît. Notre interface est super intuitive, donc tout est prêt en un rien de temps.")}} </p>
+              <p class="text-gray-600 pb-40">{{ __("Ajoutez vos plats, ajustez les prix, et choisissez un design qui vous plaît. Notre interface est super intuitive, donc tout est prêt en un rien de temps.") }} </p>
               <div class="absolute -bottom-6 right-4">
                 <div class="flex justify-center gap-4 mb-4">
                   <div class="w-16 h-16 rounded-xl bg-tresto-50"></div>
