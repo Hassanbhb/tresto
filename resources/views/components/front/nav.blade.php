@@ -54,6 +54,9 @@
                 <a href="{{ route('change.language', 'fr') }}"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem">{{ __('French') }}</a>
+                <a href="{{ route('change.language', 'en') }}"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem">{{ __('English') }}</a>
               </div>
             </div>
           </div>

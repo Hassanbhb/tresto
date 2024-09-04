@@ -437,9 +437,9 @@
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
               <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">
-                {{ __('Gestion Simplifiée des Commandes') }}</h2>
+                {{ __('Ajout et Modification des Articles et Prix du Menu') }}</h2>
               <p class="text-gray-600">
-                {{ __("Gérez toutes vos commandes, qu'elles soient sur place, à emporter ou en livraison, depuis un seul tableau de bord intuitif.") }}
+                {{ __("Mettez à jour vos menus en quelques clics. Ajoutez de nouveaux plats ou modifiez les prix à tout moment, sans aucune difficulté.") }}
               </p>
             </div>
           </div>

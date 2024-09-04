@@ -1,8 +1,6 @@
 <x-layouts.front>
-  <div class="">
-                
-    <x-front.nav />
-              
+  <div class="">             
+    <x-front.nav />    
     <section class="overflow-hidden py-24 relative">
       <div class="absolute top-0 left-0 w-full bg-tresto-900 pb-40 md:pb-24">
         <div class="flex justify-center gap-6">
@@ -29,7 +27,7 @@
                   <path d="M15.4167 10H5M5 10L10 5M5 10L10 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
-              <span class="text-white group-hover:text-opacity-80 transition duration-200 font-bold">{{ __("Back to Blog") }}</span>
+              <span class="text-white group-hover:text-opacity-80 transition duration-200 font-bold">{{ __("Retour au blog") }}</span>
             </a>
           </div>
           <h1 class="text-center text-white text-3xl lg:text-5xl font-bold mb-12 max-w-xl lg:max-w-3xl mx-auto">The Art and Science of Design Development: Crafting Digital Experiences</h1>
@@ -159,7 +157,7 @@
               </svg>
             </div> --}}
             <h1 class="text-4xl lg:text-5xl mb-10 font-bold font-heading text-center max-w-lg lg:max-w-3xl mx-auto">{{ __("Rejoignez-nous et améliorer l'efficacité de votre restaurant.") }}</h1>
-            <div class="flex justify-center"><a class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200" href="#">{{ __("Sign Up Now")}} </a></div>
+            <div class="flex justify-center"><a class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200" href="#">{{ __("Inscrivez-vous maintenant")}} </a></div>
           </div>
         </div>
       </div>

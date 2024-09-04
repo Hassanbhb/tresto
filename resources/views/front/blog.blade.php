@@ -25,7 +25,7 @@
         <p class="uppercase text-center font-bold font-heading text-sm text-tresto-50 mb-6">{{ __("Blog") }}</p>
         <h1
           class="rtl:leading-relaxed text-center text-white font-bold font-heading text-4xl lg:text-6xl max-w-md lg:max-w-4xl mx-auto pb-32 lg:pb-0">
-          {{ __("Discover the latest news, stories & insights") }}</h1>
+          {{ __("Découvrez les dernières nouvelles et analyses") }}</h1>
       </div>
       <div class="container px-4 mx-auto">
         <a class="bg-white border border-gray-100 hover:border-tresto-500 transition duration-200 shadow rounded-3xl transform -translate-y-1/2 flex flex-wrap"
@@ -57,7 +57,7 @@
           <div class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-200 h-px w-full"></div>
           <div
             class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 py-3 px-8 rounded-2xl bg-gray-50 border border-gray-200 text-lg lg:text-2xl font-bold font-heading whitespace-nowrap">
-            {{ __("Latest articles") }}</div>
+            {{ __("Derniers articles") }}</div>
         </div>
         <div class="flex flex-wrap mb-8 -mx-4">
           <div class="w-full md:w-1/2 lg:w-1/3 p-4">

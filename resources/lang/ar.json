@@ -1,6 +1,15 @@
 {
+  "Tresto - Plateforme pour Gestion de Menus en Ligne": "Tresto - منصة إدارة القوائم عبر الإنترنت",
+  "Fonctionnalités de Tresto - Optimisez la Gestion de Votre Restaurant": "ميزات Tresto - تحسين إدارة مطعمك",
+  "Explorez les fonctionnalités puissantes de Tresto : création de menus en ligne, génération de QR codes, gestion des commandes, et plus encore pour améliorer l'efficacité de votre restaurant.": "استكشف ميزات Tresto القوية: إنشاء القوائم عبر الإنترنت، توليد رموز QR، إدارة الطلبات وأكثر من ذلك لتحسين كفاءة مطعمك.",
+  "Contactez Tresto - Assistance et Support pour Gestion de Menus en Ligne": "اتصل بـ Tresto - المساعدة والدعم لإدارة القوائم عبر الإنترنت",
+  "Contactez Tresto pour toute assistance ou question concernant la gestion de vos menus en ligne et commandes avec notre plateforme.": "اتصل بـ Tresto لأي مساعدة أو استفسارات حول إدارة قوائمك وطلباتك عبر الإنترنت باستخدام منصتنا.",
+  "Conseils et Astuces pour les Restaurateurs | Blog Tresto": "نصائح وحيل لأصحاب المطاعم | مدونة Tresto",
+  "Découvrez des conseils d'experts et des tendances pour optimiser votre menu, améliorer l'expérience client, et développer votre présence en ligne.": "اكتشف نصائح الخبراء والاتجاهات لتحسين قائمتك، تحسين تجربة العملاء، وتطوير وجودك على الإنترنت.",
+
   "Arabic": "العربية",
   "French": "الفرنسية",
+  "English": "الانكليزية",
   "Créez des menus en ligne, gérez vos commandes et générez des QR codes pour simplifier la gestion de votre restaurant.": "يمكنك إنشاء قوائم الطعام عبر الإنترنت، وإدارة طلباتك، وإنشاء رموز QR لتبسيط إدارة مطعمك.",
   "© 2024 Tresto. All rights reserved.": "© 2024 Tresto. جميع الحقوق محفوظة.",
 
@@ -125,11 +134,11 @@
 
   "Rejoignez-nous et améliorer l'efficacité de votre restaurant.": "انضم إلينا وحسِّن كفاءة مطعمك.",
   "Crée un compte gratuitement !": "أنشئ حساباً مجاناً!",
-  "Sign up Now": "اشترك الآن",
+  "Inscrivez-vous maintenant": "اشترك الآن",
 
-  "Discover the latest news, stories & insights": "اكتشف أحدث الأفكار",
-  "Latest articles": "أحدث المقالات",
+  "Découvrez les dernières nouvelles et analyses": "اكتشف أحدث الأفكار",
+  "Derniers articles": "أحدث المقالات",
   "Next": "التالي",
   "Prev": "السابق",
-  "Back to Blog": "العودة للمدونة"
+  "Retour au blog": "العودة للمدونة"
 }

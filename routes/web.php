@@ -28,7 +28,7 @@ Route::get('/post', function () {
 
 
 Route::get('/{locale}', function ($locale) {
-    if (! in_array($locale, ['ar', 'fr'])) {
+    if (! in_array($locale, ['ar', 'fr', 'en'])) {
         abort(400);
     }
 
