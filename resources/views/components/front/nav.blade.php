@@ -8,7 +8,7 @@
         <ul class="hidden lg:flex items-center gap-8">
           <li>
             <a class="flex items-center flex-wrap gap-2 group" href="{{ route('home') }}">
-              <span class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Home') }}</span>
+              <span class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Acceuil') }}</span>
             </a>
           </li>
           <li class="text-white hover:text-opacity-70 transition duration-200"><a
@@ -30,7 +30,7 @@
               <button @click="open = !open" type="button"
                 class="inline-flex justify-center w-full px-4 py-2 bg-tresto-600 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tresto-200"
                 id="options-menu" aria-haspopup="true" aria-expanded="true">
-                <span>{{ session()->get('locale') }}</span>
+                <span>{{ App::getLocale() }}</span>
                 <svg class="mr-2 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                   fill="currentColor">
                   <path fill-rule="evenodd"
@@ -45,7 +45,7 @@
               x-transition:leave="transition ease-in duration-75"
               x-transition:leave-start="transform opacity-100 scale-100"
               x-transition:leave-end="transform opacity-0 scale-95"
-              class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
+              class="origin-top-right absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
               role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
               <div class="py-1" role="none">
                 <a href="{{ route('change.language', 'ar') }}"
@@ -92,11 +92,11 @@
       <ul class="flex flex-col gap-12 py-12">
         <li>
           <a class="flex items-center flex-wrap gap-2 group" href="/">
-            <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Home') }}</span>
+            <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Acceuil') }}</span>
           </a>
         </li>
-        <li class="hover:text-opacity-70 transition duration-200"><a href="#features">{{ __('Features') }}</a></li>
-        <li class="hover:text-opacity-70 transition duration-200"><a href="#pricing">{{ __('Pricing') }}</a></li>
+        <li class="hover:text-opacity-70 transition duration-200"><a href="{{ route('features') }}">{{ __('Features') }}</a></li>
+        <li class="hover:text-opacity-70 transition duration-200"><a href="{{route('home')}}#pricing">{{ __('Pricing') }}</a></li>
         <li>
           <a class="flex items-center flex-wrap gap-2 group" href="{{ route('contact') }}">
             <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>

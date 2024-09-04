@@ -1,3 +1,6 @@
+@section('title', __('Conseils et Astuces pour les Restaurateurs | Blog Tresto'))
+@section('description', __("Découvrez des conseils d'experts et des tendances pour optimiser votre menu, améliorer l'expérience client, et développer votre présence en ligne."))
+
 <x-layouts.front>
   <div class="">
 

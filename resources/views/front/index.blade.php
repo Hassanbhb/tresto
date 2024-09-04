@@ -1,15 +1,18 @@
+@section('title', __('Tresto - Plateforme pour Gestion de Menus en Ligne'))
+@section('description', __('Créez des menus en ligne, gérez vos commandes et générez des QR codes pour simplifier la gestion de votre restaurant.'))
+
 <x-layouts.front>
   <div>
-    
     <section class="overflow-hidden bg-tresto-600 pb-24">
       <x-front.nav />
 
       <div class="container px-4 mx-auto relative">
         <div class="relative z-20">
-          <h1 class="text-center text-white text-5xl lg:text-7xl font-bold ltr:font-mono rtl:font-body rtl:leading-relaxed mb-6 mt-14 max-w-4xl mx-auto">
+          <h1
+            class="text-center text-white text-5xl lg:text-7xl font-bold ltr:font-mono rtl:font-body rtl:leading-relaxed mb-6 mt-14 max-w-4xl mx-auto">
             <span>{{ __('Créez votre menu en quelques clics avec') }} <span class="text-secondary">Tresto</span>
-            {{-- <span></span> --}}
-              {{ __('Today!') }}</span>
+              {{-- <span></span> --}}
+              {{-- {{ __('Today!') }}</span> --}}
           </h1>
           <p class="text-center text-white text-lg mb-10 max-w-lg mx-auto">
             {{ __('Des commandes en ligne aux repas sur place, simplifiez vos opérations et améliorez la satisfaction de vos clients grâce à notre plateforme intuitive.') }}
@@ -18,74 +21,14 @@
               class="w-full sm:w-auto text-center h-16 inline-flex items-center justify-center py-4 px-6 rounded-full bg-secondary border border-tresto-600 hover:border-secondary shadow font-bold ltr:font-mono rtl:font-body text-black hover:text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
               href="#">{{ __('Commencez GRATUITEMENT !') }}</a></div>
           <div class="hidden lg:block absolute bottom-9 left-0 z-10">
-            <div class="bg-tresto-50 rounded-3xl pt-6 px-12 relative">
-              <img src="solstice-assets/images/hero/woman-picture.png" alt="">
-              <div class="absolute left-4 bottom-4">
-                <div class="bg-white p-2 rounded-md text-sm font-semibold">Sophie</div>
-              </div>
+            <div class="relative -rotate-[25deg]">
+              <img src="images/menu.png" class="-rotate-12 animate-float" alt="restaurant menu">
             </div>
           </div>
         </div>
-        {{-- <div class="hidden xl:block absolute bottom-0 left-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="608" height="240" viewbox="0 0 608 240"
-            fill="none">
-            <path
-              d="M607 0.999973L607 85.222L580.193 85.222C537.767 85.2199 496.449 100.198 462.201 127.976C428.139 155.602 402.822 194.465 389.84 239L1 239L0.99999 1L607 0.999973Z"
-              fill="#530031" stroke="url(#paint0_linear_203_8871)" stroke-width="2"></path>
-            <defs>
-              <lineargradient id="paint0_linear_203_8871" x1="356" y1="120" x2="438.019"
-                y2="272.086" gradientunits="userSpaceOnUse">
-                <stop stop-color="#FF7100" stop-opacity="0">
-                  <stop offset="1" stop-color="#FF7100"></stop>
-                </stop>
-              </lineargradient>
-            </defs>
-          </svg>
-        </div> --}}
-        {{-- <div class="hidden xl:block absolute bottom-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="608" height="240" viewbox="0 0 608 240"
-            fill="none">
-            <path
-              d="M1 239L0.999996 154.777L27.8065 154.777C70.233 154.779 111.551 139.802 145.799 112.024C179.861 84.3981 205.177 45.5346 218.16 0.99999L607 0.999973L607 239L1 239Z"
-              fill="#530031" stroke="url(#paint0_linear_203_8872)" stroke-width="2"></path>
-            <defs>
-              <lineargradient id="paint0_linear_203_8872" x1="139.5" y1="50.4" x2="185.195"
-                y2="150.429" gradientunits="userSpaceOnUse">
-                <stop stop-color="#FF7100">
-                  <stop offset="1" stop-color="#FF7100" stop-opacity="0"></stop>
-                </stop>
-              </lineargradient>
-            </defs>
-          </svg>
-        </div> --}}
-        <div class="hidden lg:block absolute bottom-48 right-0">
-          <div class="bg-tresto-500 rounded-xl pt-4 px-6 relative">
-            <div class="absolute bottom-2 left-2">
-              <div class="bg-white p-1 rounded-md flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"
-                  fill="none">
-                  <mask id="path-1-inside-1_587_1759" fill="white">
-                    <path
-                      d="M11.9999 11.1666C11.8933 11.1666 11.7933 11.1333 11.6999 11.0666C11.4799 10.9 11.4333 10.5866 11.5999 10.3666C12.6466 8.97331 12.6466 7.02665 11.5999 5.63331C11.4333 5.41331 11.4799 5.09998 11.6999 4.93331C11.9199 4.76665 12.2333 4.81331 12.3999 5.03331C13.7066 6.77998 13.7066 9.21998 12.3999 10.9666C12.2999 11.1 12.1533 11.1666 11.9999 11.1666Z">
-                    </path>
-                  </mask>
-                  <path
-                    d="M11.9999 11.1666C11.8933 11.1666 11.7933 11.1333 11.6999 11.0666C11.4799 10.9 11.4333 10.5866 11.5999 10.3666C12.6466 8.97331 12.6466 7.02665 11.5999 5.63331C11.4333 5.41331 11.4799 5.09998 11.6999 4.93331C11.9199 4.76665 12.2333 4.81331 12.3999 5.03331C13.7066 6.77998 13.7066 9.21998 12.3999 10.9666C12.2999 11.1 12.1533 11.1666 11.9999 11.1666Z"
-                    fill="#FF7100"></path>
-                  <path
-                    d="M11.6999 11.0666L11.0961 11.8637L11.1073 11.8722L11.1187 11.8804L11.6999 11.0666ZM11.5999 10.3666L12.397 10.9705L12.3995 10.9673L11.5999 10.3666ZM11.5999 5.63331L12.3995 5.03269L12.397 5.02945L11.5999 5.63331ZM12.3999 5.03331L13.2007 4.43428L13.197 4.42945L12.3999 5.03331ZM12.3999 10.9666L13.1999 11.5666L13.2007 11.5657L12.3999 10.9666ZM11.9999 10.1666C12.0528 10.1666 12.108 10.1752 12.1612 10.193C12.2137 10.2105 12.2538 10.2334 12.2812 10.2529L11.1187 11.8804C11.3682 12.0586 11.6689 12.1666 11.9999 12.1666V10.1666ZM12.3038 10.2696C12.514 10.4288 12.5714 10.7403 12.397 10.9705L10.8028 9.76279C10.2951 10.433 10.4459 11.3712 11.0961 11.8637L12.3038 10.2696ZM12.3995 10.9673C13.7134 9.21812 13.7134 6.78184 12.3995 5.0327L10.8004 6.23392C11.5798 7.27145 11.5798 8.72851 10.8004 9.76603L12.3995 10.9673ZM12.397 5.02945C12.5714 5.25967 12.514 5.57119 12.3038 5.7304L11.0961 4.13622C10.4459 4.62877 10.2951 5.56695 10.8028 6.23717L12.397 5.02945ZM12.3038 5.7304C12.0736 5.90481 11.7621 5.84733 11.6028 5.63717L13.197 4.42945C12.7045 3.77929 11.7663 3.62848 11.0961 4.13622L12.3038 5.7304ZM11.5992 5.63233C12.6402 7.02384 12.6402 8.97611 11.5992 10.3676L13.2007 11.5657C14.773 9.46384 14.773 6.53611 13.2007 4.43429L11.5992 5.63233ZM11.5999 10.3666C11.6975 10.2366 11.8533 10.1666 11.9999 10.1666V12.1666C12.4533 12.1666 12.9024 11.9634 13.1999 11.5666L11.5999 10.3666Z"
-                    fill="#FF7100" mask="url(#path-1-inside-1_587_1759)"></path>
-                  <path
-                    d="M13.2199 12.8334C13.1132 12.8334 13.0132 12.8 12.9199 12.7334C12.6999 12.5667 12.6532 12.2534 12.8199 12.0334C14.5999 9.66002 14.5999 6.34002 12.8199 3.96669C12.6532 3.74669 12.6999 3.43335 12.9199 3.26669C13.1399 3.10002 13.4532 3.14669 13.6199 3.36669C15.6666 6.09335 15.6666 9.90669 13.6199 12.6334C13.5266 12.7667 13.3732 12.8334 13.2199 12.8334Z"
-                    fill="#FF7100"></path>
-                  <path
-                    d="M9.34659 2.52002C8.59992 2.10669 7.64659 2.21335 6.67325 2.82002L4.72659 4.04002C4.59325 4.12002 4.43992 4.16669 4.28659 4.16669H3.66659H3.33325C1.71992 4.16669 0.833252 5.05335 0.833252 6.66669V9.33335C0.833252 10.9467 1.71992 11.8334 3.33325 11.8334H3.66659H4.28659C4.43992 11.8334 4.59325 11.88 4.72659 11.96L6.67325 13.18C7.25992 13.5467 7.83325 13.7267 8.36659 13.7267C8.71325 13.7267 9.04659 13.6467 9.34659 13.48C10.0866 13.0667 10.4999 12.2067 10.4999 11.06V4.94002C10.4999 3.79335 10.0866 2.93335 9.34659 2.52002Z"
-                    fill="#FF7100"></path>
-                </svg>
-                <span class="text-sm font-semibold">Armand</span>
-              </div>
-            </div>
-            <img src="solstice-assets/images/hero/man-picture.png" alt="">
+        <div class="hidden lg:block absolute bottom-6 right-0">
+          <div class="relative rotate-[25deg]">
+            <img src="images/burger-rb.png" class="w-128 animate-float" alt="restaurant burger">
           </div>
         </div>
       </div>
@@ -93,53 +36,66 @@
 
     <section class="py-24">
       <div class="container mx-auto px-4">
-        <p class="text-center text-tresto-500 text-sm font-bold ltr:font-mono rtl:font-body mb-6">{{ __('COMMENT ÇA MARCHE') }}</p>
-        <h1 class="text-center text-3xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-24 max-w-sm lg:max-w-xl mx-auto">
+        <p class="text-center text-tresto-500 text-sm font-bold ltr:font-mono rtl:font-body mb-6">
+          {{ __('COMMENT ÇA MARCHE') }}</p>
+        <h1
+          class="text-center text-3xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-24 max-w-sm lg:max-w-xl mx-auto">
           {{ __('Quelles sont les étapes à suivre pour commencer ?') }}</h1>
-        <div class="flex flex-wrap items-center -mx-4">
-          <div class="w-full lg:w-2/3 p-4">
-            <img class="w-full" src="solstice-assets/images/how-it-works/picture-full-primary.png" alt="">
+
+          <div x-data="{ open: 1 }" class="flex flex-wrap items-center -mx-4">
+            <div class="w-full lg:w-2/3 p-4">
+              <img class="w-full" src="solstice-assets/images/how-it-works/picture-full-primary.png" alt="online menu Tresto">
+            </div>
+            <div class="w-full lg:w-1/3 p-4">
+              <!-- First Section -->
+              <a href="#" @click.prevent="open = open === 1 ? null : 1">
+                <div :class="{'bg-tresto-50': open === 1, 'py-6 pr-10 mb-3': true}" class="rounded-2xl transition duration-200">
+                  <div :class="{'border-tresto-500': open === 1, 'border-transparent': open !== 1}" class="border-l-4 pl-10 transition duration-200">
+                    <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Inscrivez-vous et personnalisez') }}</h2>
+                    <p class="text-gray-600">
+                      {{ __('Créez votre compte et concevez un menu qui reflète l’image de votre restaurant.') }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+          
+              <!-- Second Section -->
+              <a href="#" @click.prevent="open = open === 2 ? null : 2">
+                <div :class="{'bg-tresto-50': open === 2, 'py-6 pr-10 mb-3': true}" class="rounded-2xl transition duration-200">
+                  <div :class="{'border-tresto-500': open === 2, 'border-transparent': open !== 2}" class="border-l-4 pl-10">
+                    <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Publiez et partagez ') }}</h2>
+                    <p class="text-gray-600">
+                      {{ __('Mettez votre menu en ligne et partagez le lien sur votre site web et vos réseaux sociaux.') }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+          
+              <!-- Third Section -->
+              <a href="#" @click.prevent="open = open === 3 ? null : 3">
+                <div :class="{'bg-tresto-50': open === 3, 'py-6 pr-10 mb-3': true}" class="rounded-2xl transition duration-200">
+                  <div :class="{'border-tresto-500': open === 3, 'border-transparent': open !== 3}" class="border-l-4 pl-10">
+                    <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Recevez des commandes') }}</h2>
+                    <p class="text-gray-600">
+                      {{ __('Vos clients passant commande via votre site web ou Whatsapp pour une gestion simplifiée.') }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="w-full lg:w-1/3 p-4">
-            <a href="#">
-              <div class="py-6 pr-10 mb-3 group hover:bg-tresto-50 rounded-2xl transition duration-200">
-                <div class="border-l-4 border-transparent group-hover:border-tresto-500 pl-10 transition duration-200">
-                  <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Inscrivez-vous et personnalisez') }}</h2>
-                  <p class="text-gray-600">
-                    {{ __('Créez votre compte et concevez un menu qui reflète l’image de votre restaurant.') }}
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="bg-tresto-50 rounded-2xl py-6 pr-10 mb-3">
-                <div class="border-l-4 border-tresto-500 pl-10">
-                  <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Publiez et partagez ') }}</h2>
-                  <p class="text-gray-600">{{ __('Mettez votre menu en ligne et partagez le lien sur votre site web et vos réseaux sociaux.') }}</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="py-6 pr-10 group hover:bg-tresto-50 rounded-2xl transition duration-200">
-                <div class="border-l-4 border-transparent group-hover:border-tresto-500 pl-10 transition duration-200">
-                  <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-2">{{ __('Recevez des commandes') }}</h2>
-                  <p class="text-gray-600">{{ __('Vos clients passant commande via votre site web ou Whatsapp pour une gestion simplifiée.') }}</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
     <section id="pricing" class="py-24 bg-tresto-50">
       <div class="container mx-auto px-4">
-        <h1 class="text-center text-5xl lg:text-6xl font-bold ltr:font-mono rtl:font-body mb-6">{{ __('Tarifs') }}</h1>
+        <h1 class="text-center text-5xl lg:text-6xl font-bold ltr:font-mono rtl:font-body mb-6">{{ __('Tarifs') }}
+        </h1>
         <p class="text-gray-600 text-lg text-center mb-24 max-w-lg mx-auto">
           {{ __("Une tarification simple qui s'adapte aux restaurants de toutes tailles") }}</p>
-        <div class="overflow-x-auto mb-24">
-          <div class="flex min-w-max">
-            <div class="w-96 lg:w-1/3 p-4">
+        <div class=" mb-24">
+          <div class="flex flex-col md:flex-row max-w-full">
+            <div class="lg:w-1/3 p-4">
               {{-- <div class="pb-10 border-b border-gray-200">
                 <div class="flex flex-wrap items-center gap-4 mb-4">
                   <p class="text-lg font-bold ltr:font-mono rtl:font-body">Monthly</p>
@@ -154,23 +110,25 @@
                 <div class="inline-block px-4 py-2 rounded-full bg-tresto-100 text-tresto-700">SAVE 15% with annual
                   billing</div>
               </div> --}}
-              <h2 class="mt-10 mb-24 text-lg font-bold ltr:font-mono rtl:font-body">{{ __('What you’ll get') }}</h2>
-              <ul class="flex flex-col gap-9">
-                <li class="text-lg font-medium">{{ __('Présentation de vos plats') }}</li>
+              <h2 class="mt-10 mb-12 text-lg font-bold ltr:font-mono rtl:font-body">{{ __('Ce que vous obtiendrez') }}</h2>
+              <ul class="flex flex-col gap-5">
+                <li class="text-lg font-medium">{{ __('Simplifiez les Commandes via le Site Web ou WhatsApp') }}</li>
                 <li class="text-lg font-medium">{{ __('Mises à jour en temps réel') }}</li>
+                <li class="text-lg font-medium">{{ __('Des rapports détaillés sur les visites et les ventes') }}</li>
                 <li class="text-lg font-medium">{{ __('Génération de QR Codes') }}</li>
                 <li class="text-lg font-medium">{{ __('Gestion des commandes simplifiée') }}</li>
-                <li class="text-lg font-medium">{{ __('Les clients peuvent commencer à passer commande immédiatement') }}</li>
-                <li class="text-lg font-medium">{{ __("Développez votre activité avec un minimum d'efforts") }}</li>
-                {{-- <li class="text-lg font-medium">Invite up to 100 people to learn together</li> --}}
+                <li class="text-lg font-medium">{{ __('Gestion des Zones de Livraison et des Frais') }}</li>
+                <li class="text-lg font-medium">
+                  {{ __('Les clients peuvent commencer à passer commande immédiatement') }}</li>
+                <li class="text-lg font-medium">{{ __("Augmentez la Satisfaction des Clients") }}</li>
               </ul>
             </div>
-            <div class="w-96 lg:w-1/3 p-4">
+            <div class="lg:w-1/3 p-4">
               <div class="border border-gray-200 bg-white rounded-3xl px-8 pb-8 pt-10 h-full">
                 <h2 class="text-center text-xl font-bold ltr:font-mono rtl:font-body mb-4">Starter</h2>
-                <div class="flex items-end justify-center gap-3 mb-8">
+                <div class="flex flex-col md:flex-row items-center md:items-end justify-center gap-3 mb-8">
                   <h2 class="text-5xl font-bold ltr:font-mono rtl:font-body">799 {{ __('Dhs') }}</h2>
-                  <p class="text-gray-400 text-lg font-medium pb-2">/ 12 {{ __('months')}}</p>
+                  <p class="text-gray-400 text-lg font-medium pb-2">/ 12 {{ __('months') }}</p>
                 </div>
                 <a class="h-14 inline-flex items-center justify-center w-full text-center py-4 px-6 rounded-full border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200 mb-8"
                   href="#">{{ __('Créer un compte GRATUIT') }}</a>
@@ -208,10 +166,10 @@
                 </div>
               </div>
             </div>
-            <div class="w-96 lg:w-1/3 p-4">
+            <div class="lg:w-1/3 p-4">
               <div class="bg-tresto-500 rounded-3xl px-8 pb-8 pt-10 h-full">
-                <h2 class="text-center text-white text-xl font-bold ltr:font-mono rtl:font-body mb-4">Infinity</h2>
-                <div class="flex items-end justify-center gap-3 mb-8">
+                <h2 class="text-center text-white text-xl font-bold ltr:font-mono rtl:font-body mb-4">Pro</h2>
+                <div class="flex flex-col md:flex-row items-center md:items-end justify-center gap-3 mb-8">
                   <h2 class="text-white text-5xl font-bold ltr:font-mono rtl:font-body">1900 {{ __('Dhs') }}</h2>
                   <p class="text-tresto-200 text-lg font-medium pb-2">/ 12 {{ __('months') }}</p>
                 </div>
@@ -260,42 +218,49 @@
             </div>
           </div>
         </div>
-        {{-- <h2 class="text-4xl font-bold ltr:font-mono rtl:font-body mb-14">Pricing FAQs</h2>
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full lg:w-1/2 px-4">
-            <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">What payment options are there?</h2>
-              <p class="text-gray-600">You can pay by credit card, PayPal, or Stripe.</p>
-            </div>
-          </div>
-          <div class="w-full lg:w-1/2 px-4">
-            <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">Are there a free trial?</h2>
-              <p class="text-gray-600">Yes! We offer 14-days of trial. Free and no credit card required.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full lg:w-1/2 px-4">
-            <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">What type of pricing plans does Solstice offer?</h2>
-              <p class="text-gray-600">We only have one monthly subscription plan, costs no more than the price of a
-                cup of coffee</p>
-            </div>
-          </div>
-          <div class="w-full lg:w-1/2 px-4">
-            <div class="py-12 border-b border-tresto-200 h-full">
-              <h2 class="text-xl font-bold ltr:font-mono rtl:font-body mb-2">Why am I paying a monthly basis over a one-time payment?
-              </h2>
-              <p class="text-gray-600">This is our way of keeping your costs low while giving you access to our
-                platform level quality and peace of mind.</p>
-            </div>
-          </div>
-        </div> --}}
       </div>
     </section>
 
-    <section class="py-24 xl:py-36 overflow-hidden">
+    <section class="py-24 xl:py-36 overflow-hidden" x-data="{ activeTestimonial: 0, testimonials: [
+      { quote: 'Tresto a simplifié la gestion de nos commandes avec ses menus en ligne et QR codes. Les rapports détaillés nous ont aidés à optimiser notre offre et à augmenter nos ventes.', author: 'Hassan', role: 'King Tacos Chef', image: 'images/kingtacos.png' },
+      { quote: 'Grâce à Tresto, la gestion des commandes et des zones de livraison est devenue un jeu d\'enfant. Les outils intuitifs nous ont permis de mieux servir nos clients et de gagner du temps.', author: 'Latif', role: 'Owner', image: 'images/latuniserie.webp' },
+      { quote: 'Tresto a transformé notre menu en ligne et les commandes via WhatsApp. Simple et efficace pour une gestion fluide !', author: 'Charlie', role: 'Owner', image: 'images/charlie-food.webp' }
+    ] }">
+      <div class="container mx-auto px-4">
+        <div class="border border-tresto-100 rounded-3xl p-8 lg:p-16 relative">
+          <div class="lg:max-w-4xl">
+            <h1 class="text-3xl lg:text-4xl font-semibold mb-16 max-w-4xl" x-text="testimonials[activeTestimonial].quote"></h1>
+            <div class="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <h2 class="text-lg font-semibold mb-1" x-text="testimonials[activeTestimonial].author"></h2>
+                <p class="text-gray-500" x-text="testimonials[activeTestimonial].role"></p>
+              </div>
+              <div class="flex items-center gap-3">
+                <template x-for="(testimonial, index) in testimonials" :key="index">
+                  <a :class="{'text-tresto-500': activeTestimonial === index, 'text-gray-100': activeTestimonial !== index}"
+                     @click="activeTestimonial = index"
+                     class="hover:text-tresto-500 transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <circle cx="5" cy="5" r="5" fill="currentColor"></circle>
+                    </svg>
+                  </a>
+                </template>
+              </div>
+            </div>
+          </div>
+          <div class="hidden lg:block absolute right-0 rtl:right-auto rtl:left-0 top-1/2 transform -translate-y-1/2 h-128 w-96">
+            <div class="relative h-full">
+              <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-80"
+                   :src="testimonials[activeTestimonial].image" alt="restaurants logos">
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full bg-tresto-100 rounded-4xl transform rotate-6 h-full"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full bg-tresto-50 rounded-4xl transform rotate-12 h-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {{-- <section class="py-24 xl:py-36 overflow-hidden">
       <div class="container mx-auto px-4">
         <div class="border border-tresto-100 rounded-3xl p-8 lg:p-16 relative">
           <div class="lg:max-w-md xl:max-w-2xl">
@@ -329,7 +294,8 @@
               </div>
             </div>
           </div>
-          <div class="hidden lg:block absolute right-0 rtl:right-auto rtl:left-0 top-1/2 transform -translate-y-1/2 h-128 w-96">
+          <div
+            class="hidden lg:block absolute right-0 rtl:right-auto rtl:left-0 top-1/2 transform -translate-y-1/2 h-128 w-96">
             <div class="relative h-full">
               <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
                 src="solstice-assets/images/testimonials/woman-picture.png" alt="">
@@ -343,48 +309,45 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     <section id="features" class="bg-tresto-50 pt-24">
       <div class="container mx-auto px-4">
-        <h1 class="text-center text-4xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Découvrez les fonctionnalités') }}</h1>
-        <p class="text-center text-gray-600 mb-28">{{ __('Des fonctionnalités innovantes conçues pour améliorer l\'experience de vos clients') }}
+        <h1 class="text-center text-4xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-4">
+          {{ __('Découvrez les fonctionnalités') }}</h1>
+        <p class="text-center text-gray-600 mb-28">
+          {{ __('Des fonctionnalités innovantes conçues pour améliorer l\'experience de vos clients') }}
         </p>
         <div class="flex flex-wrap -mx-4">
           <div class="w-full md:w-1/2 lg:w-1/4 p-4">
             <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path d="M8.25 2V22H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2H8.25Z" fill="white">
-                </path>
-                <path
-                  d="M21.5 7.81V10.75H10.25V2.5H16.19C17.9106 2.5 19.2238 3.01093 20.1064 3.89355C20.9891 4.77618 21.5 6.08944 21.5 7.81Z"
-                  fill="white" stroke="white"></path>
-                <path d="M22 12.75V16.19C22 19.83 19.83 22 16.19 22H9.75V12.75H22Z" fill="white"></path>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="m8.1 13.34l2.83-2.83L3.91 3.5a4.01 4.01 0 0 0 0 5.66zm6.78-1.81c1.53.71 3.68.21 5.27-1.38c1.91-1.91 2.28-4.65.81-6.12c-1.46-1.46-4.2-1.1-6.12.81c-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88l1.41-1.41L13.41 13z"/></svg>
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Conception de menu personnalisable')}}</h2>
-              <p class="text-gray-600">{{ __("Adaptez votre menu en ligne à l'image de votre restaurant. Choisissez parmi une variété de modèles, de couleurs et de polices pour créer un menu qui reflète votre style unique.")}}</p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">
+                {{ __('Plus de 6 Designs de Menus') }}</h2>
+              <p class="text-gray-600">
+                {{ __("Choisissez parmi plus de 6 modèles de menus élégants et professionnels, adaptés à votre style et à l'image de votre restaurant.") }}
+              </p>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 p-4">
             <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path
-                  d="M12.6778 19.957C12.9525 20.0209 12.9777 20.3808 12.7101 20.47L11.1301 20.99C7.1601 22.27 5.0701 21.2 3.7801 17.23L2.5001 13.28C1.2201 9.30998 2.2801 7.20998 6.2501 5.92998L6.77409 5.75645C7.17696 5.62304 7.56902 6.0271 7.45463 6.43577C7.39793 6.63834 7.34338 6.84975 7.2901 7.06998L6.3101 11.26C5.2101 15.97 6.8201 18.57 11.5301 19.69L12.6778 19.957Z"
-                  fill="white"></path>
-                <path
-                  d="M15.3848 3.30658L15.3862 3.30691L17.0561 3.69687C17.0561 3.69688 17.0562 3.69689 17.0562 3.69691C19.103 4.17564 20.3117 4.89396 20.9288 5.88861C21.5459 6.88329 21.6519 8.28397 21.1731 10.3259L20.1931 14.5059L20.1929 14.5067C19.7831 16.2682 19.1919 17.4136 18.3998 18.0914C17.6247 18.7547 16.5808 19.0339 15.1078 18.8923L15.1078 18.8922L15.0998 18.8916C14.6302 18.854 14.1164 18.7689 13.5573 18.634L13.5557 18.6336L11.8757 18.2336L11.8754 18.2335C9.83814 17.7499 8.63095 17.0317 8.01343 16.0375C7.39626 15.0438 7.28815 13.6454 7.76674 11.6041L7.7668 11.6039L8.74664 7.41453C8.74667 7.4144 8.7467 7.41427 8.74673 7.41415C8.94185 6.585 9.17125 5.88463 9.44861 5.32067L9.44862 5.32067L9.45009 5.31764C9.99063 4.1996 10.6904 3.54259 11.5993 3.2289C12.5315 2.90719 13.7555 2.92119 15.3848 3.30658ZM15.7733 13.458L15.7733 13.458L15.775 13.4513C15.9411 12.7868 15.5425 12.1026 14.8611 11.9349L11.9532 11.1954L11.9512 11.1949C11.2895 11.0295 10.6034 11.4247 10.4349 12.0987C10.2695 12.7602 10.6643 13.4459 11.3377 13.6148C11.338 13.6149 11.3383 13.615 11.3387 13.6151L14.2467 14.3546L14.2727 14.3612L14.2992 14.365C14.3053 14.3659 14.3123 14.3669 14.3199 14.368C14.3752 14.3762 14.4677 14.39 14.5599 14.39C15.1202 14.39 15.6235 14.0236 15.7733 13.458ZM18.7033 10.078L18.7034 10.078L18.7057 10.0685C18.8673 9.40584 18.4816 8.71142 17.786 8.55361L12.9428 7.32535L12.9412 7.32494C12.2795 7.1595 11.5934 7.55473 11.4249 8.22874C11.2595 8.89019 11.6543 9.57598 12.3278 9.74486C12.3281 9.74493 12.3284 9.74501 12.3287 9.74508L17.177 10.9747L17.2028 10.9812L17.2292 10.985C17.2353 10.9859 17.2423 10.9869 17.2499 10.988C17.3052 10.9963 17.3977 11.01 17.4899 11.01C18.0501 11.01 18.5535 10.6436 18.7033 10.078Z"
-                  fill="white" stroke="white"></path>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
+                    <path d="M29.3332 29.3333H2.6665C2.11984 29.3333 1.6665 28.88 1.6665 28.3333C1.6665 27.7866 2.11984 27.3333 2.6665 27.3333H29.3332C29.8798 27.3333 30.3332 27.7866 30.3332 28.3333C30.3332 28.88 29.8798 29.3333 29.3332 29.3333Z" fill="white"></path>
+                    <path d="M18.5 28.8334H13.5V5.33335C13.5 4.6557 13.6406 4.1167 13.92 3.75652C14.1817 3.4193 14.6213 3.16669 15.4 3.16669H16.6C17.3787 3.16669 17.8183 3.4193 18.08 3.75652C18.3594 4.1167 18.5 4.6557 18.5 5.33335V28.8334Z" fill="white" stroke="white"></path>
+                    <path d="M4 13.3334V29.3334H9.33333V13.3334C9.33333 11.8667 8.8 10.6667 7.2 10.6667H6.13333C4.53333 10.6667 4 11.8667 4 13.3334Z" fill="white"></path>
+                    <path d="M22.6665 20V29.3333H27.9998V20C27.9998 18.5333 27.4665 17.3333 25.8665 17.3333H24.7998C23.1998 17.3333 22.6665 18.5333 22.6665 20Z" fill="white"></path>
+                  </svg>
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Mises à jour du menu en temps réel')}}</h2>
-              <p class="text-gray-600">{{ __("Mettez votre menu à jour instantanément depuis n'importe quel appareil. Ajoutez de nouveaux plats, modifiez les prix ou mettez en avant les plats du jour en quelques clics.")}}</p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">
+                {{ __('Réception des Commandes via WhatsApp et Website') }}</h2>
+              <p class="text-gray-600">
+                {{ __("Permettez à vos clients de passer des commandes directement via WhatsApp pour une expérience de commande encore plus conviviale.") }}
+              </p>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 p-4">
@@ -401,28 +364,24 @@
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Interface adaptée aux mobiles")}}</h2>
-              <p class="text-gray-600">{{ __("Veillez à ce que votre menu soit agréable à regarder sur n'importe quel appareil. Le design responsive de Tresto garantit une expérience de navigation transparente pour les clients sur smartphones, tablettes ou ordinateurs de bureau.")}} </p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Interface adaptée aux mobiles') }}
+              </h2>
+              <p class="text-gray-600">
+                {{ __("Veillez à ce que votre menu soit agréable à regarder sur n'importe quel appareil. Le design responsive de Tresto garantit une expérience de navigation transparente pour les clients sur smartphones, tablettes ou ordinateurs de bureau.") }}
+              </p>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 p-4">
             <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path
-                  d="M22 22H2C1.59 22 1.25 21.66 1.25 21.25C1.25 20.84 1.59 20.5 2 20.5H22C22.41 20.5 22.75 20.84 22.75 21.25C22.75 21.66 22.41 22 22 22Z"
-                  fill="white"></path>
-                <path
-                  d="M13.75 21.5H10.25V4C10.25 3.50568 10.3531 3.13335 10.5388 2.894C10.7067 2.67762 10.9963 2.5 11.55 2.5H12.45C13.0037 2.5 13.2933 2.67762 13.4612 2.894C13.6469 3.13335 13.75 3.50568 13.75 4V21.5Z"
-                  fill="white" stroke="white"></path>
-                <path d="M3 10V22H7V10C7 8.9 6.6 8 5.4 8H4.6C3.4 8 3 8.9 3 10Z" fill="white"></path>
-                <path d="M17 15V22H21V15C21 13.9 20.6 13 19.4 13H18.6C17.4 13 17 13.9 17 15Z" fill="white"></path>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M19 7c0-1.1-.9-2-2-2h-3v2h3v2.65L13.52 14H10V9H6c-2.21 0-4 1.79-4 4v3h2c0 1.66 1.34 3 3 3s3-1.34 3-3h4.48L19 10.35zM4 14v-1c0-1.1.9-2 2-2h2v3zm3 3c-.55 0-1-.45-1-1h2c0 .55-.45 1-1 1"/><path fill="white" d="M5 6h5v2H5zm14 7c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3m0 4c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1"/></svg>
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Commande en ligne intégrée")}} </h2>
-              <p class="text-gray-600">{{ ('Permettez aux clients de passer des commandes directement à partir de votre menu. Augmentez vos ventes en proposant des options de vente à emporter, de livraison ou de pré-commande, le tout intégré dans la plateforme.')}} </p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Gestion des Zones de Livraison et des Frais') }}
+              </h2>
+              <p class="text-gray-600">
+                {{ 'Définissez facilement les zones de livraison et ajustez les frais en fonction de chaque secteur pour une gestion optimale des livraisons.' }}
+              </p>
             </div>
           </div>
         </div>
@@ -435,77 +394,53 @@
         <div class="flex flex-wrap -mx-4">
           <div class="w-full md:w-1/2 lg:w-1/4 p-4">
             <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path d="M8.25 2V22H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2H8.25Z" fill="white">
-                </path>
-                <path
-                  d="M21.5 7.81V10.75H10.25V2.5H16.19C17.9106 2.5 19.2238 3.01093 20.1064 3.89355C20.9891 4.77618 21.5 6.08944 21.5 7.81Z"
-                  fill="white" stroke="white"></path>
-                <path d="M22 12.75V16.19C22 19.83 19.83 22 16.19 22H9.75V12.75H22Z" fill="white"></path>
-              </svg>
-            </div>
-             <div class="relative pl-4 rtl:pr-4">
-              <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Analytics") }}</h2>
-              <p class="text-gray-600">{{ __("Suivez les préférences des clients, les plats populaires et les tendances des ventes grâce aux analyses intégrées de Tresto. Utilisez ces informations pour optimiser votre menu et prendre des décisions basées sur des données.")}} </p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path
-                  d="M12.6778 19.957C12.9525 20.0209 12.9777 20.3808 12.7101 20.47L11.1301 20.99C7.1601 22.27 5.0701 21.2 3.7801 17.23L2.5001 13.28C1.2201 9.30998 2.2801 7.20998 6.2501 5.92998L6.77409 5.75645C7.17696 5.62304 7.56902 6.0271 7.45463 6.43577C7.39793 6.63834 7.34338 6.84975 7.2901 7.06998L6.3101 11.26C5.2101 15.97 6.8201 18.57 11.5301 19.69L12.6778 19.957Z"
-                  fill="white"></path>
-                <path
-                  d="M15.3848 3.30658L15.3862 3.30691L17.0561 3.69687C17.0561 3.69688 17.0562 3.69689 17.0562 3.69691C19.103 4.17564 20.3117 4.89396 20.9288 5.88861C21.5459 6.88329 21.6519 8.28397 21.1731 10.3259L20.1931 14.5059L20.1929 14.5067C19.7831 16.2682 19.1919 17.4136 18.3998 18.0914C17.6247 18.7547 16.5808 19.0339 15.1078 18.8923L15.1078 18.8922L15.0998 18.8916C14.6302 18.854 14.1164 18.7689 13.5573 18.634L13.5557 18.6336L11.8757 18.2336L11.8754 18.2335C9.83814 17.7499 8.63095 17.0317 8.01343 16.0375C7.39626 15.0438 7.28815 13.6454 7.76674 11.6041L7.7668 11.6039L8.74664 7.41453C8.74667 7.4144 8.7467 7.41427 8.74673 7.41415C8.94185 6.585 9.17125 5.88463 9.44861 5.32067L9.44862 5.32067L9.45009 5.31764C9.99063 4.1996 10.6904 3.54259 11.5993 3.2289C12.5315 2.90719 13.7555 2.92119 15.3848 3.30658ZM15.7733 13.458L15.7733 13.458L15.775 13.4513C15.9411 12.7868 15.5425 12.1026 14.8611 11.9349L11.9532 11.1954L11.9512 11.1949C11.2895 11.0295 10.6034 11.4247 10.4349 12.0987C10.2695 12.7602 10.6643 13.4459 11.3377 13.6148C11.338 13.6149 11.3383 13.615 11.3387 13.6151L14.2467 14.3546L14.2727 14.3612L14.2992 14.365C14.3053 14.3659 14.3123 14.3669 14.3199 14.368C14.3752 14.3762 14.4677 14.39 14.5599 14.39C15.1202 14.39 15.6235 14.0236 15.7733 13.458ZM18.7033 10.078L18.7034 10.078L18.7057 10.0685C18.8673 9.40584 18.4816 8.71142 17.786 8.55361L12.9428 7.32535L12.9412 7.32494C12.2795 7.1595 11.5934 7.55473 11.4249 8.22874C11.2595 8.89019 11.6543 9.57598 12.3278 9.74486C12.3281 9.74493 12.3284 9.74501 12.3287 9.74508L17.177 10.9747L17.2028 10.9812L17.2292 10.985C17.2353 10.9859 17.2423 10.9869 17.2499 10.988C17.3052 10.9963 17.3977 11.01 17.4899 11.01C18.0501 11.01 18.5535 10.6436 18.7033 10.078Z"
-                  fill="white" stroke="white"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z"/></svg>
               </svg>
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Support multilingue') }}</h2>
-              <p class="text-gray-600">{{ __("Répondez aux besoins d'une clientèle diversifiée en proposant votre menu en plusieurs langues. Tresto facilite la traduction et l'affichage de votre menu dans les langues parlées par vos clients.") }}</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path
-                  d="M16.25 3.56V4.01584L16.7039 4.05787C17.9607 4.17424 18.8396 4.60009 19.4285 5.22534C20.0186 5.8518 20.3659 6.72969 20.4607 7.83991C20.4603 7.84 20.4601 7.84 20.46 7.84H20.46H3.54161C3.54098 7.83968 3.54018 7.83919 3.53936 7.83853C3.63436 6.72896 3.98156 5.85155 4.57144 5.22534C5.16041 4.60009 6.0393 4.17424 7.29608 4.05787L7.74999 4.01584V3.56V2C7.74999 1.86614 7.86613 1.75 7.99999 1.75C8.13384 1.75 8.24999 1.86614 8.24999 2V3.5V4H8.74999H15.25H15.75V3.5V2C15.75 1.86614 15.8661 1.75 16 1.75C16.1338 1.75 16.25 1.86614 16.25 2V3.56Z"
-                  fill="white" stroke="white"></path>
-                <path
-                  d="M20 9.84003H4C3.45 9.84003 3 10.29 3 10.84V17C3 20 4.5 22 8 22H16C19.5 22 21 20 21 17V10.84C21 10.29 20.55 9.84003 20 9.84003ZM9.21 18.21C9.11 18.3 9 18.37 8.88 18.42C8.76 18.47 8.63 18.5 8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C8 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 8 16.63 8.12 16.58C8.36 16.48 8.64 16.48 8.88 16.58C9 16.63 9.11 16.7 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21ZM9.42 14.38C9.37 14.5 9.3 14.61 9.21 14.71C9.11 14.8 9 14.87 8.88 14.92C8.76 14.97 8.63 15 8.5 15C8.37 15 8.24 14.97 8.12 14.92C8 14.87 7.89 14.8 7.79 14.71C7.7 14.61 7.63 14.5 7.58 14.38C7.53 14.26 7.5 14.13 7.5 14C7.5 13.87 7.53 13.74 7.58 13.62C7.63 13.5 7.7 13.39 7.79 13.29C7.89 13.2 8 13.13 8.12 13.08C8.36 12.98 8.64 12.98 8.88 13.08C9 13.13 9.11 13.2 9.21 13.29C9.3 13.39 9.37 13.5 9.42 13.62C9.47 13.74 9.5 13.87 9.5 14C9.5 14.13 9.47 14.26 9.42 14.38ZM12.71 14.71C12.61 14.8 12.5 14.87 12.38 14.92C12.26 14.97 12.13 15 12 15C11.87 15 11.74 14.97 11.62 14.92C11.5 14.87 11.39 14.8 11.29 14.71C11.11 14.52 11 14.26 11 14C11 13.74 11.11 13.48 11.29 13.29C11.39 13.2 11.5 13.13 11.62 13.08C11.86 12.97 12.14 12.97 12.38 13.08C12.5 13.13 12.61 13.2 12.71 13.29C12.89 13.48 13 13.74 13 14C13 14.26 12.89 14.52 12.71 14.71Z"
-                  fill="white"></path>
-              </svg>
-            </div>
-            <div class="relative pl-4 rtl:pr-4">
-              <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Intégration des programmes de fidélisation:")}}</h2>
-              <p class="text-gray-600">{{ __("Récompensez vos clients et encouragez-les à revenir en intégrant des programmes de fidélisation directement dans votre menu. Offrez des réductions, des points ou des offres spéciales pour les inciter à revenir.") }}
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Rapports Détaillés sur les Visiteurs et les Ventes') }}</h2>
+              <p class="text-gray-600">
+                {{ __('Obtenez des analyses approfondies sur les visiteurs de votre menu en ligne et suivez vos ventes en temps réel pour optimiser vos opérations.') }}
               </p>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 p-4">
             <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path
-                  d="M22 22H2C1.59 22 1.25 21.66 1.25 21.25C1.25 20.84 1.59 20.5 2 20.5H22C22.41 20.5 22.75 20.84 22.75 21.25C22.75 21.66 22.41 22 22 22Z"
-                  fill="white"></path>
-                <path
-                  d="M13.75 21.5H10.25V4C10.25 3.50568 10.3531 3.13335 10.5388 2.894C10.7067 2.67762 10.9963 2.5 11.55 2.5H12.45C13.0037 2.5 13.2933 2.67762 13.4612 2.894C13.6469 3.13335 13.75 3.50568 13.75 4V21.5Z"
-                  fill="white" stroke="white"></path>
-                <path d="M3 10V22H7V10C7 8.9 6.6 8 5.4 8H4.6C3.4 8 3 8.9 3 10Z" fill="white"></path>
-                <path d="M17 15V22H21V15C21 13.9 20.6 13 19.4 13H18.6C17.4 13 17 13.9 17 15Z" fill="white"></path>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="m20 7l.94-2.06L23 4l-2.06-.94L20 1l-.94 2.06L17 4l2.06.94zM8.5 7l.94-2.06L11.5 4l-2.06-.94L8.5 1l-.94 2.06L5.5 4l2.06.94zM20 12.5l-.94 2.06l-2.06.94l2.06.94l.94 2.06l.94-2.06L23 15.5l-2.06-.94zm-2.29-3.38l-2.83-2.83c-.2-.19-.45-.29-.71-.29s-.51.1-.71.29L2.29 17.46a.996.996 0 0 0 0 1.41l2.83 2.83c.2.2.45.3.71.3s.51-.1.71-.29l11.17-11.17c.39-.39.39-1.03 0-1.42m-3.54-.7l1.41 1.41L14.41 11L13 9.59zM5.83 19.59l-1.41-1.41L11.59 11L13 12.41z"/></svg>
             </div>
             <div class="relative pl-4 rtl:pr-4">
               <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __("Voir les progrès. Réalisez davantage.") }}</h2>
-              <p class="text-gray-600"> {{ __("Suivez vos progrès quotidiens grâce aux statistiques et au tableau de bord. Obtenez des informations et restez motivé au fur et à mesure que votre entreprise se développe.") }} </p>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Gestion Simplifiée des Commandes') }}</h2>
+              <p class="text-gray-600">
+                {{ __("Gérez toutes vos commandes, qu'elles soient sur place, à emporter ou en livraison, depuis un seul tableau de bord intuitif.") }}
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M9.5 6.5v3h-3v-3zM11 5H5v6h6zm-1.5 9.5v3h-3v-3zM11 13H5v6h6zm6.5-6.5v3h-3v-3zM19 5h-6v6h6zm-6 8h1.5v1.5H13zm1.5 1.5H16V16h-1.5zM16 13h1.5v1.5H16zm-3 3h1.5v1.5H13zm1.5 1.5H16V19h-1.5zM16 16h1.5v1.5H16zm1.5-1.5H19V16h-1.5zm0 3H19V19h-1.5zM22 7h-2V4h-3V2h5zm0 15v-5h-2v3h-3v2zM2 22h5v-2H4v-3H2zM2 2v5h2V4h3V2z"/></svg>
+            </div>
+            <div class="relative pl-4 rtl:pr-4">
+              <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">
+                {{ __(' Génération de QR Codes') }}</h2>
+              <p class="text-gray-600">
+                {{ __("Créez facilement des QR codes personnalisés pour vos menus, permettant à vos clients d'accéder rapidement à vos plats.") }}
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.01 2.01 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55c.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75s-.75-.34-.75-.75s.34-.75.75-.75M19 19H5V5h14z"/></svg>
+            </div>
+            <div class="relative pl-4 rtl:pr-4">
+              <div class="absolute top-0 left-0 rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
+              <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">
+                {{ __('Gestion Simplifiée des Commandes') }}</h2>
+              <p class="text-gray-600">
+                {{ __("Gérez toutes vos commandes, qu'elles soient sur place, à emporter ou en livraison, depuis un seul tableau de bord intuitif.") }}
+              </p>
             </div>
           </div>
         </div>
@@ -542,11 +477,12 @@
                   stroke="#FFC96D" stroke-width="4" stroke-miterlimit="10"></path>
               </svg>
             </div> --}}
-            <h1 class="text-4xl lg:text-5xl mb-10 font-bold ltr:font-mono rtl:font-body text-center max-w-lg lg:max-w-3xl mx-auto">
+            <h1
+              class="text-4xl lg:text-5xl mb-10 font-bold ltr:font-mono rtl:font-body text-center max-w-lg lg:max-w-3xl mx-auto">
               {{ __("Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant") }}</h1>
             <div class="flex justify-center"><a
                 class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold ltr:font-mono rtl:font-body text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-                href="#">{{ __("Créez un compte GRATUIT maintenant !") }}</a></div>
+                href="#">{{ __('Créez un compte GRATUIT maintenant !') }}</a></div>
           </div>
         </div>
       </div>

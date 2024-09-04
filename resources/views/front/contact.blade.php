@@ -1,3 +1,6 @@
+@section('title', __('Contactez Tresto - Assistance et Support pour Gestion de Menus en Ligne'))
+@section('description', __("Contactez Tresto pour toute assistance ou question concernant la gestion de vos menus en ligne et commandes avec notre plateforme."))
+
 <x-layouts.front>
   <div class="">
 
@@ -8,8 +11,8 @@
       <div class="flex flex-wrap -mx-4">
         <div class="w-full lg:w-1/2 p-4">
           <div class="max-w-xl mx-auto">
-            <h1 class="text-3xl lg:text-5xl font-bold font-heading mb-4">Contact us</h1>
-            <p class="text-gray-600 mb-10">Submit your info and we’ll get back to you as soon as possible.</p>
+            <h1 class="text-3xl lg:text-5xl font-bold font-heading mb-4">{{ __("Contactez nous") }}</h1>
+            <p class="text-gray-600 mb-10">{{ __("Soumettez vos informations et nous vous contacterons dès que possible.") }}</p>
             <div class="mb-10 flex items-center gap-1">
               <div class="bg-tresto-200 rounded-3xl h-px w-3"></div>
               <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewbox="0 0 3 3"
@@ -38,17 +41,17 @@
                     fill="white"></path>
                 </svg>
               </div>
-              <h2 class="text-xl font-bold font-heading">Company HQ</h2>
+              <h2 class="text-xl font-bold font-heading">Technopek</h2>
             </div>
-            <p class="text-gray-600 mb-10">4140 Parker Rd. Allentown,New Mexico 31134</p>
+            <p class="text-gray-600 mb-10">Appt3, 1ère étage Imm109 Abdellah Genoun, Hay Essalam, Agadir 80000, Maroc</p>
             <div class="rounded-3xl border border-gray-100 shadow-sm py-8">
               <div class="relative">
                 <div class="absolute top-0 left-0 bg-tresto-500 w-1 h-8"></div>
                 <div class="px-8">
-                  <h2 class="text-xl font-bold font-heading mb-6">Technical Help desk</h2>
+                  <h2 class="text-xl font-bold font-heading mb-6">{{ __("Notre équipe est disponible par téléphon & WhatsApp")}}</h2>
                   <a class="w-full sm:w-auto h-12 py-3 px-5 rounded-full bg-tresto-600 border border-tresto-700 hover:bg-tresto-800 focus:ring focus:ring-tresto-800 transition duration-200 inline-flex items-center justify-center gap-2"
-                    href="#">
-                    <span class="text-white text-sm font-semibold">Visit FAQ Center</span>
+                    href="tel:+212664645348">
+                    <span class="text-white text-sm font-semibold">+212 6 64 64 53 48</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                       fill="none">
                       <path d="M5 10H15.4167M15.4167 10L10.4167 5M15.4167 10L10.4167 15" stroke="white"
@@ -63,37 +66,37 @@
         <div class="w-full lg:w-1/2 p-4">
           <form action="">
             <div class="border border-gray-100 rounded-3xl p-6 max-w-xl mx-auto">
-              <h2 class="text-3xl text-center font-bold font-heading mb-4">Get in touch</h2>
-              <p class="text-center text-gray-600 mb-16">Fill out the form to connect with a member of our team.</p>
+              <h2 class="text-3xl text-center font-bold font-heading mb-4">{{ __("Prendre contact") }}</h2>
+              <p class="text-center text-gray-600 mb-16">{{ __('Fill out the form to connect with a member of our team.') }}</p>
               <div class="flex flex-wrap -mx-4">
                 <div class="w-full lg:w-1/2 p-4">
-                  <label class="text-sm font-medium mb-2 block" for="textInput1">First name</label>
+                  <label class="text-sm font-medium mb-2 block" for="textInput1">{{ __("Prénom")}}</label>
                   <input
                     class="w-full rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
-                    id="textInput1" type="text" placeholder="First name">
+                    id="textInput1" type="text" placeholder="{{ __("Prénom") }}">
                 </div>
                 <div class="w-full lg:w-1/2 p-4">
-                  <label class="text-sm font-medium mb-2 block" for="textInput2">Last name</label>
+                  <label class="text-sm font-medium mb-2 block" for="textInput2">{{ __("Nom") }}</label>
                   <input
                     class="w-full rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
-                    id="textInput2" type="text" placeholder="Last name">
+                    id="textInput2" type="text" placeholder="{{ __("Nom")}}">
                 </div>
               </div>
-              <label class="text-sm font-medium mb-2 block" for="textInput3">Email</label>
+              <label class="text-sm font-medium mb-2 block" for="textInput3">{{ __("Email") }}</label>
               <input
                 class="w-full mb-4 rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
                 id="textInput3" type="text" placeholder="john@email.com">
-              <label class="text-sm font-medium mb-2 block" for="textInput4">Message</label>
+              <label class="text-sm font-medium mb-2 block" for="textInput4">{{ __("Message") }}</label>
               <textarea
                 class="resize-none w-full rounded-3xl p-4 mb-8 outline-none border border-gray-100 placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
-                id="textInput4" rows="5" placeholder="Enter your message"></textarea>
+                id="textInput4" rows="5" placeholder="{{ __("Enter your message")}}"></textarea>
               <button
                 class="py-4 px-6 rounded-full w-full h-14 inline-flex items-center justify-center text-center mb-8 bg-tresto-500 border border-tresto-600 font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-                type="submit">Submit</button>
+                type="submit">{{ __("Submit") }}</button>
               <p class="text-gray-500 text-sm">
-                <span>We process your information in accordance with our</span>
+                <span>{{("Nous traitons vos informations conformément à notre")}}</span>
                 <span></span>
-                <span class="text-tresto-500 text-sm font-semibold">Privacy Policy</span>
+                <span class="text-sm font-semibold">{{ __("politique de confidentialité")}}</span>
               </p>
             </div>
           </form>
@@ -106,67 +109,106 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="w-full lg:w-1/3 p-4">
-          <h1 class="text-4xl lg:text-5xl font-bold font-heading mb-6">FAQ</h1>
+          <h1 class="text-4xl lg:text-5xl font-bold font-heading mb-6">{{ __("FAQ")}}</h1>
           <p class="text-xl font-bold font-heading max-w-xs">
-            <span>Still have more questions? Visit our</span>
+            <span>{{ __("Vous avez encore des questions ?") }}</span>
+            {{-- <span></span>
+            <a class="text-tresto-500 hover:underline" href="#">{{ __("help center") }}</a>
             <span></span>
-            <a class="text-tresto-500 hover:underline" href="#">help center</a>
-            <span></span>
-            <span>to get in touch.</span>
+            <span>{{ __("to get in touch.") }}</span> --}}
           </p>
         </div>
         <div class="w-full lg:w-2/3 p-4">
-          <div class="bg-white rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 class="text-lg font-bold font-heading">What is Solstice? What is it for?</h2>
-            <a class="hover:text-opacity-70 transition duration-200 w-6 h-6" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 class="text-lg font-bold font-heading">What steps do I need to take to join?</h2>
-            <a class="hover:text-opacity-70 transition duration-200 w-6 h-6" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 class="text-lg font-bold font-heading">Do you facilitate any regular events or offer rooms for group
-              discussions?</h2>
-            <a class="hover:text-opacity-70 transition duration-200 w-6 h-6" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 class="text-lg font-bold font-heading">Is there a particular subject I should focus on learning?</h2>
-            <a class="hover:text-opacity-70 transition duration-200 w-6 h-6" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white rounded-3xl p-6 flex items-center justify-between gap-6">
-            <h2 class="text-lg font-bold font-heading">Can I make it a fun group study session by inviting my buddies?
-            </h2>
-            <a class="hover:text-opacity-70 transition duration-200 w-6 h-6" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                fill="none">
-                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </a>
+          <div class="space-y-4">
+            <details class="group [&_summary::-webkit-details-marker]:hidden bg-white rounded-3xl">
+              <summary
+                class="flex cursor-pointer items-center justify-between gap-1.5 rounded-3xl bg-white text-black p-6"
+              >
+                <h2 class="text-lg font-bold font-heading">{{ __("Est-ce que je peux personnaliser l'apparence de mon menu en ligne ?") }} </h2>
+          
+                <svg
+                  class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+          
+              <p class="p-6 leading-relaxed text-gray-700">
+                {{ __("Tout à fait. Vous avez la possibilité de choisir parmi plus de 6 designs de menus et de personnaliser les couleurs, les polices et la mise en page pour refléter l'identité de votre restaurant.") }}
+              </p>
+            </details>
+          
+            <details class="group [&_summary::-webkit-details-marker]:hidden bg-white rounded-3xl">
+              <summary
+                class="flex cursor-pointer items-center justify-between gap-1.5 rounded-3xl bg-white text-black p-6"
+              >
+                <h2 class="text-lg font-bold font-heading">{{ __(" Combien de temps faut-il pour configurer mon menu en ligne ?") }} </h2>
+          
+                <svg
+                  class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+          
+              <p class="p-6 leading-relaxed text-gray-700">
+                {{ __("La configuration de votre menu en ligne est rapide et simple. En quelques clics, vous pouvez ajouter des articles, télécharger des images, et ajuster les prix. La plupart des utilisateurs peuvent configurer leur menu en moins de 30 minutes.") }}
+              </p>
+            </details>
+
+            <details class="group [&_summary::-webkit-details-marker]:hidden bg-white rounded-3xl">
+              <summary
+                class="flex cursor-pointer items-center justify-between gap-1.5 rounded-3xl bg-white text-black p-6"
+              >
+                <h2 class="text-lg font-bold font-heading">{{ __("Comment la plateforme facilite-t-elle la gestion des commandes ?") }} </h2>
+          
+                <svg
+                  class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+          
+              <p class="p-6 leading-relaxed text-gray-700">
+                {{ __("Notre tableau de bord centralisé regroupe toutes les commandes en un seul endroit, ce qui simplifie leur suivi et leur gestion. Vous pouvez visualiser les commandes en cours, traiter les paiements, et gérer les livraisons sans effort.") }}
+              </p>
+            </details>
+
+            <details class="group [&_summary::-webkit-details-marker]:hidden bg-white rounded-3xl">
+              <summary
+                class="flex cursor-pointer items-center justify-between gap-1.5 rounded-3xl bg-white text-black p-6"
+              >
+                <h2 class="text-lg font-bold font-heading">{{ __("Puis-je accéder à la plateforme depuis n'importe quel appareil ?") }} </h2>
+          
+                <svg
+                  class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+          
+              <p class="p-6 leading-relaxed text-gray-700">
+                {{ __("Oui, Tresto est accessible depuis n'importe quel appareil avec une connexion internet, que ce soit un ordinateur, une tablette ou un smartphone. Vous pouvez gérer votre restaurant en toute simplicité, où que vous soyez.") }}
+              </p>
+            </details>
+
+            
           </div>
         </div>
       </div>
@@ -189,7 +231,7 @@
           <img class="h-16 sm:h-20 md:h-auto" src="solstice-assets/images/cta/men-picture2.png" alt="">
         </div>
         <div class="relative z-10">
-          <div class="flex justify-center mb-6">
+          {{-- <div class="flex justify-center mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" width="68" height="34" viewbox="0 0 68 34"
               fill="none">
               <path
@@ -202,12 +244,11 @@
                 d="M16.1339 34C16.1339 29.2617 18.0162 24.7174 21.3667 21.3669C24.7173 18.0163 29.2616 16.134 33.9999 16.134C38.7383 16.134 43.2826 18.0163 46.6331 21.3669C49.9836 24.7174 51.8659 29.2617 51.8659 34"
                 stroke="#FFC96D" stroke-width="4" stroke-miterlimit="10"></path>
             </svg>
-          </div>
-          <h1 class="text-4xl lg:text-5xl mb-10 font-bold font-heading text-center max-w-lg lg:max-w-3xl mx-auto">What
-            are you waiting for?Join now and learn together!</h1>
+          </div> --}}
+          <h1 class="text-4xl lg:text-5xl mb-10 font-bold font-heading text-center max-w-lg lg:max-w-3xl mx-auto">{{ __("Rejoignez-nous et améliorer l'efficacité de votre restaurant.") }}</h1>
           <div class="flex justify-center"><a
               class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-              href="#">Sign Up Now</a></div>
+              href="#">{{ __(" Crée un compte gratuitement !") }}</a></div>
         </div>
       </div>
     </div>

@@ -146,6 +146,7 @@ module.exports = {
                         "64": "16rem",
                         "72": "18rem",
                         "80": "20rem",
+                        "88": "22rem",
                         "96": "24rem",
                         "112": "28rem",
                         "128": "32rem",
@@ -168,7 +169,8 @@ module.exports = {
                         "pulseTextGreen": "pulseTextGreen 10s ease-in-out infinite",
                         "showLine": "showLine 5s linear infinite",
                         "searchInput": "showSearchInput 1s linear",
-                        "fill": "animFill 500ms linear both"
+                        "fill": "animFill 500ms linear both",
+                        "float": 'float 3s ease-in-out infinite',
                     },
                     "backdropBlur": {
                         "none": "none",
@@ -285,7 +287,8 @@ module.exports = {
                         "lg": "0px 8px 8px -4px rgba(83, 0, 49, 0.02), 0px 20px 24px -4px rgba(83, 0, 49, 0.04)",
                         "xl": "0px 24px 48px -12px rgba(83, 0, 49, 0.06)",
                         "2xl": "0px 32px 64px -12px rgba(83, 0, 49, 0.08)",
-                        "none": "none"
+                        "none": "none",
+                        "custom": "0 8px 16px rgba(0, 0, 0, 0.3)",
                     },
                     "caretColor": (theme) => theme('colors'),
                     "contrast": {
@@ -640,7 +643,11 @@ module.exports = {
                                 "transform": "none",
                                 "animationTimingFunction": "cubic-bezier(0,0,0.2,1)"
                             }
-                        }
+                        },
+                        "float": {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                          }
                     },
                     "letterSpacing": {
                         "10xl": "-4.8px",
