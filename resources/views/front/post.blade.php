@@ -21,7 +21,7 @@
       <div class="relative z-10">
         <div class="container mx-auto px-4">
           <div class="flex justify-center">
-            <a class="group mb-12 flex rtl:flex-row-reverse items-center gap-2 flex-wrap" href="{{route('blog')}}">
+            <a class="group mb-12 flex rtl:flex-row-reverse items-center gap-2 flex-wrap" href="{{route('blog', ['locale' => app()->getLocale()])}}">
               <div class="text-white group-hover:text-opacity-80 transition duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
                   <path d="M15.4167 10H5M5 10L10 5M5 10L10 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -31,12 +31,12 @@
             </a>
           </div>
           <h1 class="text-center text-white text-3xl lg:text-5xl font-bold mb-12 max-w-xl lg:max-w-3xl mx-auto">The Art and Science of Design Development: Crafting Digital Experiences</h1>
-          <img class="w-full rounded-2xl mb-12" src="solstice-assets/images/blog/post-picture.png" alt="">
+          <img class="w-full rounded-2xl mb-12" src="{{asset('solstice-assets/images/blog/post-picture.png')}}" alt="">
           <div class="px-8 lg:px-24">
             <div class="w-full h-px bg-gray-200"></div>
             <div class="flex items-center justify-between flex-wrap gap-4 py-5">
               <div class="flex items-center gap-4 flex-wrap">
-                <img src="solstice-assets/images/blog/avatar1.png" alt="">
+                <img src="{{asset('solstice-assets/images/blog/avatar1.png')}}" alt="">
                 <div>
                   <p class="text-lg font-semibold">John Doe</p>
                   <span class="text-gray-500 font-medium">Content Writer, Solstice</span>

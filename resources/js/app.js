@@ -5,7 +5,6 @@ Livewire.start()
 
 // Burger menus
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('hello')
   // open
   const burger = document.querySelectorAll('.navbar-burger');
   const menu = document.querySelectorAll('.navbar-menu');

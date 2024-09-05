@@ -14,7 +14,11 @@
         <p class="uppercase text-tresto-500 text-center text-sm font-bold font-heading mb-4">{{ __('FEATURES') }}</p>
         <h1 class="text-center text-4xl lg:text-5xl font-bold font-heading mb-24">{{ __("Fonctionnalités Spéciales de Tresto") }}</h1>
         <div class="flex flex-wrap -mx-4">
-          <div class="w-full lg:w-1/2 px-4">
+          <div  data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
                 <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
@@ -28,7 +32,11 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2 px-4">
+          <div  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 border-l border-dashed border-gray-100 lg:border-transparent">
                 <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
@@ -42,7 +50,11 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2 px-4">
+          <div  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 border-l border-dashed border-gray-100">
                 <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
@@ -56,7 +68,11 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2 px-4">
+          <div data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
                 <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
@@ -75,7 +91,11 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2 px-4">
+          <div  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="400"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
                 <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
@@ -89,7 +109,11 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2 px-4">
+          <div  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
                 <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
@@ -114,10 +138,20 @@
               
     <section class="py-24 bg-tresto-50">
       <div class="container mx-auto px-4">
-        <h1 class="text-center text-3xl lg:text-5xl font-bold font-heading mb-4">{{ __("Comment ça marche?")}}</h1>
-        <p class="text-center text-gray-600 mb-20">{{ __("Quelles sont les étapes à suivre pour adhérer ?") }}</p>
+        <div  data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
+          <h1 class="text-center text-3xl lg:text-5xl font-bold font-heading mb-4">{{ __("Comment ça marche?")}}</h1>
+          <p class="text-center text-gray-600 mb-20">{{ __("Quelles sont les étapes à suivre pour adhérer ?") }}</p>
+        </div>
         <div class="flex flex-wrap -mx-4">
-          <div class="w-full lg:w-1/3 p-4">
+          <div data-aos="fade-up"
+          data-aos-offset="150"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/3 p-4">
             <div class="border border-tresto-500 bg-white rounded-3xl px-4 lg:px-10 py-6 lg:py-12 relative overflow-hidden h-full max-w-md mx-auto">
               <div class="py-1 px-2 rounded-lg bg-tresto-500 inline-flex items-center gap-2 mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -143,7 +177,11 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/3 p-4">
+          <div data-aos="fade-up"
+          data-aos-offset="150"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/3 p-4">
             <div class="border border-tresto-500 bg-white rounded-3xl px-4 lg:px-10 py-6 lg:py-12 relative overflow-hidden h-full max-w-md mx-auto">
               <div class="py-1 px-2 rounded-lg bg-tresto-500 inline-flex items-center gap-2 mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -168,7 +206,11 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/3 p-4">
+          <div data-aos="fade-up"
+          data-aos-offset="150"
+          data-aos-delay="400"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/3 p-4">
             <div class="border border-tresto-500 bg-white rounded-3xl px-4 lg:px-10 py-6 lg:py-12 relative overflow-hidden h-full max-w-md mx-auto">
               <div class="py-1 px-2 rounded-lg bg-tresto-500 inline-flex items-center gap-2 mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">

@@ -3,8 +3,8 @@
     <div class="bg-tresto-700 rounded-t-3xl pt-10 pb-36 px-10">
       <div class="flex justify-between flex-wrap gap-8">
         <div>
-          <a href="{{route('home')}}">
-            <img class="mb-6 h-12" src="images/logo-04.png" alt="">
+          <a href="{{route('home', ['locale' => app()->getLocale()])}}">
+            <img class="mb-6 h-12" src="{{asset("images/logo-04.png")}}" alt="">
           </a>
           <p class="text-tresto-100 text-sm max-w-96 pb-3">{{__("Créez des menus en ligne, gérez vos commandes et générez des QR codes pour simplifier la gestion de votre restaurant.")}}</p>
           <p class="text-tresto-200 text-sm"> {{ __("© 2024 Tresto. All rights reserved.")}} </p>
@@ -12,13 +12,13 @@
         <div class="flex flex-wrap gap-8 -mx-4">
           <ul class="flex flex-col gap-6 p-4">
             <li class="text-white font-medium">{{ __("Platform")}}</li>
-            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('home')}}">{{ __("Accueil")}}</a>
+            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('home', ['locale' => app()->getLocale()])}}">{{ __("Accueil")}}</a>
             </li>
-            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('features')}}">{{ __("Features")}}</a>
+            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('features', ['locale' => app()->getLocale()])}}">{{ __("Features")}}</a>
             </li>
-            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{config('app.url')}}#pricing">{{ __("Tarifs")}}</a>
+            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('home', ['locale' => app()->getLocale()])}}#pricing">{{ __("Tarifs")}}</a>
             </li>
-            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('blog')}}">{{ __("Blog")}}</a>
+            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('home', ['locale' => app()->getLocale()])}}">{{ __("Blog")}}</a>
             </li>
             {{-- <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Events</a></li> --}}
           </ul>

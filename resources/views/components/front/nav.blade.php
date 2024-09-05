@@ -2,26 +2,28 @@
   <div class="border-b border-tresto-500">
     <div class="container px-4 mx-auto">
       <div class="flex items-center justify-between py-6">
-        <a href="{{ route('home') }}">
-          <img src="images/logo-04.png" alt="" class="h-8">
+        <a href="{{ route('home', ['locale' => app()->getLocale()]) }}">
+          <img src="{{asset('images/logo-04.png')}}" alt="" class="h-8">
         </a>
         <ul class="hidden lg:flex items-center gap-8">
           <li>
-            <a class="flex items-center flex-wrap gap-2 group" href="{{ route('home') }}">
+            <a class="flex items-center flex-wrap gap-2 group"
+              href="{{ route('home', ['locale' => app()->getLocale()]) }}">
               <span class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Accueil') }}</span>
             </a>
           </li>
           <li class="text-white hover:text-opacity-70 transition duration-200"><a
-              href="{{ route('features') }}">{{ __('Features') }}</a></li>
+              href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Features') }}</a></li>
           <li class="text-white hover:text-opacity-70 transition duration-200"><a
-              href="{{ route('home') }}#pricing">{{ __('Tarifs') }}</a></li>
+              href="{{ route('home', ['locale' => app()->getLocale()]) }}#pricing">{{ __('Tarifs') }}</a></li>
           <li>
-            <a class="flex items-center flex-wrap gap-2 group" href="{{ route('contact') }}">
+            <a class="flex items-center flex-wrap gap-2 group"
+              href="{{ route('contact', ['locale' => app()->getLocale()]) }}">
               <span class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>
-
             </a>
           </li>
-          <li class="text-white hover:text-opacity-70 transition duration-200"><a href="{{ route('blog') }}">{{ __('Blog') }}</a>
+          <li class="text-white hover:text-opacity-70 transition duration-200"><a
+              href="{{ route('blog', ['locale' => app()->getLocale()]) }}">{{ __('Blog') }}</a>
           </li>
         </ul>
         <div class="flex gap-3 items-center">
@@ -48,20 +50,24 @@
               class="origin-top-right absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
               role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
               <div class="py-1" role="none">
-                <a href="{{ route('change.language', 'ar') }}"
+                <a href="{{ route(Route::currentRouteName(), ['locale' => 'ar'] + request()->route()->parameters()) }}"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem">{{ __('Arabic') }}</a>
-                <a href="{{ route('change.language', 'fr') }}"
+                <a href="{{ route(Route::currentRouteName(), ['locale' => 'fr'] + request()->route()->parameters()) }}"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem">{{ __('French') }}</a>
-                <a href="{{ route('change.language', 'en') }}"
+                <a href="{{ route(Route::currentRouteName(), ['locale' => 'en'] + request()->route()->parameters()) }}"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem">{{ __('English') }}</a>
               </div>
             </div>
           </div>
-          <a class="hidden lg:block py-3 px-5 rounded-full bg-tresto-900 border border-tresto-700 shadow text-sm font-semibold text-white hover:bg-tresto-800 focus:ring focus:ring-tresto-800 transition duration-200"
-            href="/register">{{ __('Get Started') }}</a>
+          <div class="flex gap-3 items-center">
+            <a class="hidden lg:block py-3 px-5 rounded-full bg-tresto-900 border border-tresto-700 shadow text-sm font-semibold text-white hover:bg-tresto-800 focus:ring focus:ring-tresto-800 transition duration-200"
+              href="#">{{ __('Connexion') }}</a>
+            <a class="hidden lg:block py-3 px-5 rounded-full bg-secondary border border-secondary shadow text-sm font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
+              href="#">{{ __("s'inscrire") }}</a>
+          </div>
         </div>
         <div class="lg:hidden">
           <a href="#">
@@ -94,18 +100,23 @@
       </div>
       <ul class="flex flex-col gap-12 py-12">
         <li>
-          <a class="flex items-center flex-wrap gap-2 group" href="/">
+          <a class="flex items-center flex-wrap gap-2 group"
+            href="{{ route('home', ['locale' => app()->getLocale()]) }}">
             <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Accueil') }}</span>
           </a>
         </li>
-        <li class="hover:text-opacity-70 transition duration-200"><a href="{{ route('features') }}">{{ __('Features') }}</a></li>
-        <li class="hover:text-opacity-70 transition duration-200"><a href="{{route('home')}}#pricing">{{ __('Tarifs') }}</a></li>
+        <li class="hover:text-opacity-70 transition duration-200"><a
+            href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Features') }}</a></li>
+        <li class="hover:text-opacity-70 transition duration-200"><a
+            href="{{ route('home', ['locale' => app()->getLocale()]) }}#pricing"> {{ _('Tarifs') }} </a></li>
         <li>
-          <a class="flex items-center flex-wrap gap-2 group" href="{{ route('contact') }}">
+          <a class="flex items-center flex-wrap gap-2 group"
+            href="{{ route('contact', ['locale' => app()->getLocale()]) }}">
             <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>
           </a>
         </li>
-        <li class="hover:text-opacity-70 transition duration-200"><a href="{{ route('blog') }}">{{ __('Blog') }}</a></li>
+        <li class="hover:text-opacity-70 transition duration-200"><a
+            href="{{ route('blog', ['locale' => app()->getLocale()]) }}">{{ __('Blog') }}</a></li>
 
       </ul>
       <div>

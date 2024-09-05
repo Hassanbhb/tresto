@@ -29,7 +29,7 @@
       </div>
       <div class="container px-4 mx-auto">
         <a class="bg-white border border-gray-100 hover:border-tresto-500 transition duration-200 shadow rounded-3xl transform -translate-y-1/2 flex flex-wrap"
-          href="{{ route('post') }}">
+          href="{{ route('post', ['locale' => app()->getLocale()]) }}">
           <div class="w-full lg:w-1/2 px-8 lg:px-16 py-8">
             <div class="flex flex-col justify-center items-start h-full">
               <div class="py-1 px-3 rounded-md border border-gray-100 mb-4 text-sm font-medium text-gray-700">
@@ -49,7 +49,7 @@
             <div class="relative" style="height: 396px;">
               <img
                 class="absolute inset-0 w-full h-full object-cover lg:rounded-tl-3xl lg:rounded-tr-3xl rounded-br-3xl rounded-bl-3xl"
-                src="solstice-assets/images/blog/picture-large.png" alt="">
+                src="{{asset('solstice-assets/images/blog/picture-large.png')}}" alt="">
             </div>
           </div>
         </a>
@@ -82,7 +82,7 @@
                     </svg>
                   </div>
                   <img class="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
-                    src="solstice-assets/images/blog/picture1.png" alt="">
+                    src="{{asset("solstice-assets/images/blog/picture1.png")}}" alt="">
                 </div>
                 <div class="p-6">
                   <div
@@ -125,7 +125,7 @@
                     </svg>
                   </div>
                   <img class="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
-                    src="solstice-assets/images/blog/picture2.png" alt="">
+                    src="{{asset("solstice-assets/images/blog/picture2.png")}}" alt="">
                 </div>
                 <div class="p-6">
                   <div
@@ -168,7 +168,7 @@
                     </svg>
                   </div>
                   <img class="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
-                    src="solstice-assets/images/blog/picture3.png" alt="">
+                    src="{{asset("solstice-assets/images/blog/picture3.png")}}" alt="">
                 </div>
                 <div class="p-6">
                   <div
@@ -213,9 +213,9 @@
                   <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-900 w-full h-full rounded-t-2xl">
                     <div class="flex items-center justify-center gap-4 h-full">
-                      <img src="solstice-assets/images/logos/solstice-logo-light.svg" alt="">
+                      <img src="{{asset("solstice-assets/images/logos/solstice-logo-light.svg")}}" alt="">
                       <span class="font-medium text-white text-opacity-50">+</span>
-                      <img src="solstice-assets/images/logos/zoom-logo.png" alt="">
+                      <img src="{{asset("solstice-assets/images/logos/zoom-logo.png")}}" alt="">
                     </div>
                   </div>
                 </div>
@@ -262,7 +262,7 @@
                   <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black w-full h-full rounded-t-2xl">
                     <div class="flex items-center justify-center gap-4 h-full">
-                      <img src="solstice-assets/images/logos/solstice-logo-light.svg" alt="">
+                      <img src="{{asset("solstice-assets/images/logos/solstice-logo-light.svg")}}" alt="">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"
                         fill="none">
                         <g clip-path="url(#clip0_185_6392)">
@@ -277,7 +277,7 @@
                           </clippath>
                         </defs>
                       </svg>
-                      <img src="solstice-assets/images/logos/udemy-logo.png" alt="">
+                      <img src="{{asset("solstice-assets/images/logos/udemy-logo.png")}}" alt="">
                     </div>
                   </div>
                 </div>
@@ -322,7 +322,7 @@
                     </svg>
                   </div>
                   <img class="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
-                    src="solstice-assets/images/blog/picture4.png" alt="">
+                    src="{{asset("solstice-assets/images/blog/picture4.png")}}" alt="">
                 </div>
                 <div class="p-6">
                   <div
@@ -383,16 +383,16 @@
       <div class="container mx-auto px-4">
         <div class="py-28 relative">
           <div class="hidden sm:block absolute top-6 left-0 bg-tresto-600 rounded-xl px-6 pt-4">
-            <img class="h-16 sm:h-20 md:h-auto" src="solstice-assets/images/cta/men-picture1.png" alt="">
+            <img class="h-16 sm:h-20 md:h-auto" src="{{asset("solstice-assets/images/cta/men-picture1.png")}}" alt="">
           </div>
           <div class="absolute top-0 right-0 bg-purple-900 rounded-xl px-6 pt-4">
-            <img class="h-16 sm:h-24 md:h-auto" src="solstice-assets/images/cta/woman-picture1.png" alt="">
+            <img class="h-16 sm:h-24 md:h-auto" src="{{asset("solstice-assets/images/cta/woman-picture1.png")}}" alt="">
           </div>
           <div class="absolute bottom-0 left-0 sm:left-24 bg-tresto-300 rounded-xl px-6 pt-4">
-            <img class="h-16 sm:h-24 md:h-auto" src="solstice-assets/images/cta/woman-picture2.png" alt="">
+            <img class="h-16 sm:h-24 md:h-auto" src="{{asset("solstice-assets/images/cta/woman-picture2.png")}}" alt="">
           </div>
           <div class="hidden sm:block absolute bottom-0 right-0 sm:right-24 bg-tresto-100 rounded-xl px-6 pt-4">
-            <img class="h-16 sm:h-20 md:h-auto" src="solstice-assets/images/cta/men-picture2.png" alt="">
+            <img class="h-16 sm:h-20 md:h-auto" src="{{asset("solstice-assets/images/cta/men-picture2.png")}}" alt="">
           </div>
           <div class="relative z-10">
             {{-- <div class="flex justify-center mb-6">
