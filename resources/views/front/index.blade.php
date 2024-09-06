@@ -1,5 +1,6 @@
 @section('title', __('Tresto - Plateforme pour Gestion de Menus en Ligne'))
-@section('description', __('Créez des menus en ligne, gérez vos commandes et générez des QR codes pour simplifier la
+@section('description',
+  __('Créez des menus en ligne, gérez vos commandes et générez des QR codes pour simplifier la
   gestion de votre restaurant.'))
 
   <x-layouts.front>
@@ -7,134 +8,157 @@
       <x-front.nav />
 
       <div x-data="{
-        slides: [1, 2, 3],
-        currentSlide: 0,
-        slideCount: 3,
-        interval: null,
-        isRTL: document.documentElement.dir === 'rtl',
-        startAutoSlide() {
-          this.interval = setInterval(() => {
-            this.nextSlide();
-          }, 5000); // Change slide every 5 seconds
-        },
-        nextSlide() {
-          console.log(this.currentSlide, this.slideCount);
-          if (this.currentSlide === this.slideCount) {
-            // If it's the last slide, reset to first slide without animation
-            this.$refs.slides.classList.remove('transition-transform', 'duration-500');
-            this.currentSlide = 0;
-            this.updateSlidePosition();
-            
-            // Add transition back for the rest of the slides
-            setTimeout(() => {
-              this.$refs.slides.classList.add('transition-transform', 'duration-500');
-            }, 50); // Small timeout to ensure the jump happens instantly
-          } else {
-            this.currentSlide++;
-            this.updateSlidePosition();
-          }
-        },
-        prevSlide() {
-          if (this.currentSlide === 0) {
-            // If we're at the first slide, jump to the cloned last slide without animation
-            this.$refs.slides.classList.remove('transition-transform', 'duration-500');
-            this.currentSlide = this.slideCount;
-            this.updateSlidePosition();
-            
-            // Add transition back for the rest of the slides
-            setTimeout(() => {
-              this.$refs.slides.classList.add('transition-transform', 'duration-500');
-            }, 50);
-          } else {
-            this.currentSlide--;
-            this.updateSlidePosition();
-          }
-        },
-        goToSlide(index) {
-          this.currentSlide = index;
-          this.updateSlidePosition();
-        },
-        updateSlidePosition() {
-          {{-- const direction = this.isRTL ? -1 : 1; --}}
-          this.$refs.slides.style.transform = `translateX(-${this.currentSlide * 100}%)`
-        },
-        
+          slides: [1, 2, 3],
+          currentSlide: 0,
+          slideCount: 3,
+          interval: null,
+          isRTL: document.documentElement.dir === 'rtl',
+          startAutoSlide() {
+              this.interval = setInterval(() => {
+                  this.nextSlide();
+              }, 5000); // Change slide every 5 seconds
+          },
+          nextSlide() {
+              console.log(this.currentSlide, this.slideCount);
+              if (this.currentSlide === this.slideCount) {
+                  // If it's the last slide, reset to first slide without animation
+                  this.$refs.slides.classList.remove('transition-transform', 'duration-500');
+                  this.currentSlide = 0;
+                  this.updateSlidePosition();
+      
+                  // Add transition back for the rest of the slides
+                  setTimeout(() => {
+                      this.$refs.slides.classList.add('transition-transform', 'duration-500');
+                  }, 50); // Small timeout to ensure the jump happens instantly
+              } else {
+                  this.currentSlide++;
+                  this.updateSlidePosition();
+              }
+          },
+          prevSlide() {
+              if (this.currentSlide === 0) {
+                  // If we're at the first slide, jump to the cloned last slide without animation
+                  this.$refs.slides.classList.remove('transition-transform', 'duration-500');
+                  this.currentSlide = this.slideCount;
+                  this.updateSlidePosition();
+      
+                  // Add transition back for the rest of the slides
+                  setTimeout(() => {
+                      this.$refs.slides.classList.add('transition-transform', 'duration-500');
+                  }, 50);
+              } else {
+                  this.currentSlide--;
+                  this.updateSlidePosition();
+              }
+          },
+          goToSlide(index) {
+              this.currentSlide = index;
+              this.updateSlidePosition();
+          },
+          updateSlidePosition() {
+              {{-- const direction = this.isRTL ? -1 : 1; --}}
+              this.$refs.slides.style.transform = `translateX(-${this.currentSlide * 100}%)`
+          },
+      
       }" x-init="startAutoSlide" class="relative slider overflow-hidden h-[80%]">
         <!-- Slides -->
         <div x-ref="slides" class="flex rtl:flex-row-reverse transition-transform duration-500 h-full lg:max-h-[800px]">
           <div class="relative slide w-full flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1725352118061-3da248f1826d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full min-h-full object-cover" alt="Slide 1">
+            <img
+              src="https://images.unsplash.com/photo-1725352118061-3da248f1826d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-full min-h-full object-cover" alt="Slide 1">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
               <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
                 <div class="space-y-3">
-                  <h1 class="text-white text-2xl lg:text-7xl font-bold">{{__("Crées votre site internet avec menu en ligne")}}</h1>
-                  <p class="font-medium text-lg max-w-7xl">{{ __("Tresto a tous ce dont vous avez besoin pour créer un sites web professionel, Obtenez des commendes en ligne, des réservations, des menus et plus encore.") }}</p>
+                  <h1 class="text-white text-2xl lg:text-7xl font-bold">
+                    {{ __('Crées votre site internet avec menu en ligne') }}</h1>
+                  <p class="font-medium text-lg max-w-7xl">
+                    {{ __('Tresto a tous ce dont vous avez besoin pour créer un sites web professionel, Obtenez des commendes en ligne, des réservations, des menus et plus encore.') }}
+                  </p>
                 </div>
                 <div>
                   <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                href="#">{{ __("Crée mon Menu en ligne") }}</a>
+                    href="#">{{ __('Crée mon Menu en ligne') }}</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="relative slide w-full flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1473366514866-3649b6c30284?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full min-h-full object-cover" alt="Slide 2">
+            <img
+              src="https://images.unsplash.com/photo-1473366514866-3649b6c30284?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-full min-h-full object-cover" alt="Slide 2">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
               <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
                 <div class="space-y-3">
-                  <h1 class="text-white text-2xl lg:text-7xl font-bold">{{ __("Commandes en ligne, réservatons, menus et plus encore")}}</h1>
+                  <h1 class="text-white text-2xl lg:text-7xl font-bold">
+                    {{ __('Commandes en ligne, réservatons, menus et plus encore') }}</h1>
                 </div>
                 <div>
                   <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                href="#">{{ __("Crée mon Menu en ligne") }}</a>
+                    href="#">{{ __('Crée mon Menu en ligne') }}</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="slide w-full flex-shrink-0 relative">
-            <img src="https://images.unsplash.com/photo-1603298896117-ccb78aea8ddf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full min-h-full object-cover" alt="Slide 3">
+            <img
+              src="https://images.unsplash.com/photo-1603298896117-ccb78aea8ddf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-full min-h-full object-cover" alt="Slide 3">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
               <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
-                  <div class="space-y-3">
-                    <h1 class="text-white text-2xl lg:text-7xl font-bold">{{ __("Un site web pour votre restaurant") }}</h1>
-                    <p class="font-medium text-lg max-w-7xl">{{ __("Publiez un menu interactif, acceptez les commendes en ligne et fidélisez bos client.") }}</p>
-                  </div>
+                <div class="space-y-3">
+                  <h1 class="text-white text-2xl lg:text-7xl font-bold">{{ __('Un site web pour votre restaurant') }}</h1>
+                  <p class="font-medium text-lg max-w-7xl">
+                    {{ __('Publiez un menu interactif, acceptez les commendes en ligne et fidélisez bos client.') }}</p>
+                </div>
                 <div>
                   <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                href="#">{{ __("Crée un site web gratuit") }}</a>
+                    href="#">{{ __('Crée un site web gratuit') }}</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="slide w-full flex-shrink-0 max-h-full relative">
-            <img src="https://images.unsplash.com/photo-1725352118061-3da248f1826d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full min-h-full object-cover" alt="Slide 1 Clone">
+            <img
+              src="https://images.unsplash.com/photo-1725352118061-3da248f1826d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-full min-h-full object-cover" alt="Slide 1 Clone">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
               <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
                 <div class="space-y-3">
-                  <h1 class="text-white text-2xl lg:text-7xl font-bold">{{ __("Crées votre site internet avec menu en ligne")}}</h1>
-                  <p class="font-medium text-lg max-w-7xl">{{ __("Tresto a tous ce dont vous avez besoin pour créer un sites web professionel, Obtenez des commendes en ligne, des réservations, des menus et plus encore.")}}</p>
+                  <h1 class="text-white text-2xl lg:text-7xl font-bold">
+                    {{ __('Crées votre site internet avec menu en ligne') }}</h1>
+                  <p class="font-medium text-lg max-w-7xl">
+                    {{ __('Tresto a tous ce dont vous avez besoin pour créer un sites web professionel, Obtenez des commendes en ligne, des réservations, des menus et plus encore.') }}
+                  </p>
                 </div>
                 <div>
                   <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                href="#">{{ __("Crée mon Menu en ligne") }}</a>
+                    href="#">{{ __('Crée mon Menu en ligne') }}</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    
+
         <!-- navigation buttons -->
-        <button @click="prevSlide" class="lg:hidden absolute left-4 bottom-0 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full shadow-md">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"/></svg>
+        <button @click="prevSlide"
+          class="lg:hidden absolute left-4 bottom-0 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path fill="white" d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
+          </svg>
         </button>
-        <button @click="nextSlide" class="lg:hidden absolute right-4 bottom-0 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full shadow-md">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg>
+        <button @click="nextSlide"
+          class="lg:hidden absolute right-4 bottom-0 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path fill="white" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z" />
+          </svg>
         </button>
 
         <!-- Navigation Dots -->
         <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 p-4">
           <template x-for="(slide, index) in slides" :key="index">
-            <button :class="{'bg-gray-800': currentSlide === index, 'bg-gray-400': currentSlide !== index}" class="w-3 h-3 rounded-full" @click="goToSlide(index)"></button>
+            <button :class="{ 'bg-gray-800': currentSlide === index, 'bg-gray-400': currentSlide !== index }"
+              class="w-3 h-3 rounded-full" @click="goToSlide(index)"></button>
           </template>
         </div>
       </div>
@@ -142,7 +166,7 @@
       <section class="py-24">
         <div class="container mx-auto px-4">
           <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-            data-aos-easing="ease-in-out">
+            data-aos-easing="ease-in-out" data-aos-once="true">
             <p class="text-center text-tresto-500 text-sm font-bold ltr:font-mono rtl:font-body mb-6">
               {{ __('COMMENT ÇA MARCHE') }}</p>
             <h1
@@ -151,14 +175,15 @@
           </div>
 
           <div x-data="{ activeTab: 1 }" class="flex flex-wrap items-center -mx-4">
-            <div class="w-full lg:w-2/3 p-4" data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="w-full lg:w-2/3 p-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
+              data-aos-once="true" data-aos-duration="1000" data-aos-easing="ease-in-out">
               <img class="w-full rounded-2xl" src="images/product/themes.gif" alt="online menu Tresto">
             </div>
             <div class="w-full lg:w-1/3 p-4">
               <!-- First Section -->
               <a href="#" @click.prevent="activeTab = activeTab === 1 ? null : 1" data-aos="fade-up"
-                data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                data-aos-once="true" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
                 <div :class="{ 'bg-tresto-50': activeTab === 1, 'py-6 pr-10 mb-3': true }"
                   class="rounded-2xl transition duration-200">
                   <div :class="{ 'border-tresto-500': activeTab === 1, 'border-transparent': activeTab !== 1 }"
@@ -174,7 +199,8 @@
 
               <!-- Second Section -->
               <a href="#" @click.prevent="activeTab = activeTab === 2 ? null : 2" data-aos="fade-up"
-                data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                data-aos-once="true" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
                 <div :class="{ 'bg-tresto-50': activeTab === 2, 'py-6 pr-10 mb-3': true }"
                   class="rounded-2xl transition duration-200">
                   <div :class="{ 'border-tresto-500': activeTab === 2, 'border-transparent': activeTab !== 2 }"
@@ -188,7 +214,8 @@
 
                 <!-- Third Section -->
                 <a href="#" @click.prevent="activeTab = activeTab === 3 ? null : 3" data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="150" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                  data-aos-once="true" data-aos-offset="200" data-aos-delay="150" data-aos-duration="1000"
+                  data-aos-easing="ease-in-out">
                   <div :class="{ 'bg-tresto-50': activeTab === 3, 'py-6 pr-10 mb-3': true }"
                     class="rounded-2xl transition duration-200">
                     <div :class="{ 'border-tresto-500': activeTab === 3, 'border-transparent': activeTab !== 3 }"
@@ -208,41 +235,51 @@
 
       <section id="pricing" class="py-24 bg-tresto-50">
         <div class="container mx-auto px-4">
-          <div data-aos="fade-up"
-          data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+          <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-once="true" data-aos-easing="ease-in-out">
             <h1 class="text-center text-5xl lg:text-6xl font-bold ltr:font-mono rtl:font-body mb-6">{{ __('Tarifs') }}
             </h1>
             <p class="text-gray-600 text-lg text-center mb-24 max-w-lg mx-auto">
               {{ __("Une tarification simple qui s'adapte aux restaurants de toutes tailles") }}</p>
           </div>
-          <div class=" mb-24">
+          <div class="mb-24">
             <div class="flex flex-col md:flex-row max-w-full">
-              <div class="lg:w-1/3 p-4">
-                <h2 data-aos="fade-up"
-                data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" class="mt-10 mb-12 text-lg font-bold ltr:font-mono rtl:font-body">{{ __('Ce que vous obtiendrez') }}
+              <div class="lg:w-1/3 p-4 lg:mt-6">
+                <h2 data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                  data-aos-once="true" data-aos-easing="ease-in-out"
+                  class="mt-10 mb-12 text-3xl font-bold ltr:font-mono rtl:font-body">
+                  {{ __('Ce que vous obtiendrez') }}
                 </h2>
                 <ul class="flex flex-col gap-5">
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">{{ __('Simplifiez les Commandes via le Site Web ou WhatsApp') }}</li>
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">{{ __('Mises à jour en temps réel') }}</li>
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">{{ __('Des rapports détaillés sur les visites et les ventes') }}</li>
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">{{ __('Génération de QR Codes') }}</li>
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">{{ __('Gestion des commandes simplifiée') }}</li>
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">{{ __('Gestion des Zones de Livraison et des Frais') }}</li>
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                    {{ __('Simplifiez les Commandes via le Site Web ou WhatsApp') }}</li>
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                    {{ __('Mises à jour en temps réel') }}
+                  </li>
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                    {{ __('Des rapports détaillés sur les visites et les ventes') }}</li>
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                    {{ __('Génération de QR Codes') }}</li>
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                    {{ __('Gestion des commandes simplifiée') }}</li>
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                    {{ __('Gestion des Zones de Livraison et des Frais') }}</li>
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
                     {{ __('Les clients peuvent commencer à passer commande immédiatement') }}</li>
-                  <li data-aos="fade-up"
-                  data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-lg font-medium">{{ __('Augmentez la Satisfaction des Clients') }}</li>
+                  <li data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-easing="ease-in-out" class="text-lg font-medium">
+                    {{ __('Augmentez la Satisfaction des Clients') }}</li>
                 </ul>
               </div>
-              <div data-aos="fade-up"
-              data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" class="lg:w-1/3 p-4">
+              <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000"
+                data-aos-once="true" data-aos-easing="ease-in-out" class="lg:w-1/3 p-4">
                 <div class="border border-gray-200 bg-white rounded-3xl px-8 pb-8 pt-10 h-full">
                   <h2 class="text-center text-xl font-bold ltr:font-mono rtl:font-body mb-4">Standard</h2>
                   <div class="flex flex-col md:flex-row items-center md:items-end justify-center gap-3 mb-8">
@@ -252,57 +289,63 @@
                   <a class="h-14 inline-flex items-center justify-center w-full text-center py-4 px-6 rounded-full border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200 mb-8"
                     href="#">{{ __('Commencez avec le forfait basique') }}</a>
                   <div class="bg-tresto-50 rounded-3xl p-6 flex flex-col items-left gap-8 mx-auto">
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.1301 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.444 12.1173 19.3453 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3549 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9368 13.5193Z"
-                          fill="#FF7100"></path>
-                      </svg>
-                      <p>{{__("Produits illimités")}} </p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.1301 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.444 12.1173 19.3453 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3549 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9368 13.5193Z"
-                          fill="#FF7100"></path>
-                      </svg>
-                      <p>{{__("Commandes illimitées")}} </p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63589 8.63589 2.66666 16 2.66666C23.3641 2.66666 29.3333 8.63589 29.3333 16C29.3333 23.3641 23.3641 29.3333 16 29.3333C8.63589 29.3333 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2853 21.1114 13.1527C21.1446 13.0201 21.1509 12.8822 21.1301 12.7471C21.1092 12.612 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1487 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.0429C19.444 12.1173 19.3453 12.2138 19.2684 12.3268L14.8431 18.5217L12.6222 16.3008C12.4278 16.1197 12.1706 16.021 11.9049 16.0257C11.6392 16.0304 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0331C10.8928 17.2988 10.9915 17.556 11.1726 17.7504L14.2496 20.8273C14.3549 20.9325 14.4818 21.0136 14.6215 21.0648C14.7613 21.116 14.9105 21.1362 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9205 15.7219 20.8198 15.8085 20.6988L20.9368 13.5193Z"
-                          fill="#FFE0A5"></path>
-                      </svg>
-                      <p>{{__("Tables Illimitées")}} </p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63589 8.63589 2.66666 16 2.66666C23.3641 2.66666 29.3333 8.63589 29.3333 16C29.3333 23.3641 23.3641 29.3333 16 29.3333C8.63589 29.3333 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2853 21.1114 13.1527C21.1446 13.0201 21.1509 12.8822 21.1301 12.7471C21.1092 12.612 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1487 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.0429C19.444 12.1173 19.3453 12.2138 19.2684 12.3268L14.8431 18.5217L12.6222 16.3008C12.4278 16.1197 12.1706 16.021 11.9049 16.0257C11.6392 16.0304 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0331C10.8928 17.2988 10.9915 17.556 11.1726 17.7504L14.2496 20.8273C14.3549 20.9325 14.4818 21.0136 14.6215 21.0648C14.7613 21.116 14.9105 21.1362 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9205 15.7219 20.8198 15.8085 20.6988L20.9368 13.5193Z"
-                          fill="#FFE0A5"></path>
-                      </svg>
-                      <p>{{ __("Rapport de base et statistiques") }}</p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63589 8.63589 2.66666 16 2.66666C23.3641 2.66666 29.3333 8.63589 29.3333 16C29.3333 23.3641 23.3641 29.3333 16 29.3333C8.63589 29.3333 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2853 21.1114 13.1527C21.1446 13.0201 21.1509 12.8822 21.1301 12.7471C21.1092 12.612 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1487 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.0429C19.444 12.1173 19.3453 12.2138 19.2684 12.3268L14.8431 18.5217L12.6222 16.3008C12.4278 16.1197 12.1706 16.021 11.9049 16.0257C11.6392 16.0304 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0331C10.8928 17.2988 10.9915 17.556 11.1726 17.7504L14.2496 20.8273C14.3549 20.9325 14.4818 21.0136 14.6215 21.0648C14.7613 21.116 14.9105 21.1362 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9205 15.7219 20.8198 15.8085 20.6988L20.9368 13.5193Z"
-                          fill="#FFE0A5"></path>
-                      </svg>
-                      <p>{{__("Support Technique")}}</p>
+                    <div class="flex flex-col gap-6 lg:w-72 mx-auto">
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.1301 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.444 12.1173 19.3453 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3549 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9368 13.5193Z"
+                            fill="#FF7100"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Produits illimités') }} </p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.1301 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.444 12.1173 19.3453 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3549 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9368 13.5193Z"
+                            fill="#FF7100"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Commandes illimitées') }} </p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63589 8.63589 2.66666 16 2.66666C23.3641 2.66666 29.3333 8.63589 29.3333 16C29.3333 23.3641 23.3641 29.3333 16 29.3333C8.63589 29.3333 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2853 21.1114 13.1527C21.1446 13.0201 21.1509 12.8822 21.1301 12.7471C21.1092 12.612 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1487 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.0429C19.444 12.1173 19.3453 12.2138 19.2684 12.3268L14.8431 18.5217L12.6222 16.3008C12.4278 16.1197 12.1706 16.021 11.9049 16.0257C11.6392 16.0304 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0331C10.8928 17.2988 10.9915 17.556 11.1726 17.7504L14.2496 20.8273C14.3549 20.9325 14.4818 21.0136 14.6215 21.0648C14.7613 21.116 14.9105 21.1362 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9205 15.7219 20.8198 15.8085 20.6988L20.9368 13.5193Z"
+                            fill="#FFE0A5"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Tables Illimitées') }} </p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63589 8.63589 2.66666 16 2.66666C23.3641 2.66666 29.3333 8.63589 29.3333 16C29.3333 23.3641 23.3641 29.3333 16 29.3333C8.63589 29.3333 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2853 21.1114 13.1527C21.1446 13.0201 21.1509 12.8822 21.1301 12.7471C21.1092 12.612 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1487 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.0429C19.444 12.1173 19.3453 12.2138 19.2684 12.3268L14.8431 18.5217L12.6222 16.3008C12.4278 16.1197 12.1706 16.021 11.9049 16.0257C11.6392 16.0304 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0331C10.8928 17.2988 10.9915 17.556 11.1726 17.7504L14.2496 20.8273C14.3549 20.9325 14.4818 21.0136 14.6215 21.0648C14.7613 21.116 14.9105 21.1362 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9205 15.7219 20.8198 15.8085 20.6988L20.9368 13.5193Z"
+                            fill="#FFE0A5"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Rapport de base et statistiques') }}</p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63589 8.63589 2.66666 16 2.66666C23.3641 2.66666 29.3333 8.63589 29.3333 16C29.3333 23.3641 23.3641 29.3333 16 29.3333C8.63589 29.3333 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2853 21.1114 13.1527C21.1446 13.0201 21.1509 12.8822 21.1301 12.7471C21.1092 12.612 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1487 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.0429C19.444 12.1173 19.3453 12.2138 19.2684 12.3268L14.8431 18.5217L12.6222 16.3008C12.4278 16.1197 12.1706 16.021 11.9049 16.0257C11.6392 16.0304 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0331C10.8928 17.2988 10.9915 17.556 11.1726 17.7504L14.2496 20.8273C14.3549 20.9325 14.4818 21.0136 14.6215 21.0648C14.7613 21.116 14.9105 21.1362 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9205 15.7219 20.8198 15.8085 20.6988L20.9368 13.5193Z"
+                            fill="#FFE0A5"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Support Technique') }}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div data-aos="fade-up"
-              data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-in-out" class="lg:w-1/3 p-4">
-                <div class="bg-tresto-500 rounded-3xl px-8 pb-8 pt-10 h-full">
+              <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000"
+                data-aos-once="true" data-aos-easing="ease-in-out" class="lg:w-1/3 p-4">
+                <div class="relative bg-tresto-500 rounded-3xl px-8 pb-8 pt-10 h-full">
+                  <div class="absolute top-2 left-0 flex justify-center w-full">
+                    <p class="py-1 px-2 bg-secondary rounded-full w-fit text-xs text-black font-medium">
+                      {{ __('Recommandé') }}</p>
+                  </div>
                   <h2 class="text-center text-white text-xl font-bold ltr:font-mono rtl:font-body mb-4">Premium</h2>
                   <div class="flex flex-col md:flex-row items-center md:items-end justify-center gap-3 mb-8">
                     <h2 class="text-white text-5xl font-bold ltr:font-mono rtl:font-body">1900 {{ __('Dhs') }}</h2>
@@ -310,67 +353,69 @@
                   </div>
                   <a class="w-full text-center h-14 py-4 px-6 rounded-full bg-white border border-gray-200 shadow hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200 mb-8 flex rtl:flex-row-reverse items-center justify-center gap-2"
                     href="#">
-                    <span class="text-sm font-semibold ">{{ __("Commencez avec le forfait premium") }}</span>
+                    <span class="text-sm font-semibold ">{{ __('Commencez avec le forfait premium') }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewbox="0 0 21 20"
                       fill="none">
                       <path d="M5.50002 10H15.9167M15.9167 10L10.9167 5M15.9167 10L10.9167 15" stroke="#282828"
                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </a>
-                  <div class="bg-tresto-900 rounded-3xl p-6 flex flex-col items-left gap-8 text-white">
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
-                          fill="white"></path>
-                      </svg>
-                      <p>{{__("Tous les avantages du plan standard")}}</p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
-                          fill="white"></path>
-                      </svg>
-                      <p>{{__("Fidélité des clients")}}</p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
-                          fill="white"></path>
-                      </svg>
-                      <p>{{__("Bons de réduction")}}</p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
-                          fill="white"></path>
-                      </svg>
-                      <p>{{__("Barre d'annonce et popup promotionnel")}}</p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
-                          fill="white"></path>
-                      </svg>
-                      <p>{{__("Commentaires des clients")}}</p>
-                    </div>
-                    <div class="flex gap-3 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"
-                        fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
-                          fill="white"></path>
-                      </svg>
-                      <p>{{__("Et Plus")}}</p>
+                  <div class="bg-tresto-900 rounded-3xl p-6  text-white">
+                    <div class="flex flex-col gap-6 lg:w-72 mx-auto">
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                            fill="white"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Tous les avantages du plan standard') }}</p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                            fill="white"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Fidélité des clients') }}</p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                            fill="white"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Bons de réduction') }}</p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                            fill="white"></path>
+                        </svg>
+                        <p class="text-center">{{ __("Barre d'annonce et popup promotionnel") }}</p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                            fill="white"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Commentaires des clients') }}</p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                            fill="white"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Et Plus') }}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -380,15 +425,15 @@
         </div>
       </section>
 
-      <section data-aos="fade-up"
-      data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" class="py-24 xl:py-36 overflow-hidden" x-data="{
-          activeTestimonial: 0,
-          testimonials: [
-              { quote: 'Tresto a simplifié la gestion de nos commandes avec ses menus en ligne et QR codes. Les rapports détaillés nous ont aidés à optimiser notre offre et à augmenter nos ventes.', author: 'Hassan', role: 'King Tacos Chef', image: 'images/kingtacos.png' },
-              { quote: 'Grâce à Tresto, la gestion des commandes et des zones de livraison est devenue un jeu d\'enfant. Les outils intuitifs nous ont permis de mieux servir nos clients et de gagner du temps.', author: 'Latif', role: 'Owner', image: 'images/latuniserie.webp' },
-              { quote: 'Tresto a transformé notre menu en ligne et les commandes via WhatsApp. Simple et efficace pour une gestion fluide !', author: 'Charlie', role: 'Owner', image: 'images/charlie-food.webp' }
-          ]
-      }">
+      <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-once="true"
+        data-aos-easing="ease-in-out" class="py-24 xl:py-36 overflow-hidden" x-data="{
+            activeTestimonial: 0,
+            testimonials: [
+                { quote: 'Tresto a simplifié la gestion de nos commandes avec ses menus en ligne et QR codes. Les rapports détaillés nous ont aidés à optimiser notre offre et à augmenter nos ventes.', author: 'Hassan', role: 'King Tacos Chef', image: 'images/clients/kingtacos.jpg' },
+                { quote: 'Grâce à Tresto, la gestion des commandes et des zones de livraison est devenue un jeu d\'enfant. Les outils intuitifs nous ont permis de mieux servir nos clients et de gagner du temps.', author: 'Latif', role: 'Owner', image: 'images/clients/latuniseri2.jpg' },
+                { quote: 'Tresto a transformé notre menu en ligne et les commandes via WhatsApp. Simple et efficace pour une gestion fluide !', author: 'Charlie', role: 'Owner', image: 'images/clients/charliefood.jpg' }
+            ]
+        }">
         <div class="container mx-auto px-4">
           <div class="border border-tresto-100 rounded-3xl p-8 lg:p-16 relative">
             <div class="lg:max-w-4xl">
@@ -413,16 +458,16 @@
               </div>
             </div>
             <div
-              class="hidden lg:block absolute right-0 rtl:right-auto rtl:left-0 top-1/2 transform -translate-y-1/2 h-128 w-96">
+              class="hidden lg:block absolute right-0 rtl:right-auto rtl:left-0 top-1/2 transform -translate-y-1/2 h-128 w-[35rem]">
               <div class="relative h-full">
-                <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-80"
+                <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full rounded-xl"
                   :src="testimonials[activeTestimonial].image" alt="restaurants logos">
-                <div
+                {{-- <div
                   class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full bg-tresto-100 rounded-4xl transform rotate-6 h-full">
                 </div>
                 <div
                   class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full bg-tresto-50 rounded-4xl transform rotate-12 h-full">
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
@@ -482,8 +527,8 @@
 
       <section id="features" class="bg-tresto-50 pt-24">
         <div class="container mx-auto px-4">
-          <div data-aos="fade-up"
-          data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+          <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-once="true"
+            data-aos-easing="ease-in-out">
             <h1 class="text-center text-4xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-4">
               {{ __('Découvrez les fonctionnalités') }}</h1>
             <p class="text-center text-gray-600 mb-28">
@@ -491,8 +536,8 @@
             </p>
           </div>
           <div class="flex flex-wrap -mx-4">
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -508,8 +553,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -538,8 +583,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                   fill="none">
@@ -560,8 +605,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -588,8 +633,8 @@
         <div class="container mx-auto px-4">
 
           <div class="flex flex-wrap -mx-4">
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white" d="M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z" />
@@ -605,8 +650,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -622,8 +667,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -639,8 +684,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up"
-            data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true"
+              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -663,8 +708,8 @@
       <section class="py-12">
         <div class="container mx-auto px-4">
           <div class="py-28 relative">
-            <div class="hidden sm:block absolute top-6 left-0 bg-tresto-100 rounded-xl px-6 pt-4">
-              <img class="h-16 sm:h-20 md:h-auto" src="solstice-assets/images/cta/men-picture1.png" alt="">
+            <div class="hidden sm:block absolute top-6 left-0 rounded-xl px-6 pt-4">
+              <img class="h-52" src="images/cta/deliveryBike.svg" alt="">
             </div>
             <div class="absolute top-0 right-0 bg-tresto-900 rounded-xl px-6 pt-4">
               <img class="h-16 sm:h-24 md:h-auto" src="solstice-assets/images/cta/woman-picture1.png" alt="">

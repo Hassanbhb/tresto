@@ -27,8 +27,8 @@
               </div>
               <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
                 <div class="absolute top-0 -left-px rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Rapports Détaillés sur les Visiteurs et les Ventes") }}</h2>
-                <p class="text-gray-600">{{ __("Obtenez des analyses approfondies sur les visiteurs de votre menu en ligne et suivez vos ventes en temps réel pour optimiser vos opérations.") }}</p>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Réception des Commandes via WhatsApp et Website") }}</h2>
+                <p class="text-gray-600">{{ __("Permettez à vos clients de passer des commandes directement via WhatsApp pour une expérience de commande encore plus conviviale.") }}</p>
               </div>
             </div>
           </div>
@@ -63,8 +63,8 @@
               </div>
               <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
                 <div class="absolute top-0 -left-px rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Plus de 6 Designs de Menus")}} </h2>
-                <p class="text-gray-600">{{ __("Choisissez parmi plus de 6 modèles de menus élégants et professionnels, adaptés à votre style et à l'image de votre restaurant.") }}</p>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Interface adaptée aux mobiles")}} </h2>
+                <p class="text-gray-600">{{ __("Veillez à ce que votre menu soit agréable à regarder sur n'importe quel appareil. Le design responsive de Tresto garantit une expérience de navigation transparente pour les clients sur smartphones, tablettes ou ordinateurs de bureau.") }}</p>
               </div>
             </div>
           </div>
@@ -86,8 +86,8 @@
               </div>
               <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
                 <div class="absolute top-0 -left-px rtl:right-0 bg-tresto-500 w-0.5 h-6"></div>
-                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Réception des Commandes via WhatsApp et website") }}</h2>
-                <p class="text-gray-600">{{ __("Permettez à vos clients de passer des commandes directement via WhatsApp pour une expérience de commande encore plus conviviale.") }}</p>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Gestion des Zones de Livraison et des Frais") }}</h2>
+                <p class="text-gray-600">{{ __("Définissez facilement les zones de livraison et ajustez les frais en fonction de chaque secteur pour une gestion optimale des livraisons.") }}</p>
               </div>
             </div>
           </div>
@@ -104,8 +104,8 @@
               </div>
               <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
                 <div class="absolute top-0 -left-px rtl:right-0  bg-tresto-500 w-0.5 h-6"></div>
-                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Génération de QR Codes") }}</h2>
-                <p class="text-gray-600">{{ __("Créez facilement des QR codes personnalisés pour vos menus, permettant à vos clients d'accéder rapidement à vos plats.") }}</p>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Rapports Détaillés sur les Visiteurs et les Ventes") }}</h2>
+                <p class="text-gray-600">{{ __("Obtenez des analyses approfondies sur les visiteurs de votre menu en ligne et suivez vos ventes en temps réel pour optimiser vos opérations.") }}</p>
               </div>
             </div>
           </div>
@@ -256,13 +256,13 @@
             <img class="h-16 sm:h-20 md:h-auto" src="solstice-assets/images/cta/men-picture2.png" alt="">
           </div>
           <div class="relative z-10">
-            <div class="flex justify-center mb-6">
+            {{-- <div class="flex justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="68" height="34" viewbox="0 0 68 34" fill="none">
                 <path d="M2 34C1.99977 29.7976 2.8273 25.6364 4.43533 21.7539C6.04336 17.8713 8.40039 14.3436 11.3718 11.3721C14.3433 8.40056 17.8709 6.04346 21.7533 4.43539C25.6358 2.82732 29.7969 1.99977 33.9991 2C51.6726 2 66 16.3261 66 34" stroke="#530031" stroke-width="4" stroke-miterlimit="10"></path>
                 <path d="M9.22571 34C9.22571 27.4084 11.8358 21.0868 16.4819 16.4258C21.128 11.7649 27.4294 9.14639 33.9999 9.14639C40.5704 9.14639 46.8718 11.7649 51.5179 16.4258C56.164 21.0868 58.7741 27.4084 58.7741 34" stroke="#FF7100" stroke-width="4" stroke-miterlimit="10"></path>
                 <path d="M16.1339 34C16.1339 29.2617 18.0162 24.7174 21.3667 21.3669C24.7173 18.0163 29.2616 16.134 33.9999 16.134C38.7383 16.134 43.2826 18.0163 46.6331 21.3669C49.9836 24.7174 51.8659 29.2617 51.8659 34" stroke="#FFC96D" stroke-width="4" stroke-miterlimit="10"></path>
               </svg>
-            </div>
+            </div> --}}
             <h1 class="text-4xl lg:text-5xl mb-10 font-bold font-heading text-center max-w-lg lg:max-w-3xl mx-auto">{{ __("Explorez Nos Outils Puissants et Simplifiez Votre Gestion – Commencez Maintenant !") }}</h1>
             <div class="flex justify-center"><a class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200" href="#">{{ __("Crée un compte gratuitement") }} </a></div>
           </div>
