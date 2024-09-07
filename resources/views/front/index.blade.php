@@ -5,182 +5,130 @@
 
   <x-layouts.front>
     <div>
-      <x-front.nav />
+      <section class="overflow-hidden bg-tresto-600">
+        <x-front.nav />
 
-      <div x-data="{
-          slides: [1, 2, 3],
-          currentSlide: 0,
-          slideCount: 3,
-          interval: null,
-          isRTL: document.documentElement.dir === 'rtl',
-          startAutoSlide() {
-              this.interval = setInterval(() => {
-                  this.nextSlide();
-              }, 5000); // Change slide every 5 seconds
-          },
-          nextSlide() {
-              console.log(this.currentSlide, this.slideCount);
-              if (this.currentSlide === this.slideCount) {
-                  // If it's the last slide, reset to first slide without animation
-                  this.$refs.slides.classList.remove('transition-transform', 'duration-500');
-                  this.currentSlide = 0;
-                  this.updateSlidePosition();
-      
-                  // Add transition back for the rest of the slides
-                  setTimeout(() => {
-                      this.$refs.slides.classList.add('transition-transform', 'duration-500');
-                  }, 50); // Small timeout to ensure the jump happens instantly
-              } else {
-                  this.currentSlide++;
-                  this.updateSlidePosition();
-              }
-          },
-          prevSlide() {
-              if (this.currentSlide === 0) {
-                  // If we're at the first slide, jump to the cloned last slide without animation
-                  this.$refs.slides.classList.remove('transition-transform', 'duration-500');
-                  this.currentSlide = this.slideCount;
-                  this.updateSlidePosition();
-      
-                  // Add transition back for the rest of the slides
-                  setTimeout(() => {
-                      this.$refs.slides.classList.add('transition-transform', 'duration-500');
-                  }, 50);
-              } else {
-                  this.currentSlide--;
-                  this.updateSlidePosition();
-              }
-          },
-          goToSlide(index) {
-              this.currentSlide = index;
-              this.updateSlidePosition();
-          },
-          updateSlidePosition() {
-              {{-- const direction = this.isRTL ? -1 : 1; --}}
-              this.$refs.slides.style.transform = `translateX(-${this.currentSlide * 100}%)`
-          },
-      
-      }" x-init="startAutoSlide" class="relative slider overflow-hidden h-[80%]">
-        <!-- Slides -->
-        <div x-ref="slides" class="flex rtl:flex-row-reverse transition-transform duration-500 h-full lg:max-h-[800px]">
-          <div class="relative slide w-full flex-shrink-0">
-            <img
-              src="https://images.unsplash.com/photo-1725352118061-3da248f1826d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="w-full min-h-full object-cover" alt="Slide 1">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
-              <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
-                <div class="space-y-3">
-                  <h1 class="text-white text-2xl lg:text-7xl font-bold">
-                    {{ __('Crées votre site internet avec menu en ligne') }}</h1>
-                  <p class="font-medium text-lg max-w-7xl">
-                    {{ __('Tresto a tous ce dont vous avez besoin pour créer un sites web professionel, Obtenez des commendes en ligne, des réservations, des menus et plus encore.') }}
-                  </p>
-                </div>
-                <div>
-                  <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                    href="#">{{ __('Crée mon Menu en ligne') }}</a>
-                </div>
+        <div class="container px-4 mx-auto relative">
+          <div class="relative z-20">
+            <h1
+              class="text-center text-white text-5xl lg:text-7xl font-bold ltr:font-mono rtl:font-body rtl:leading-relaxed mb-6 mt-14 max-w-4xl mx-auto">
+              <span>{{ __('Créez votre menu en quelques clics avec') }} <span class="text-secondary">TResto</span>
+                {{-- <span></span> --}}
+                {{-- {{ __('Today!') }}</span> --}}
+            </h1>
+            <p class="text-center text-white text-lg mb-10 max-w-lg mx-auto">
+              {{ __('Des commandes en ligne aux repas sur place, simplifiez vos opérations et améliorez la satisfaction de vos clients grâce à notre plateforme intuitive.') }}
+            </p>
+            <div class="flex justify-center "><a
+                class="w-full sm:w-auto text-center h-16 inline-flex items-center justify-center py-4 px-6 rounded-full bg-secondary border border-tresto-600 hover:border-secondary shadow font-bold ltr:font-mono rtl:font-body text-black hover:text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
+                href="https://tresto.ma/start?step=1">{{ __('Commencez GRATUITEMENT !') }}</a></div>
+            {{-- <div class="hidden lg:block absolute bottom-9 left-0 z-10">
+              <div class="relative -rotate-[25deg]">
+                <img src="images/menu.png" class="-rotate-12 animate-float" alt="restaurant menu">
+              </div>
+            </div> --}}
+          </div>
+          {{-- <div class="hidden lg:block absolute bottom-6 right-0">
+            <div class="relative rotate-[25deg]">
+              <img src="images/burger-rb.png" class="w-128 animate-float" alt="restaurant burger">
+            </div>
+          </div> --}}
+
+          <div class="py-6 space-y-4">
+            <div class="flex gap-2 items-center justify-center">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                  <path fill="yellow"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" />
+                </svg>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                  <path fill="yellow"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" />
+                </svg>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                  <path fill="yellow"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" />
+                </svg>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                  <path fill="yellow"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" />
+                </svg>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                  <path fill="yellow"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" />
+                </svg>
               </div>
             </div>
-          </div>
-          <div class="relative slide w-full flex-shrink-0">
-            <img
-              src="https://images.unsplash.com/photo-1473366514866-3649b6c30284?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="w-full min-h-full object-cover" alt="Slide 2">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
-              <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
-                <div class="space-y-3">
-                  <h1 class="text-white text-2xl lg:text-7xl font-bold">
-                    {{ __('Commandes en ligne, réservatons, menus et plus encore') }}</h1>
-                </div>
-                <div>
-                  <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                    href="#">{{ __('Crée mon Menu en ligne') }}</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide w-full flex-shrink-0 relative">
-            <img
-              src="https://images.unsplash.com/photo-1603298896117-ccb78aea8ddf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="w-full min-h-full object-cover" alt="Slide 3">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
-              <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
-                <div class="space-y-3">
-                  <h1 class="text-white text-2xl lg:text-7xl font-bold">{{ __('Un site web pour votre restaurant') }}</h1>
-                  <p class="font-medium text-lg max-w-7xl">
-                    {{ __('Publiez un menu interactif, acceptez les commendes en ligne et fidélisez bos client.') }}</p>
-                </div>
-                <div>
-                  <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                    href="#">{{ __('Crée un site web gratuit') }}</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide w-full flex-shrink-0 max-h-full relative">
-            <img
-              src="https://images.unsplash.com/photo-1725352118061-3da248f1826d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="w-full min-h-full object-cover" alt="Slide 1 Clone">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end">
-              <div class="px-5 lg:w-4/5 lg:mx-auto text-white space-y-10 mb-32 lg:mb-60">
-                <div class="space-y-3">
-                  <h1 class="text-white text-2xl lg:text-7xl font-bold">
-                    {{ __('Crées votre site internet avec menu en ligne') }}</h1>
-                  <p class="font-medium text-lg max-w-7xl">
-                    {{ __('Tresto a tous ce dont vous avez besoin pour créer un sites web professionel, Obtenez des commendes en ligne, des réservations, des menus et plus encore.') }}
-                  </p>
-                </div>
-                <div>
-                  <a class="w-fit py-3 px-5 rounded-full bg-secondary border border-secondary shadow font-semibold text-black hover:bg-secondary focus:ring focus:ring-secondary transition duration-200"
-                    href="#">{{ __('Crée mon Menu en ligne') }}</a>
-                </div>
-              </div>
+            <div>
+              <p class="text-sm text-center text-white font-medium">
+                {{ __(':rate étoiles sur 5 d’après :total avis', ['rate' => '4.8', 'total' => '128']) }}</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- navigation buttons -->
-        <button @click="prevSlide"
-          class="lg:hidden absolute left-4 bottom-0 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full shadow-md">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-            <path fill="white" d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
-          </svg>
-        </button>
-        <button @click="nextSlide"
-          class="lg:hidden absolute right-4 bottom-0 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full shadow-md">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-            <path fill="white" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z" />
-          </svg>
-        </button>
-
-        <!-- Navigation Dots -->
-        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 p-4">
-          <template x-for="(slide, index) in slides" :key="index">
-            <button :class="{ 'bg-gray-800': currentSlide === index, 'bg-gray-400': currentSlide !== index }"
-              class="w-3 h-3 rounded-full" @click="goToSlide(index)"></button>
-          </template>
+      <div class="relative w-full py-5 overflow-hidden">
+        <div x-data="{
+            logos: [
+                { src: 'images/clients/1.webp', alt: 'Restaurants Ticktok' },
+                { src: 'images/clients/2.webp', alt: 'Ghost Food' },
+                { src: 'images/clients/3.webp', alt: 'Pasta la Vista' },
+                { src: 'images/clients/4.webp', alt: 'Mama Ghadina Baba Achina' },
+                { src: 'images/clients/5.webp', alt: 'MFC' },
+                { src: 'images/clients/6.webp', alt: 'la' },
+                { src: 'images/clients/7.webp', alt: 'Food Factory Crunch' },
+                { src: 'images/clients/8.webp', alt: 'Sami Food' },
+                { src: 'images/clients/9.webp', alt: 'As you like it' },
+                { src: 'images/clients/10.webp', alt: 'King Tacos' },
+                { src: 'images/clients/11.webp', alt: 'Souk alhad' },
+                { src: 'images/clients/12.webp', alt: 'Akwaba Délice' },
+                { src: 'images/clients/13.webp', alt: 'Chicken Home' },
+            ]
+        }" class="flex overflow-hidden">
+            <div class="flex gap-6 py-2 whitespace-nowrap animate-marquee">
+                <template x-for="logo in logos" :key="logo.alt">
+                    <span class="w-24 lg:w-40">
+                        <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto">
+                    </span>
+                </template>
+            </div>
+    
+            <div class="absolute top-5 flex gap-6 py-2 whitespace-nowrap animate-marquee2">
+                <template x-for="logo in logos" :key="logo.alt">
+                    <span class="w-24 lg:w-40">
+                        <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto">
+                    </span>
+                </template>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <section class="py-24">
+      <section dir="ltr" class="pt-20 pb-24">
         <div class="container mx-auto px-4">
-          <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-            data-aos-easing="ease-in-out" data-aos-once="true">
+          <div>
             <p class="text-center text-tresto-500 text-sm font-bold ltr:font-mono rtl:font-body mb-6">
               {{ __('COMMENT ÇA MARCHE') }}</p>
             <h1
               class="text-center text-3xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-24 max-w-sm lg:max-w-xl mx-auto">
-              {{ __('Quelles sont les étapes à suivre pour commencer ?') }}</h1>
+              {{ __('Quelles sont les étapes à suivre ?') }}</h1>
           </div>
 
           <div x-data="{ activeTab: 1 }" class="flex flex-wrap items-center -mx-4">
-            <div class="w-full lg:w-2/3 p-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
-              data-aos-once="true" data-aos-duration="1000" data-aos-easing="ease-in-out">
-              <img class="w-full rounded-2xl" src="images/product/themes.gif" alt="online menu Tresto">
+            <div class="w-full lg:w-2/3 lg:p-5 bg-tresto-500  rounded-2xl" data-aos="fade-up" data-aos-offset="200"
+              data-aos-delay="50" data-aos-once="true" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              <img class="w-full" src="images/product/themes.gif" alt="online menu TResto">
             </div>
-            <div class="w-full lg:w-1/3 p-4">
-              <!-- First Section -->
+
+            <!-- First Section -->
+            <div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" class="w-full lg:w-1/3 p-4">
               <a href="#" @click.prevent="activeTab = activeTab === 1 ? null : 1" data-aos="fade-up"
                 data-aos-once="true" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
@@ -239,12 +187,12 @@
             data-aos-once="true" data-aos-easing="ease-in-out">
             <h1 class="text-center text-5xl lg:text-6xl font-bold ltr:font-mono rtl:font-body mb-6">{{ __('Tarifs') }}
             </h1>
-            <p class="text-gray-600 text-lg text-center mb-24 max-w-lg mx-auto">
+            <p class="text-gray-600 text-lg text-center mb-24 max-w-xl mx-auto">
               {{ __("Une tarification simple qui s'adapte aux restaurants de toutes tailles") }}</p>
           </div>
           <div class="mb-24">
             <div class="flex flex-col md:flex-row max-w-full">
-              <div class="lg:w-1/3 p-4 lg:mt-6">
+              <div class="lg:w-1/3 p-4 lg:mt-56">
                 <h2 data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
                   data-aos-once="true" data-aos-easing="ease-in-out"
                   class="mt-10 mb-12 text-3xl font-bold ltr:font-mono rtl:font-body">
@@ -284,7 +232,8 @@
                   <h2 class="text-center text-xl font-bold ltr:font-mono rtl:font-body mb-4">Standard</h2>
                   <div class="flex flex-col md:flex-row items-center md:items-end justify-center gap-3 mb-8">
                     <h2 class="text-5xl font-bold ltr:font-mono rtl:font-body">799 {{ __('Dhs') }}</h2>
-                    <p class="text-gray-400 text-lg font-medium pb-2">/ 12 {{ __('months') }}</p>
+                    <p class="text-gray-400 text-lg font-medium pb-2"><span class="text-sm">HT</span> / 12
+                      {{ __('months') }}</p>
                   </div>
                   <a class="h-14 inline-flex items-center justify-center w-full text-center py-4 px-6 rounded-full border border-gray-200 shadow text-sm font-semibold hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200 mb-8"
                     href="#">{{ __('Commencez avec le forfait basique') }}</a>
@@ -342,14 +291,15 @@
               <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000"
                 data-aos-once="true" data-aos-easing="ease-in-out" class="lg:w-1/3 p-4">
                 <div class="relative bg-tresto-500 rounded-3xl px-8 pb-8 pt-10 h-full">
-                  <div class="absolute top-2 left-0 flex justify-center w-full">
+                  <div class="absolute -top-3 left-0 flex justify-center w-full">
                     <p class="py-1 px-2 bg-secondary rounded-full w-fit text-xs text-black font-medium">
                       {{ __('Recommandé') }}</p>
                   </div>
                   <h2 class="text-center text-white text-xl font-bold ltr:font-mono rtl:font-body mb-4">Premium</h2>
                   <div class="flex flex-col md:flex-row items-center md:items-end justify-center gap-3 mb-8">
                     <h2 class="text-white text-5xl font-bold ltr:font-mono rtl:font-body">1900 {{ __('Dhs') }}</h2>
-                    <p class="text-tresto-200 text-lg font-medium pb-2">/ 12 {{ __('months') }}</p>
+                    <p class="text-tresto-200 text-lg font-medium pb-2"><span class="text-sm">HT</span> / 12
+                      {{ __('months') }}</p>
                   </div>
                   <a class="w-full text-center h-14 py-4 px-6 rounded-full bg-white border border-gray-200 shadow hover:bg-gray-50 focus:ring focus:ring-tresto-200 transition duration-200 mb-8 flex rtl:flex-row-reverse items-center justify-center gap-2"
                     href="#">
@@ -425,54 +375,100 @@
         </div>
       </section>
 
-      <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-once="true"
-        data-aos-easing="ease-in-out" class="py-24 xl:py-36 overflow-hidden" x-data="{
+      <section dir="ltr" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+        data-aos-once="true" data-aos-easing="ease-in-out" class="py-24 xl:py-36 overflow-hidden"
+        x-data="{
             activeTestimonial: 0,
             testimonials: [
-                { quote: 'Tresto a simplifié la gestion de nos commandes avec ses menus en ligne et QR codes. Les rapports détaillés nous ont aidés à optimiser notre offre et à augmenter nos ventes.', author: 'Hassan', role: 'King Tacos Chef', image: 'images/clients/kingtacos.jpg' },
-                { quote: 'Grâce à Tresto, la gestion des commandes et des zones de livraison est devenue un jeu d\'enfant. Les outils intuitifs nous ont permis de mieux servir nos clients et de gagner du temps.', author: 'Latif', role: 'Owner', image: 'images/clients/latuniseri2.jpg' },
-                { quote: 'Tresto a transformé notre menu en ligne et les commandes via WhatsApp. Simple et efficace pour une gestion fluide !', author: 'Charlie', role: 'Owner', image: 'images/clients/charliefood.jpg' }
-            ]
-        }">
+                { quote: 'TResto a simplifié la gestion de nos commandes avec ses menus en ligne et QR codes. Les rapports détaillés nous ont aidés à optimiser notre offre et à augmenter nos ventes.', author: 'Youseff', role: 'King Tacos Chef', image: 'images/clients/shops/kingtacos.jpg' },
+                { quote: 'Grâce à TResto, la gestion des commandes et des zones de livraison est devenue un jeu d\'enfant. Les outils intuitifs nous ont permis de mieux servir nos clients et de gagner du temps.', author: 'Latif', role: 'Owner', image: 'images/clients/shops/latuniseri2.jpg' },
+                { quote: 'TResto a transformé notre menu en ligne et les commandes via WhatsApp. Simple et efficace pour une gestion fluide !', author: 'Charlie', role: 'Owner', image: 'images/clients/shops/charliefood.jpg' }
+            ],
+            init() {
+                // Start auto-switching testimonials
+                this.startAutoSwitch();
+            },
+            fadeOut() {
+                const content = document.querySelector('.testimonial-content');
+                const image = document.querySelector('.testimonial-image');
+                content.classList.add('opacity-0');
+                image.classList.add('opacity-0');
+                return new Promise(resolve => setTimeout(resolve, 500)); // Duration of transition
+            },
+            fadeIn() {
+                const content = document.querySelector('.testimonial-content');
+                const image = document.querySelector('.testimonial-image');
+                content.classList.remove('opacity-0');
+                image.classList.remove('opacity-0');
+            },
+            nextTestimonial() {
+                this.fadeOut().then(() => {
+                    this.activeTestimonial = (this.activeTestimonial + 1) % this.testimonials.length;
+                    this.fadeIn();
+                });
+            },
+            prevTestimonial() {
+                this.fadeOut().then(() => {
+                    this.activeTestimonial = (this.activeTestimonial - 1 + this.testimonials.length) % this.testimonials.length;
+                    this.fadeIn();
+                });
+            },
+            startAutoSwitch() {
+                setInterval(() => {
+                    this.nextTestimonial();
+                }, 9000); // Switch testimonials every 5 seconds
+            }
+        }" x-init="init()">
         <div class="container mx-auto px-4">
           <div class="border border-tresto-100 rounded-3xl p-8 lg:p-16 relative">
-            <div class="lg:max-w-4xl">
+            <div class="lg:max-w-4xl testimonial-content transition-opacity duration-500 ease-out">
               <h1 class="text-3xl lg:text-4xl font-semibold mb-16 max-w-4xl"
                 x-text="testimonials[activeTestimonial].quote"></h1>
-              <div class="flex items-center justify-between flex-wrap gap-4">
+              <div class="flex items-center justify-center lg:justify-between flex-wrap gap-4">
                 <div>
                   <h2 class="text-lg font-semibold mb-1" x-text="testimonials[activeTestimonial].author"></h2>
                   <p class="text-gray-500" x-text="testimonials[activeTestimonial].role"></p>
                 </div>
-                <div class="flex items-center gap-3">
-                  <template x-for="(testimonial, index) in testimonials" :key="index">
-                    <a :class="{ 'text-tresto-500': activeTestimonial === index, 'text-gray-100': activeTestimonial !== index }"
-                      @click="activeTestimonial = index" class="hover:text-tresto-500 transition duration-200">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
-                        fill="none">
-                        <circle cx="5" cy="5" r="5" fill="currentColor"></circle>
-                      </svg>
-                    </a>
-                  </template>
-                </div>
               </div>
             </div>
+
+            <!-- Next and Previous Buttons -->
             <div
-              class="hidden lg:block absolute right-0 rtl:right-auto rtl:left-0 top-1/2 transform -translate-y-1/2 h-128 w-[35rem]">
+              class="absolute bottom-12 px-2 lg:px-0 lg:bottom-1/2 left-0 lg:-left-[21px] w-full lg:w-[103%] transform translate-y-1/2 flex justify-between z-40">
+              <button @click="prevTestimonial" class="p-4 bg-tresto-100 rounded-full hover:bg-tresto-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
+                </svg>
+              </button>
+              <button @click="nextTestimonial" class="p-4 bg-tresto-100 rounded-full hover:bg-tresto-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z" />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 h-128 w-[35rem]">
               <div class="relative h-full">
-                <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full rounded-xl"
+                <img
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full rounded-xl testimonial-image transition-opacity duration-500 ease-out"
                   :src="testimonials[activeTestimonial].image" alt="restaurants logos">
-                {{-- <div
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full bg-tresto-100 rounded-4xl transform rotate-6 h-full">
-                </div>
-                <div
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full bg-tresto-50 rounded-4xl transform rotate-12 h-full">
-                </div> --}}
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
+
+      {{-- <div class="absolute top-1/2 -left-[21px] w-[103%] transform -translate-y-1/2 flex justify-between z-40">
+              <button @click="prevTestimonial" class="p-4 bg-tresto-100 rounded-full hover:bg-tresto-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"/></svg>
+              </button>
+              <button @click="nextTestimonial" class="p-4 bg-tresto-100 rounded-full hover:bg-tresto-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg>
+              </button>
+            </div> --}}
 
       {{-- <section class="py-24 xl:py-36 overflow-hidden">
       <div class="container mx-auto px-4">
@@ -527,8 +523,8 @@
 
       <section id="features" class="bg-tresto-50 pt-24">
         <div class="container mx-auto px-4">
-          <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-once="true"
-            data-aos-easing="ease-in-out">
+          <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-once="true" data-aos-easing="ease-in-out">
             <h1 class="text-center text-4xl lg:text-5xl font-bold ltr:font-mono rtl:font-body mb-4">
               {{ __('Découvrez les fonctionnalités') }}</h1>
             <p class="text-center text-gray-600 mb-28">
@@ -536,8 +532,8 @@
             </p>
           </div>
           <div class="flex flex-wrap -mx-4">
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -553,8 +549,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -583,8 +579,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                   fill="none">
@@ -601,12 +597,12 @@
                 <h2 class="text-lg font-bold ltr:font-mono rtl:font-body mb-4">{{ __('Interface adaptée aux mobiles') }}
                 </h2>
                 <p class="text-gray-600">
-                  {{ __("Veillez à ce que votre menu soit agréable à regarder sur n'importe quel appareil. Le design responsive de Tresto garantit une expérience de navigation transparente pour les clients sur smartphones, tablettes ou ordinateurs de bureau.") }}
+                  {{ __("Veillez à ce que votre menu soit agréable à regarder sur n'importe quel appareil. Le design responsive de TResto garantit une expérience de navigation transparente pour les clients sur smartphones, tablettes ou ordinateurs de bureau.") }}
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -629,12 +625,12 @@
         </div>
       </section>
 
-      <section class="bg-tresto-50 pb-24">
+      <section class="bg-tresto-50">
         <div class="container mx-auto px-4">
 
           <div class="flex flex-wrap -mx-4">
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white" d="M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z" />
@@ -650,8 +646,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -667,8 +663,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -684,8 +680,8 @@
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true"
-              data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000"
+              data-aos-once="true" data-aos-easing="ease-in-out" class="w-full md:w-1/2 lg:w-1/4 p-4">
               <div class="rounded-full w-12 h-12 flex items-center justify-center bg-tresto-500 mb-4 ml-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="white"
@@ -703,44 +699,39 @@
             </div>
           </div>
         </div>
+
+        <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000"
+        data-aos-once="true" data-aos-easing="ease-in-out">
+          <div class="flex justify-center py-12 px-4">
+            <a
+            class="w-full sm:w-auto text-center h-16 inline-flex items-center justify-center py-4 px-6 rounded-full bg-white border border-tresto-500 hover:border-tresto-500 font-bold ltr:font-mono rtl:font-body text-black focus:ring focus:ring-tresto-200 transition duration-200"
+            href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Voir plus de fonctionnalités') }}</a>
+            </div>
+        </div>
       </section>
 
       <section class="py-12">
         <div class="container mx-auto px-4">
           <div class="py-28 relative">
-            <div class="hidden sm:block absolute top-6 left-0 rounded-xl px-6 pt-4">
-              <img class="h-52" src="images/cta/deliveryBike.svg" alt="">
+            <div class="hidden -rotate-12 sm:block absolute top-6 left-0">
+              <img class="w-48 animate-float" src="{{asset('images/chefhat.png')}}" alt="">
             </div>
-            <div class="absolute top-0 right-0 bg-tresto-900 rounded-xl px-6 pt-4">
-              <img class="h-16 sm:h-24 md:h-auto" src="solstice-assets/images/cta/woman-picture1.png" alt="">
+            <div class="absolute top-0 right-0">
+              <img class="w-28 lg:w-60 animate-float" src="{{ asset("images/menu.png") }}" alt="menu icon">
             </div>
-            <div class="absolute bottom-0 left-0 sm:left-24 bg-tresto-300 rounded-xl px-6 pt-4">
-              <img class="h-16 sm:h-24 md:h-auto" src="solstice-assets/images/cta/woman-picture2.png" alt="">
+            <div class="absolute bottom-0 left-0 sm:left-24">
+              <img class="w-28 lg:w-60 animate-float" src="{{ asset("images/burger-rb.png") }}" alt="hamburger image">
             </div>
-            <div class="hidden sm:block absolute bottom-0 right-0 sm:right-24 bg-tresto-50 rounded-xl px-6 pt-4">
-              <img class="h-16 sm:h-20 md:h-auto" src="solstice-assets/images/cta/men-picture2.png" alt="">
+            <div class="hidden rotate-12 sm:block absolute bottom-0 right-0 sm:right-24">
+              <img class="lg:w-60" src="{{asset("images/delivery.png")}}" alt="delivery icon">
             </div>
             <div class="relative z-10">
-              {{-- <div class="flex justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="68" height="34" viewbox="0 0 68 34"
-                fill="none">
-                <path
-                  d="M2 34C1.99977 29.7976 2.8273 25.6364 4.43533 21.7539C6.04336 17.8713 8.40039 14.3436 11.3718 11.3721C14.3433 8.40056 17.8709 6.04346 21.7533 4.43539C25.6358 2.82732 29.7969 1.99977 33.9991 2C51.6726 2 66 16.3261 66 34"
-                  stroke="#530031" stroke-width="4" stroke-miterlimit="10"></path>
-                <path
-                  d="M9.22571 34C9.22571 27.4084 11.8358 21.0868 16.4819 16.4258C21.128 11.7649 27.4294 9.14639 33.9999 9.14639C40.5704 9.14639 46.8718 11.7649 51.5179 16.4258C56.164 21.0868 58.7741 27.4084 58.7741 34"
-                  stroke="#FF7100" stroke-width="4" stroke-miterlimit="10"></path>
-                <path
-                  d="M16.1339 34C16.1339 29.2617 18.0162 24.7174 21.3667 21.3669C24.7173 18.0163 29.2616 16.134 33.9999 16.134C38.7383 16.134 43.2826 18.0163 46.6331 21.3669C49.9836 24.7174 51.8659 29.2617 51.8659 34"
-                  stroke="#FFC96D" stroke-width="4" stroke-miterlimit="10"></path>
-              </svg>
-            </div> --}}
               <h1
                 class="text-4xl lg:text-5xl mb-10 font-bold ltr:font-mono rtl:font-body text-center max-w-lg lg:max-w-3xl mx-auto">
                 {{ __("Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant") }}</h1>
               <div class="flex justify-center"><a
                   class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold ltr:font-mono rtl:font-body text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-                  href="#">{{ __('Créez un compte GRATUIT maintenant !') }}</a></div>
+                  href="https://tresto.ma/start?step=1">{{ __('Créez un compte GRATUIT maintenant !') }}</a></div>
             </div>
           </div>
         </div>

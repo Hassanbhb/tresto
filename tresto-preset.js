@@ -171,6 +171,8 @@ module.exports = {
                         "searchInput": "showSearchInput 1s linear",
                         "fill": "animFill 500ms linear both",
                         "float": 'float 3s ease-in-out infinite',
+                        "marquee": 'marquee 30s linear infinite',
+                        "marquee2": 'marquee2 30s linear infinite',
                     },
                     "backdropBlur": {
                         "none": "none",
@@ -647,7 +649,15 @@ module.exports = {
                         "float": {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-10px)' },
-                          }
+                        },
+                        "marquee": {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        "marquee2": {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(0%)' },
+                        },
                     },
                     "letterSpacing": {
                         "10xl": "-4.8px",

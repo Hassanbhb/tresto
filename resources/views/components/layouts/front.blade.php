@@ -16,9 +16,9 @@
 
         <meta name="keywords" content="gestion de restaurant, menus en ligne, plateforme SAAS, QR codes restaurant, commandes en ligne, gestion des commandes, solution pour restaurants, menus numériques, livraison restaurant, logiciel restaurant, gestion de livraison, création de menus, optimisation de restaurant, Tresto, gestion de clients, gestion de personnel restaurant">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{asset("images/favicon/apple-touch-icon.png")}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{asset("images/favicon/favicon-32x32.png")}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{asset("images/favicon/favicon-16x16.png")}}">
         <link rel="manifest" href="images/favicon/site.webmanifest">
 
         <link rel="alternate" hreflang="ar" href="{{config('app.url')}}/ar">
@@ -58,7 +58,7 @@
         <meta name="author" content="Technopek">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         {{-- <link rel="preconnect" href="https://fonts.gstatic.com"> --}}
-        {{-- <link href="solstice-assets/fonts/fonts.css" rel="stylesheet"> --}}
+        <link href="solstice-assets/fonts/fonts.css" rel="stylesheet">
         {{-- <link rel="stylesheet" href="css/tailwind/tailwind.min.css"> --}}
         {{-- <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png"> --}}
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&amp;display=swap"  rel="stylesheet">

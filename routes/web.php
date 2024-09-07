@@ -21,6 +21,10 @@ Route::prefix('{locale}')->group(function () {
     Route::get('/features', function () {
         return view('front.features');
     })->name('features');
+
+    Route::get('/tarifs', function () {
+        return view('front.tarifs');
+    })->name('tarifs');
     
     Route::get('/blog', function () {
         return view('front.blog');
