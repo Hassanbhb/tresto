@@ -171,8 +171,10 @@ module.exports = {
                         "searchInput": "showSearchInput 1s linear",
                         "fill": "animFill 500ms linear both",
                         "float": 'float 3s ease-in-out infinite',
-                        "marquee": 'marquee 30s linear infinite',
-                        "marquee2": 'marquee2 30s linear infinite',
+                        "marquee": 'marquee 70s linear infinite',
+                        "marquee2": 'marquee2 70s linear infinite',
+                        'marquee-reverse': 'marquee-reverse 70s linear infinite',
+                        "marquee-reverse2": 'marquee2-reverse 70s linear infinite '
                     },
                     "backdropBlur": {
                         "none": "none",
@@ -657,6 +659,14 @@ module.exports = {
                         "marquee2": {
                             '0%': { transform: 'translateX(100%)' },
                             '100%': { transform: 'translateX(0%)' },
+                        },
+                        'marquee-reverse': {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(0%)' },
+                        },
+                        "marquee2-reverse": {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(100%)' },
                         },
                     },
                     "letterSpacing": {

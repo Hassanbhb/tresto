@@ -11,30 +11,28 @@
         <div class="container px-4 mx-auto relative">
           <div class="relative z-20">
             <h1
-              class="text-center text-white text-5xl lg:text-7xl font-bold ltr:font-mono rtl:font-body rtl:leading-relaxed mb-6 mt-14 max-w-4xl mx-auto">
+              class="text-center text-white text-4xl lg:text-7xl font-bold ltr:font-mono rtl:font-body rtl:leading-relaxed mb-6 mt-14 max-w-6xl mx-auto">
               <span>{{ __('Créez votre menu en quelques clics avec') }} <span class="text-secondary">TResto</span>
-                {{-- <span></span> --}}
-                {{-- {{ __('Today!') }}</span> --}}
             </h1>
-            <p class="text-center text-white text-lg mb-10 max-w-lg mx-auto">
+            <p class="text-center text-white text-lg mb-10 max-w-xl mx-auto">
               {{ __('Des commandes en ligne aux repas sur place, simplifiez vos opérations et améliorez la satisfaction de vos clients grâce à notre plateforme intuitive.') }}
             </p>
             <div class="flex justify-center "><a
                 class="w-full sm:w-auto text-center h-16 inline-flex items-center justify-center py-4 px-6 rounded-full bg-secondary border border-tresto-600 hover:border-secondary shadow font-bold ltr:font-mono rtl:font-body text-black hover:text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
                 href="https://tresto.ma/start?step=1">{{ __('Commencez GRATUITEMENT !') }}</a></div>
-            {{-- <div class="hidden lg:block absolute bottom-9 left-0 z-10">
-              <div class="relative -rotate-[25deg]">
-                <img src="images/menu.png" class="-rotate-12 animate-float" alt="restaurant menu">
-              </div>
-            </div> --}}
-          </div>
-          {{-- <div class="hidden lg:block absolute bottom-6 right-0">
-            <div class="relative rotate-[25deg]">
-              <img src="images/burger-rb.png" class="w-128 animate-float" alt="restaurant burger">
             </div>
-          </div> --}}
+            <div class="hidden lg:block absolute bottom-32 left-0 z-10">
+              <div class="relative">
+                <img src="{{asset("images/delivery-man.webp")}}" class="max-w-88 animate-float" alt="restaurant menu">
+              </div>
+            </div>
+          <div class="hidden lg:block absolute bottom-32 rotate-12 right-0">
+            <div class="relative">
+              <img src="{{asset("images/shop.webp")}}" class="max-w-88 animate-float" alt="restaurant burger">
+            </div>
+          </div>
 
-          <div class="py-6 space-y-4">
+          <div class="pt-6 pb-18 space-y-4">
             <div class="flex gap-2 items-center justify-center">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
@@ -75,7 +73,7 @@
         </div>
       </section>
 
-      <div class="relative w-full py-5 overflow-hidden">
+      <div class="relative w-full pt-6 overflow-hidden bg-tresto-50 group">
         <div x-data="{
             logos: [
                 { src: 'images/clients/1.webp', alt: 'Restaurants Ticktok' },
@@ -93,22 +91,58 @@
                 { src: 'images/clients/13.webp', alt: 'Chicken Home' },
             ]
         }" class="flex overflow-hidden">
-            <div class="flex gap-6 py-2 whitespace-nowrap animate-marquee">
+            <div class="flex gap-6 whitespace-nowrap animate-marquee">
                 <template x-for="logo in logos" :key="logo.alt">
-                    <span class="w-24 lg:w-40">
-                        <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto">
+                    <span class="w-24 lg:w-40 p-5 border border-gray-50 bg-white flex justify-center items-center rounded-xl">
+                        <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto grayscale group-hover:grayscale-0 transition-all">
                     </span>
                 </template>
             </div>
     
-            <div class="absolute top-5 flex gap-6 py-2 whitespace-nowrap animate-marquee2">
+            <div class="absolute top-6 flex gap-6 pl-4 whitespace-nowrap animate-marquee2">
                 <template x-for="logo in logos" :key="logo.alt">
-                    <span class="w-24 lg:w-40">
-                        <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto">
+                    <span class="w-24 lg:w-40 p-5 border border-gray-50 bg-white flex justify-center items-center rounded-xl">
+                        <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto grayscale group-hover:grayscale-0 transition-all">
                     </span>
                 </template>
             </div>
         </div>
+    </div>
+
+    <div class="relative w-full py-6 overflow-hidden bg-tresto-50 group">
+      <div x-data="{
+          logos: [
+              { src: 'images/clients/1.webp', alt: 'Restaurants Ticktok' },
+              { src: 'images/clients/2.webp', alt: 'Ghost Food' },
+              { src: 'images/clients/3.webp', alt: 'Pasta la Vista' },
+              { src: 'images/clients/4.webp', alt: 'Mama Ghadina Baba Achina' },
+              { src: 'images/clients/5.webp', alt: 'MFC' },
+              { src: 'images/clients/6.webp', alt: 'la' },
+              { src: 'images/clients/7.webp', alt: 'Food Factory Crunch' },
+              { src: 'images/clients/8.webp', alt: 'Sami Food' },
+              { src: 'images/clients/9.webp', alt: 'As you like it' },
+              { src: 'images/clients/10.webp', alt: 'King Tacos' },
+              { src: 'images/clients/11.webp', alt: 'Souk alhad' },
+              { src: 'images/clients/12.webp', alt: 'Akwaba Délice' },
+              { src: 'images/clients/13.webp', alt: 'Chicken Home' },
+          ]
+      }" class="flex overflow-hidden">
+          <div class="flex gap-6 py-1 whitespace-nowrap animate-marquee-reverse">
+              <template x-for="logo in logos" :key="logo.alt">
+                  <span class="w-24 lg:w-40 p-5 border border-gray-50 bg-white flex justify-center items-center rounded-xl">
+                      <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto grayscale group-hover:grayscale-0 transition-all">
+                  </span>
+              </template>
+          </div>
+  
+          <div class="absolute top-6 flex gap-6 pl-5 py-1 whitespace-nowrap animate-marquee-reverse2">
+              <template x-for="logo in logos" :key="logo.alt">
+                  <span class="w-24 lg:w-40 p-5 border border-gray-50 bg-white flex justify-center items-center rounded-xl">
+                      <img :src="logo.src" :alt="logo.alt" class="lg:w-24 h-auto grayscale group-hover:grayscale-0 transition-all">
+                  </span>
+              </template>
+          </div>
+      </div>
     </div>
 
       <section dir="ltr" class="pt-20 pb-24">
@@ -124,12 +158,14 @@
           <div x-data="{ activeTab: 1 }" class="flex flex-wrap items-center -mx-4">
             <div class="w-full lg:w-2/3 lg:p-5 bg-tresto-500  rounded-2xl" data-aos="fade-up" data-aos-offset="200"
               data-aos-delay="50" data-aos-once="true" data-aos-duration="1000" data-aos-easing="ease-in-out">
-              <img class="w-full" src="images/product/themes.gif" alt="online menu TResto">
+              <img x-show="activeTab === 1" class="w-full" src="images/product/themes.gif" alt="online menu TResto">
+              <img x-show="activeTab === 2" class="w-full" src="images/product/menu.gif" alt="online menu TResto">
+              <img x-show="activeTab === 3" class="w-full" src="images/product/order.gif" alt="online menu TResto">
             </div>
 
             <!-- First Section -->
             <div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" class="w-full lg:w-1/3 p-4">
-              <a href="#" @click.prevent="activeTab = activeTab === 1 ? null : 1" data-aos="fade-up"
+              <a href="#" @click.prevent="activeTab = 1" data-aos="fade-up"
                 data-aos-once="true" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <div :class="{ 'bg-tresto-50': activeTab === 1, 'py-6 pr-10 mb-3': true }"
@@ -146,7 +182,7 @@
               </a>
 
               <!-- Second Section -->
-              <a href="#" @click.prevent="activeTab = activeTab === 2 ? null : 2" data-aos="fade-up"
+              <a href="#" @click.prevent="activeTab = 2" data-aos="fade-up"
                 data-aos-once="true" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <div :class="{ 'bg-tresto-50': activeTab === 2, 'py-6 pr-10 mb-3': true }"
@@ -161,7 +197,7 @@
                 </div>
 
                 <!-- Third Section -->
-                <a href="#" @click.prevent="activeTab = activeTab === 3 ? null : 3" data-aos="fade-up"
+                <a href="#" @click.prevent="activeTab = 3" data-aos="fade-up"
                   data-aos-once="true" data-aos-offset="200" data-aos-delay="150" data-aos-duration="1000"
                   data-aos-easing="ease-in-out">
                   <div :class="{ 'bg-tresto-50': activeTab === 3, 'py-6 pr-10 mb-3': true }"
@@ -255,6 +291,24 @@
                             d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.1301 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.444 12.1173 19.3453 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3549 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9368 13.5193Z"
                             fill="#FF7100"></path>
                         </svg>
+                        <p class="text-center">{{ __('Hébergement') }} </p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.1301 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.444 12.1173 19.3453 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3549 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9368 13.5193Z"
+                            fill="#FF7100"></path>
+                        </svg>
+                        <p class="text-center">{{ __('Domaine inclue') }} </p>
+                      </div>
+                      <div class="flex flex-col gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                          fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9368 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.1301 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.444 12.1173 19.3453 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3549 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2072 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9368 13.5193Z"
+                            fill="#FF7100"></path>
+                        </svg>
                         <p class="text-center">{{ __('Commandes illimitées') }} </p>
                       </div>
                       <div class="flex flex-col gap-1 items-center">
@@ -311,7 +365,7 @@
                     </svg>
                   </a>
                   <div class="bg-tresto-900 rounded-3xl p-6  text-white">
-                    <div class="flex flex-col gap-6 lg:w-72 mx-auto">
+                    <div x-data="{ show: false }" class="flex flex-col gap-6 lg:w-72 mx-auto">
                       <div class="flex flex-col gap-1 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
                           fill="none">
@@ -364,7 +418,41 @@
                             d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
                             fill="white"></path>
                         </svg>
+                        <p class="text-center">{{ __('Domaine personnalisé') }}</p>
+                      </div>
+                      <div @click="show = !show" class="flex flex-col gap-1 items-center cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
                         <p class="text-center">{{ __('Et Plus') }}</p>
+                      </div>
+                      {{-- hidden --}}
+                      <div x-show="show" class="space-y-6">
+                        <div class="flex flex-col gap-1 items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                              fill="white"></path>
+                          </svg>
+                          <p class="text-center">{{ __('Pixels des réseaux sociaux') }}</p>
+                        </div>
+                        <div class="flex flex-col gap-1 items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                              fill="white"></path>
+                          </svg>
+                          <p class="text-center">{{ __('Thèmes') }}</p>
+                        </div>
+                        <div class="flex flex-col gap-1 items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 32 32"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.66666 16C2.66666 8.63592 8.63589 2.66669 16 2.66669C23.3641 2.66669 29.3333 8.63592 29.3333 16C29.3333 23.3641 23.3641 29.3334 16 29.3334C8.63589 29.3334 2.66666 23.3641 2.66666 16ZM20.9367 13.5193C21.0188 13.41 21.0782 13.2854 21.1114 13.1528C21.1446 13.0202 21.1509 12.8823 21.13 12.7472C21.1092 12.6121 21.0615 12.4825 20.9899 12.3661C20.9182 12.2497 20.824 12.1488 20.7128 12.0693C20.6016 11.9898 20.4756 11.9333 20.3423 11.9032C20.209 11.8731 20.0709 11.87 19.9364 11.894C19.8018 11.918 19.6734 11.9686 19.5587 12.043C19.4439 12.1173 19.3452 12.2138 19.2684 12.3269L14.8431 18.5217L12.6222 16.3009C12.4278 16.1197 12.1706 16.0211 11.9049 16.0258C11.6392 16.0305 11.3857 16.1381 11.1978 16.326C11.0099 16.5139 10.9022 16.7674 10.8975 17.0332C10.8928 17.2989 10.9915 17.556 11.1726 17.7504L14.2496 20.8274C14.3548 20.9326 14.4818 21.0136 14.6215 21.0648C14.7613 21.1161 14.9105 21.1363 15.0588 21.124C15.2071 21.1118 15.351 21.0674 15.4805 20.994C15.61 20.9206 15.7219 20.8199 15.8085 20.6988L20.9367 13.5193Z"
+                              fill="white"></path>
+                          </svg>
+                          <p class="text-center">{{ __('Rapports Et Statistiques Avançés') }}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -418,7 +506,7 @@
                     this.nextTestimonial();
                 }, 9000);
             }
-        }" x-init="init()" class="flex items-center h-full lg:h-2/3 overflow-hidden">
+        }" x-init="$nextTick(() => init())" class="flex items-center h-full lg:h-2/3 overflow-hidden">
         <div class="container mx-auto px-4">
           <div class="border border-tresto-100 rounded-3xl p-8 lg:p-16 relative">
             <div class="lg:max-w-4xl testimonial-content transition-opacity duration-500 ease-out">

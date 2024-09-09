@@ -4,16 +4,16 @@
   <div class="container mx-auto px-4">
     <div class="py-28 relative">
       <div class="hidden -rotate-12 sm:block absolute top-6 left-0">
-        <img class="w-48 animate-float" src="{{asset('images/chefhat.png')}}" alt="">
+        <img class="w-56 animate-float" src="{{ asset("images/menu-3D.webp") }}" alt="">
       </div>
-      <div class="absolute top-0 right-0">
-        <img class="w-28 lg:w-60 animate-float" src="{{ asset("images/menu.png") }}" alt="menu icon">
+      <div class="absolute top-0 rotate-12 right-0">
+        <img class="w-28 lg:w-60 animate-float" src="{{ asset("images/fast-food.webp") }}" alt="menu icon">
       </div>
-      <div class="absolute bottom-0 left-0 sm:left-24">
-        <img class="w-28 lg:w-60 animate-float" src="{{ asset("images/burger-rb.png") }}" alt="hamburger image">
+      <div class="absolute rotate-12 bottom-0 left-0 sm:left-24">
+        <img class="w-28 lg:w-60 animate-float" src="{{ asset("images/shop.webp") }}" alt="hamburger image">
       </div>
-      <div class="hidden rotate-12 sm:block absolute bottom-0 right-0 sm:right-24">
-        <img class="lg:w-60" src="{{asset("images/delivery.png")}}" alt="delivery icon">
+      <div class="hidden sm:block absolute bottom-0 right-0 sm:right-24">
+        <img class="w-48 animate-float" src="{{asset("images/hand-phone.webp")}}" alt="delivery icon">
       </div>
       <div class="relative z-10">
         <h1

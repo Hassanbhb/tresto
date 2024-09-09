@@ -105,6 +105,18 @@
 
   "Ajout et Modification des Articles et Prix du Menu": "إضافة وتعديل عناصر القائمة والأسعار",
 
+  "Gérer les livreurs": "إدارة فريق التوصيل",
+  "Assignez et suivez vos livreurs facilement. Surveillez leurs performances et optimisez les itinéraires de livraison pour garantir un service rapide et la satisfaction des clients.": "عيِّن السائقين وتتبَّعهم بسهولة. راقب أداءهم وحسِّن طرق التوصيل لضمان سرعة الخدمة ورضا العملاء.",
+
+  "Gérer l’équipe du restaurant": "إدارة فريق مطعمك",
+  "Gérez efficacement votre équipe de restaurant, avec des capacités permettant d'afficher les profils de personnel existants et d'en créer de nouveaux.": "قم بإدارة فريق مطعمك بكفاءة، مع إمكانية عرض ملفات تعريف الموظفين الحاليين وإنشاء ملفات تعريف جديدة.",
+  
+  "Gérer les clients": "إدارة العملاء",
+  "Maintenez une base de données détaillée de vos clients, suivez l'historique des commandes et proposez des promotions personnalisées pour améliorer la fidélité et la satisfaction des clients.": "احتفظ بقاعدة بيانات مفصلة لعملائك، وتتبَّع سجل الطلبات وقدِّم عروضاً ترويجية مخصصة لتحسين ولاء العملاء ورضاهم.",
+  
+  "Newsletter": "النشرة الإخبارية",
+  "Créez et envoyez des newsletters pour informer vos clients des nouveaux plats, des promotions, et des offres spéciales, tout en renforçant l’engagement et la fidélité de votre audience.": "أنشئ وأرسل رسائل إخبارية لإبلاغ عملائك بالأطباق الجديدة والعروض الترويجية والعروض الخاصة، مما يزيد من ولاء العملاء و يزيد مبيعاتك.",
+
   "Mettez à jour vos menus en quelques clics. Ajoutez de nouveaux plats ou modifiez les prix à tout moment, sans aucune difficulté.": "حدِّث قوائمك ببضع نقرات فقط. أضف أطباقاً جديدة أو غيِّر الأسعار في أي وقت وبكل سهولة.",
 
   "Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant": "ابدأ اليوم - حسِّن من عمليات مطعمك", 
@@ -169,5 +181,16 @@
   "Derniers articles": "أحدث المقالات",
   "Next": "التالي",
   "Prev": "السابق",
-  "Retour au blog": "العودة للمدونة"
+  "Retour au blog": "العودة للمدونة",
+  "E-mail": "البريد الالكتروني",
+  "Telephone ou whatsapp": "الهاتف أو واتساب",
+  "Nom complet": "الاسم الكامل",
+  "Numéro de telephone": "رقم الهاتف",
+  "Sujet": "الموضوع",
+  "Sujet de votre message": "الموضوع",
+  "Adresse": "العنوان",
+  "Domaine personnalisé": "أسم نطاق مخصص",
+  "Pixels des réseaux sociaux": "بكسل وسائل التواصل الاجتماعية",
+  "Thèmes": "ثيمات متنوعة",
+  "Rapports Et Statistiques Avançés": "التقارير والاحصائيات المتقدمة"
 }

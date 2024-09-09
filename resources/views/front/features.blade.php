@@ -9,15 +9,16 @@
   <div class="">
     <x-front.nav />
               
-    <section class="py-24">
+    <section class="pt-24">
       <div class="container mx-auto px-4">
         <p class="uppercase text-tresto-500 text-center text-sm font-bold font-heading mb-4">{{ __('FEATURES') }}</p>
-        <h1 class="text-center text-4xl lg:text-5xl font-bold font-heading mb-24">{{ __("Fonctionnalités Spéciales de Tresto") }}</h1>
+        <h1 class="text-center text-4xl lg:text-5xl font-bold font-heading mb-24">{{ __("Fonctionnalités Spéciales de TResto") }}</h1>
         <div class="flex flex-wrap -mx-4">
           <div  data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="50"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
@@ -36,6 +37,7 @@
           data-aos-offset="100"
           data-aos-delay="100"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 border-l border-dashed border-gray-100 lg:border-transparent">
@@ -54,6 +56,7 @@
           data-aos-offset="100"
           data-aos-delay="200"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 border-l border-dashed border-gray-100">
@@ -72,6 +75,7 @@
           data-aos-offset="100"
           data-aos-delay="300"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
@@ -95,6 +99,7 @@
           data-aos-offset="100"
           data-aos-delay="400"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
@@ -113,6 +118,7 @@
           data-aos-offset="100"
           data-aos-delay="500"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
             <div class="flex flex-col h-full">
               <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
@@ -132,8 +138,92 @@
               </div>
             </div>
           </div>
+          <div  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
+            <div class="flex flex-col h-full">
+              <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
+                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M19 7a2 2 0 0 0-2-2h-3v2h3v2.65L13.5 14H10V9H6c-2.21 0-4 1.79-4 4v3h2c0 1.66 1.34 3 3 3s3-1.34 3-3h4.5l4.5-5.65zM7 17c-.55 0-1-.45-1-1h2c0 .55-.45 1-1 1m1-3H4v-1c0-1.1.9-2 2-2h2zm11-1c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3m0 4c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1m-9-9H5V6h5z"/></svg>
+                </div>
+              </div>
+              <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
+                <div class="absolute top-0 -left-px rtl:right-0  bg-tresto-500 w-0.5 h-6"></div>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Gérer les livreurs") }}</h2>
+                <p class="text-gray-600">{{ __("Assignez et suivez vos livreurs facilement. Surveillez leurs performances et optimisez les itinéraires de livraison pour garantir un service rapide et la satisfaction des clients.") }}</p>
+              </div>
+            </div>
+          </div>
+          <div  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="700"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
+            <div class="flex flex-col h-full">
+              <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
+                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M12.5 1.5c-1.77 0-3.33 1.17-3.83 2.87C8.14 4.13 7.58 4 7 4a4 4 0 0 0-4 4a4.01 4.01 0 0 0 3 3.87V19h13v-7.13c1.76-.46 3-2.05 3-3.87a4 4 0 0 0-4-4c-.58 0-1.14.13-1.67.37c-.5-1.7-2.06-2.87-3.83-2.87m-.5 9h1v7h-1zm-3 2h1v5H9zm6 0h1v5h-1zM6 20v1a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-1z"/></svg>
+                </div>
+              </div>
+              <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
+                <div class="absolute top-0 -left-px rtl:right-0  bg-tresto-500 w-0.5 h-6"></div>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Gérer l’équipe du restaurant") }}</h2>
+                <p class="text-gray-600">{{ __("Gérez efficacement votre équipe de restaurant, avec des capacités permettant d'afficher les profils de personnel existants et d'en créer de nouveaux.") }}</p>
+              </div>
+            </div>
+          </div>
+          <div  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="800"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
+            <div class="flex flex-col h-full">
+              <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
+                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="m9.1 19.7l-.3-.7l.2-.4c-1.9-.5-3-1.3-3-1.6v-2.2c1.3.6 2.8 1 4.6 1.2c.7-.8 1.6-1.5 2.5-2H12c-2.4 0-4.7-.6-6-1.5V9.6c1.5.8 3.6 1.4 6 1.4s4.5-.5 6-1.4v2.8c-.3.2-.6.4-1 .6q1.5 0 3 .6V7c0-2.2-3.6-4-8-4S4 4.8 4 7v10c0 1.8 2.4 3.3 5.7 3.8c-.2-.3-.4-.7-.6-1.1M12 5c3.9 0 6 1.5 6 2s-2.1 2-6 2s-6-1.5-6-2s2.1-2 6-2m5 13c.6 0 1 .4 1 1s-.4 1-1 1s-1-.4-1-1s.4-1 1-1m0-3c-2.7 0-5.1 1.7-6 4c.9 2.3 3.3 4 6 4s5.1-1.7 6-4c-.9-2.3-3.3-4-6-4m0 6.5c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5"/></svg>
+                </div>
+              </div>
+              <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
+                <div class="absolute top-0 -left-px rtl:right-0  bg-tresto-500 w-0.5 h-6"></div>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Gérer les clients") }}</h2>
+                <p class="text-gray-600">{{ __("Maintenez une base de données détaillée de vos clients, suivez l'historique des commandes et proposez des promotions personnalisées pour améliorer la fidélité et la satisfaction des clients.") }}</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="900"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          data-aos-easing="ease-in-out" class="w-full lg:w-1/2 px-4">
+            <div class="flex flex-col h-full">
+              <div class="pb-4 ltr:border-l rtl:border-r border-dashed border-gray-100">
+                <div class="rounded-2xl w-14 h-14 flex items-center justify-center bg-tresto-500 ltr:ml-4 rtl:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M12 .64L8.23 3H5v2L2.97 6.29C2.39 6.64 2 7.27 2 8v10a2 2 0 0 0 2 2h16c1.11 0 2-.89 2-2V8c0-.73-.39-1.36-.97-1.71L19 5V3h-3.23M7 5h10v4.88L12 13L7 9.88M8 6v1.5h8V6M5 7.38v1.25L4 8m15-.62L20 8l-1 .63M8 8.5V10h8V8.5Z"/></svg>
+                </div>
+              </div>
+              <div class="relative ltr:pl-4 rtl:pr-4 pb-12 ltr:border-l rtl:border-r border-dashed border-gray-100 flex-1">
+                <div class="absolute top-0 -left-px rtl:right-0  bg-tresto-500 w-0.5 h-6"></div>
+                <h2 class="text-2xl font-bold font-heading mb-4">{{ __("Newsletter") }}</h2>
+                <p class="text-gray-600">{{ __("Créez et envoyez des newsletters pour informer vos clients des nouveaux plats, des promotions, et des offres spéciales, tout en renforçant l’engagement et la fidélité de votre audience.") }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div  data-aos="fade-up"
+      data-aos-offset="100"
+      data-aos-delay="900"
+      data-aos-duration="1000"
+      data-aos-once="true"
+      data-aos-easing="ease-in-out" class="flex justify-center pt-12 pb-24"><a
+        class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold ltr:font-mono rtl:font-body text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
+        href="https://tresto.ma/start?step=1">{{ __('Commencez GRATUITEMENT !') }}</a></div>
     </section>
               
     <section class="py-24 bg-tresto-50">
@@ -142,6 +232,7 @@
         data-aos-offset="200"
         data-aos-delay="50"
         data-aos-duration="1000"
+        data-aos-once="true"
         data-aos-easing="ease-in-out">
           <h1 class="text-center text-3xl lg:text-5xl font-bold font-heading mb-4">{{ __("Comment ça marche?")}}</h1>
           <p class="text-center text-gray-600 mb-20">{{ __("Quelles sont les étapes à suivre pour adhérer ?") }}</p>
@@ -151,6 +242,7 @@
           data-aos-offset="150"
           data-aos-delay="50"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/3 p-4">
             <div class="border border-tresto-500 bg-white rounded-3xl px-4 lg:px-10 py-6 lg:py-12 relative overflow-hidden h-full max-w-md mx-auto">
               <div class="py-1 px-2 rounded-lg bg-tresto-500 inline-flex items-center gap-2 mb-6">
@@ -181,6 +273,7 @@
           data-aos-offset="150"
           data-aos-delay="200"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/3 p-4">
             <div class="border border-tresto-500 bg-white rounded-3xl px-4 lg:px-10 py-6 lg:py-12 relative overflow-hidden h-full max-w-md mx-auto">
               <div class="py-1 px-2 rounded-lg bg-tresto-500 inline-flex items-center gap-2 mb-6">
@@ -210,6 +303,7 @@
           data-aos-offset="150"
           data-aos-delay="400"
           data-aos-duration="1000"
+          data-aos-once="true"
           data-aos-easing="ease-in-out" class="w-full lg:w-1/3 p-4">
             <div class="border border-tresto-500 bg-white rounded-3xl px-4 lg:px-10 py-6 lg:py-12 relative overflow-hidden h-full max-w-md mx-auto">
               <div class="py-1 px-2 rounded-lg bg-tresto-500 inline-flex items-center gap-2 mb-6">

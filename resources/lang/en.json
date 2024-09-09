@@ -31,7 +31,7 @@
   "Produits illimités": "Unlimited products",
   "Commandes illimitées": "Unlimited orders",
   "Tables Illimitées": "Unlimited Tables",
-  "Rapport de base et statistiques": "Technical Support",
+  "Rapport de base et statistiques": "Basic reports and statistiques",
   "Support Technique": "Technical Support",
   "Tous les avantages du plan gratuit": "All the benefits of the free plan",
   "Fidélité des clients": "Customer loyalty",
@@ -105,6 +105,18 @@
 
   "Mettez à jour vos menus en quelques clics. Ajoutez de nouveaux plats ou modifiez les prix à tout moment, sans aucune difficulté.": "Update your menus in a few clicks. Add new dishes or change prices at any time, with ease.",
 
+  "Gérer les livreurs": "Manage delivery drivers",
+  "Assignez et suivez vos livreurs facilement. Surveillez leurs performances et optimisez les itinéraires de livraison pour garantir un service rapide et la satisfaction des clients.": "Assign and track your drivers with ease. Monitor their performance and optimize delivery routes to ensure fast service and customer satisfaction.",
+
+  "Gérer l’équipe du restaurant": "Manage your restaurant team",
+  "Gérez efficacement votre équipe de restaurant, avec des capacités permettant d'afficher les profils de personnel existants et d'en créer de nouveaux.": "Manage your restaurant team efficiently, with capabilities to view existing staff profiles and create new ones.",
+  
+  "Gérer les clients": "Manage customers",
+  "Maintenez une base de données détaillée de vos clients, suivez l'historique des commandes et proposez des promotions personnalisées pour améliorer la fidélité et la satisfaction des clients.": "Maintain a detailed database of your customers, track order history and offer personalized promotions to improve customer loyalty and satisfaction.",
+  
+  "Newsletter": "Newsletter",
+  "Créez et envoyez des newsletters pour informer vos clients des nouveaux plats, des promotions, et des offres spéciales, tout en renforçant l’engagement et la fidélité de votre audience.": "Create and send newsletters to inform your customers of new dishes, promotions and special offers, while boosting audience engagement and loyalty.",
+
   "Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant": "Start today - Improve your restaurant operations", 
 
   "Créez un compte GRATUIT maintenant !": "Create a FREE account now!",
@@ -165,5 +177,16 @@
 
   "Découvrez les dernières nouvelles et analyses": "Discover the latest insights",
   "Derniers articles": "Latest articles",
-  "Retour au blog": "Back to blog"
+  "Retour au blog": "Back to blog",
+  "E-mail": "Email",
+  "Telephone ou whatsapp": "Phone or WhatsApp",
+  "Nom complet": "Full Name",
+  "Numéro de telephone": "Phone Number",
+  "Sujet": "Subject",
+  "Sujet de votre message": "Message Subject",
+  "Adresse": "Address",
+  "Domaine personnalisé": "Custom domain",
+  "Pixels des réseaux sociaux": "Social Media Pixels",
+  "Thèmes": "Themes",
+  "Rapports Et Statistiques Avançés": "Advanced Reports & Statistics"
 }

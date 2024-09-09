@@ -51,7 +51,7 @@
                       fill="white"></path>
                   </svg>
                 </div>
-                <h2 class="text-xl font-bold font-heading">Technopek</h2>
+                <h2 class="text-xl font-bold font-heading">{{__("Adresse")}}</h2>
               </div>
               <p class="text-gray-600 mb-10">Appt3, 1ère étage Imm109 Abdellah Genoun, Hay Essalam, Agadir 80000, Maroc</p>
             </div>
@@ -64,9 +64,26 @@
                 <div class="bg-tresto-500 rounded-xl p-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="white" d="M12 15c.81 0 1.5-.3 2.11-.89c.59-.61.89-1.3.89-2.11s-.3-1.5-.89-2.11C13.5 9.3 12.81 9 12 9s-1.5.3-2.11.89C9.3 10.5 9 11.19 9 12s.3 1.5.89 2.11c.61.59 1.3.89 2.11.89m0-13c2.75 0 5.1 1 7.05 2.95S22 9.25 22 12v1.45c0 1-.35 1.85-1 2.55c-.7.67-1.5 1-2.5 1c-1.2 0-2.19-.5-2.94-1.5c-1 1-2.18 1.5-3.56 1.5c-1.37 0-2.55-.5-3.54-1.46C7.5 14.55 7 13.38 7 12c0-1.37.5-2.55 1.46-3.54C9.45 7.5 10.63 7 12 7c1.38 0 2.55.5 3.54 1.46C16.5 9.45 17 10.63 17 12v1.45c0 .41.16.77.46 1.08s.65.47 1.04.47c.42 0 .77-.16 1.07-.47s.43-.67.43-1.08V12c0-2.19-.77-4.07-2.35-5.65S14.19 4 12 4s-4.07.77-5.65 2.35S4 9.81 4 12s.77 4.07 2.35 5.65S9.81 20 12 20h5v2h-5c-2.75 0-5.1-1-7.05-2.95S2 14.75 2 12s1-5.1 2.95-7.05S9.25 2 12 2"/></svg>
                 </div>
-                <a class="text-xl font-bold font-heading" href="mailto:contact@tresto.ma">contact@tresto.ma</a>
+                <h2 class="text-xl font-bold font-heading">{{__("E-mail")}}</h2>
               </div>
+              <p class="text-gray-600 mb-10">Contact@tresto.ma</p>
             </div>
+            <div  data-aos="fade-up"
+              data-aos-offset="100"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
+              <div class="flex items-center flex-wrap gap-3 mb-4">
+                <div class="bg-tresto-500 rounded-xl p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="white" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/></svg>
+                </div>
+                <h2 class="text-xl font-bold font-heading">{{__("Telephone ou whatsapp")}}</h2>
+              </div>
+              <p class="text-gray-600 mb-10">
+                <a dir="ltr" href="https://api.whatsapp.com/send?phone=+212708900709&text=Bonjour">+212 70 89 00 709</a>
+              </p>
+            </div>
+
             <div  data-aos="fade-up"
             data-aos-offset="200"
             data-aos-delay="300"
@@ -78,7 +95,7 @@
                   <h2 class="text-xl font-bold font-heading mb-6">{{ __("Notre équipe est disponible par téléphone & WhatsApp")}}</h2>
                   <a class="w-full sm:w-auto h-12 py-3 px-5 rounded-full bg-[#25D366] border focus:ring focus:ring-tresto-800 transition duration-200 inline-flex items-center justify-center gap-2"
                   href="https://api.whatsapp.com/send?phone=+212708900709&text=Bonjour">
-                    <span dir="ltr" class="text-white text-sm font-semibold">+212 6 64 64 53 48</span>
+                    <span dir="ltr" class="text-white text-sm font-semibold">+212 70 89 00 709</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/></svg>
                   </a>
                 </div>
@@ -96,27 +113,35 @@
               <h2 class="text-3xl text-center font-bold font-heading mb-4">{{ __("Prendre contact") }}</h2>
               <p class="text-center text-gray-600 mb-16">{{ __('Remplissez le formulaire pour entrer en contact avec un membre de notre équipe.') }}</p>
               <div class="flex flex-wrap -mx-4">
-                <div class="w-full lg:w-1/2 p-4">
-                  <label class="text-sm font-medium mb-2 block" for="textInput1">{{ __("Prénom")}}</label>
+                <div class="w-full p-4">
+                  <label class="text-sm font-medium mb-2 block" for="textInput1">{{ __("Nom complet")}}</label>
                   <input
                     class="w-full rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
-                    id="textInput1" type="text" placeholder="{{ __("Prénom") }}">
+                    id="textInput1" type="text" placeholder="{{ __("Nom complet") }}">
                 </div>
-                <div class="w-full lg:w-1/2 p-4">
+                {{-- <div class="w-full lg:w-1/2 p-4">
                   <label class="text-sm font-medium mb-2 block" for="textInput2">{{ __("Nom") }}</label>
                   <input
                     class="w-full rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
                     id="textInput2" type="text" placeholder="{{ __("Nom")}}">
-                </div>
+                </div> --}}
               </div>
               <label class="text-sm font-medium mb-2 block" for="textInput3">{{ __("Email") }}</label>
               <input
                 class="w-full mb-4 rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
                 id="textInput3" type="text" placeholder="john@email.com">
+              <label class="text-sm font-medium mb-2 block" for="textInput3">{{ __("Numéro de telephone") }}</label>
+              <input
+                class="w-full mb-4 rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
+                id="textInput4" type="text" placeholder="+212 6 123 456 789">
+              <label class="text-sm font-medium mb-2 block" for="textInput3">{{ __("Sujet") }}</label>
+              <input
+                class="w-full mb-4 rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
+                id="textInput5" type="text" placeholder="{{__("Sujet de votre message")}}">
               <label class="text-sm font-medium mb-2 block" for="textInput4">{{ __("Message") }}</label>
               <textarea
                 class="resize-none w-full rounded-3xl p-4 mb-8 outline-none border border-gray-100 placeholder-gray-500 focus:ring focus:ring-tresto-200 transition duration-200"
-                id="textInput4" rows="5" placeholder="{{ __("Enter your message")}}"></textarea>
+                id="textInput6" rows="5" placeholder="{{ __("Enter your message")}}"></textarea>
               <button
                 class="py-4 px-6 rounded-full w-full h-14 inline-flex items-center justify-center text-center mb-8 bg-tresto-500 border border-tresto-600 font-bold font-heading text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
                 type="submit">{{ __("Submit") }}</button>
