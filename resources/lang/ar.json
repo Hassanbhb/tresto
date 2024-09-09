@@ -33,6 +33,7 @@
   "Support Technique": "الدعم الفني",
   "Tous les avantages du plan gratuit": "جميع مزايا الباقة الأساسية",
   "Fidélité des clients": "ولاء العملاء",
+  "Tous les avantages du plan standard":"جميع مزايا الباقة الأساسية",
   "Bons de réduction": "قسائم الخصم",
   "Barre d'annonce et popup promotionnel": "شريط الإعلانات والنوافذ المنبثقة الترويجية",
   "Commentaires des clients": "ملاحظات العملاء",
@@ -109,9 +110,10 @@
   "Commencez dès aujourd'hui - Améliorez les opérations de votre restaurant": "ابدأ اليوم - حسِّن من عمليات مطعمك", 
 
   "Créez un compte GRATUIT maintenant !": "أنشئ حساباً مجاناً الآن!",
+  "Voir plus de fonctionnalités": "اطلع على المزيد من المزايا",
 
   "FEATURES":"المزايا",
-  "Fonctionnalités Spéciales de Tresto": "ميزات TResto الخاصة",
+  "Fonctionnalités Spéciales de TResto": "ميزات TResto الخاصة",
   
   "Comment ça marche?": "كيف يعمل؟",
   "Quelles sont les étapes à suivre pour adhérer ?": "ما هي خطوات الانضمام؟",
@@ -157,7 +159,7 @@
   "Notre tableau de bord centralisé regroupe toutes les commandes en un seul endroit, ce qui simplifie leur suivi et leur gestion. Vous pouvez visualiser les commandes en cours, traiter les paiements, et gérer les livraisons sans effort.": "تجمع لوحة التحكم المركزية لدينا جميع طلباتك معاً في مكان واحد، مما يسهل تتبعها وإدارتها. يمكنك عرض الطلبات قيد التنفيذ، ومعالجة المدفوعات وإدارة عمليات التسليم دون عناء.",
 
   "Puis-je accéder à la plateforme depuis n'importe quel appareil ?": "هل يمكنني الوصول إلى المنصة من أي جهاز؟",
-  "Oui, Tresto est accessible depuis n'importe quel appareil avec une connexion internet, que ce soit un ordinateur, une tablette ou un smartphone. Vous pouvez gérer votre restaurant en toute simplicité, où que vous soyez.": "نعم، يمكن الوصول إلى TResto من أي جهاز متصل بالإنترنت، سواء كان جهاز كمبيوتر أو جهاز لوحي أو هاتف ذكي. يمكنك إدارة مطعمك بكل سهولة أينما كنت.",
+  "Oui, TResto est accessible depuis n'importe quel appareil avec une connexion internet, que ce soit un ordinateur, une tablette ou un smartphone. Vous pouvez gérer votre restaurant en toute simplicité, où que vous soyez.": "نعم، يمكن الوصول إلى TResto من أي جهاز متصل بالإنترنت، سواء كان جهاز كمبيوتر أو جهاز لوحي أو هاتف ذكي. يمكنك إدارة مطعمك بكل سهولة أينما كنت.",
 
   "Rejoignez-nous et améliorer l'efficacité de votre restaurant.": "انضم إلينا وحسِّن كفاءة مطعمك.",
   "Crée un compte gratuitement !": "أنشئ حساباً مجاناً!",

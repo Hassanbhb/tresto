@@ -110,7 +110,7 @@
         <li class="hover:text-opacity-70 transition duration-200"><a
             href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Features') }}</a></li>
         <li class="hover:text-opacity-70 transition duration-200"><a
-            href="{{ route('tarifs', ['locale' => app()->getLocale()]) }}#pricing"> {{ _('Tarifs') }} </a></li>
+            href="{{ route('tarifs', ['locale' => app()->getLocale()]) }}#pricing"> {{ __('Tarifs') }} </a></li>
         <li>
           <a class="flex items-center flex-wrap gap-2 group"
             href="{{ route('contact', ['locale' => app()->getLocale()]) }}">
