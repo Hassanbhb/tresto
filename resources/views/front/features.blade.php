@@ -1,5 +1,5 @@
-@section('title', __('Fonctionnalités de Tresto - Optimisez la Gestion de Votre Restaurant'))
-@section('description', __("Explorez les fonctionnalités puissantes de Tresto : création de menus en ligne, génération de QR codes, gestion des commandes, et plus encore pour améliorer l'efficacité de votre restaurant."))
+@section('title', __('Fonctionnalités de TResto: Site Web de Restaurant, Menu Digital & Commandes au Maroc'))
+@section('description', __("Découvrez toutes les fonctionnalités de TResto au Maroc: création de site web, génération de QR codes, commande en ligne sans commissions. Gérez facilement votre restaurant avec une solution tout-en-un."))
 
 <x-layouts.front>
   {{-- <x-slot:title>
@@ -11,7 +11,7 @@
               
     <section class="pt-24">
       <div class="container mx-auto px-4">
-        <p class="uppercase text-tresto-500 text-center text-sm font-bold font-heading mb-4">{{ __('FEATURES') }}</p>
+        <p class="uppercase text-tresto-500 text-center text-sm font-bold font-heading mb-4">{{ __('FONCTIONNALITES') }}</p>
         <h1 class="text-center text-4xl lg:text-5xl font-bold font-heading mb-24">{{ __("Fonctionnalités Spéciales de TResto") }}</h1>
         <div class="flex flex-wrap -mx-4">
           <div  data-aos="fade-up"
@@ -223,7 +223,7 @@
       data-aos-once="true"
       data-aos-easing="ease-in-out" class="flex justify-center pt-12 pb-24"><a
         class="w-full sm:w-auto text-center py-5 px-8 rounded-full h-16 inline-flex items-center justify-center bg-tresto-500 border border-tresto-600 shadow font-bold ltr:font-mono rtl:font-body text-white hover:bg-tresto-600 focus:ring focus:ring-tresto-200 transition duration-200"
-        href="https://tresto.ma/start?step=1">{{ __('Commencez GRATUITEMENT !') }}</a></div>
+        href="https://tresto.ma/start?step=1">{{ __("Essayez gratuitement dès aujourd'hui") }}</a></div>
     </section>
               
     <section class="py-24 bg-tresto-50">

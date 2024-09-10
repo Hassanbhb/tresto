@@ -1,9 +1,15 @@
 {
-  "TResto - Plateforme pour Gestion de Menus en Ligne": "TResto - منصة إدارة القوائم عبر الإنترنت",
-  "Fonctionnalités de TResto - Optimisez la Gestion de Votre Restaurant": "ميزات TResto - تحسين إدارة مطعمك",
-  "Explorez les fonctionnalités puissantes de TResto : création de menus en ligne, génération de QR codes, gestion des commandes, et plus encore pour améliorer l'efficacité de votre restaurant.": "استكشف ميزات TResto القوية: إنشاء القوائم عبر الإنترنت، توليد رموز QR، إدارة الطلبات وأكثر من ذلك لتحسين كفاءة مطعمك.",
-  "Contactez TResto - Assistance et Support pour Gestion de Menus en Ligne": "اتصل بـ TResto - المساعدة والدعم لإدارة القوائم عبر الإنترنت",
-  "Contactez TResto pour toute assistance ou question concernant la gestion de vos menus en ligne et commandes avec notre plateforme.": "اتصل بـ TResto لأي مساعدة أو استفسارات حول إدارة قوائمك وطلباتك عبر الإنترنت باستخدام منصتنا.",
+  "Créez votre Site Web de Restaurant et Menu Digital avec QR Code | TResto Maroc": "أنشيء موقع مطعمك وقائمة طعام رقمية مع رمز الاستجابة السريعة | TResto Maroc",
+  "Avec TResto, créez facilement un site web pour votre restaurant au Maroc. Générez des QR codes personnalisés et recevez des commandes en ligne via WhatsApp ou votre site web. Aucun frais de commission, simple et rapide.": "مع TResto، يمكنك بسهولة إنشاء موقع إلكتروني لمطعمك في المغرب. أنشئ رموز QR مخصصة واستقبل الطلبات عبر الإنترنت عبر واتساب أو موقعك الإلكتروني. بدون رسوم عمولة وبسرعة وسهولة.",
+  "Fonctionnalités de TResto: Site Web de Restaurant, Menu Digital & Commandes au Maroc": "ميزات TResto: موقع المطعم وقائمة الطعام والطلبات الرقمية في المغرب",
+  "Découvrez toutes les fonctionnalités de TResto au Maroc: création de site web, génération de QR codes, commande en ligne sans commissions. Gérez facilement votre restaurant avec une solution tout-en-un.": "اكتشف جميع ميزات TResto في المغرب: إنشاء موقع إلكتروني، وإنشاء رمز الاستجابة السريعة، والطلب عبر الإنترنت بدون عمولة. قم بإدارة مطعمك بسهولة من خلال حل متكامل.",
+  
+  "Tarifs TResto au Maroc: Créez un Site Web de Restaurant sans Commissions": "تسعير TResto في المغرب: إنشاء موقع مطعم بدون عمولة",
+  "Choisissez une offre TResto adaptée à votre restaurant au Maroc. Créez votre site web, gérez votre menu digital, et recevez des commandes sans frais de commission. Profitez d'un essai gratuit dès maintenant.": "اختر عرض TResto المناسب لمطعمك في المغرب. أنشئ موقع الويب الخاص بك، وقم بإدارة قائمتك الرقمية، واستقبل الطلبات بدون عمولة. احصل على نسخة تجريبية مجانية الآن.",
+
+  "Contactez TResto au Maroc: Assistance et Informations pour Votre Site de Restaurant": "اتصل بـ TResto في المغرب الدعم والمعلومات لموقع مطعمك الإلكتروني",
+  "Besoin d'aide pour créer un site web de restaurant au Maroc ? Contactez l'équipe TResto pour plus d'informations sur nos services de menu digital et commande en ligne sans commissions.": "هل تحتاج إلى مساعدة في إنشاء موقع إلكتروني لمطعم في المغرب؟ اتصل بفريق TResto لمزيد من المعلومات حول قائمة الطعام الرقمية وخدمات الطلب عبر الإنترنت بدون عمولة.",
+
   "Conseils et Astuces pour les Restaurateurs | Blog TResto": "نصائح وحيل لأصحاب المطاعم | مدونة TResto",
   "Découvrez des conseils d'experts et des tendances pour optimiser votre menu, améliorer l'expérience client, et développer votre présence en ligne.": "اكتشف نصائح الخبراء والاتجاهات لتحسين قائمتك، تحسين تجربة العملاء، وتطوير وجودك على الإنترنت.",
 
@@ -20,7 +26,7 @@
   "Un site web pour votre restaurant": "موقع إلكتروني لمطعمك",
   "Publiez un menu interactif, acceptez les commendes en ligne et fidélisez bos client.": "نشر قائمة تفاعلية وقبول الطلبات عبر الإنترنت وبناء ولاء العملاء.",
 
-  "Créez votre menu en quelques clics avec": "أنشيئ قائمة مطعمك بسهولة مع",
+  "Créez votre propre site web de restaurant en quelques clics avec": "أنشئ موقع الويب الخاص بمطعمك ببضع نقرات فقط مع",
   "Crée un site web gratuit": "إنشئ موقع إلكتروني مجاني",
   "Connexion":"تسجيل الدخول",
   "S'inscrire": "انشاء حساب",
@@ -42,15 +48,15 @@
   "Crée mon Menu en ligne": "إنشاء قائمتي على الإنترنت",
   "Today!": "اليوم!",
   "Accueil": "الرئيسية",
-  "Features": "المميزات",
+  "Fonctionnalités": "المميزات",
   "Tarifs": "التسعير",
   "Contact": "اتصل بنا",
   "Blog": "المدونة",
   "platform": "المنصة",
   "Social Media": "وسائل التواصل الاجتماعي",
   "Get Started": " ابدأ الأن",
-  "Des commandes en ligne aux repas sur place, simplifiez vos opérations et améliorez la satisfaction de vos clients grâce à notre plateforme intuitive.": "بدءاً من الطلبات عبر الإنترنت ووصولاً إلى تناول الطعام في المطعم، يمكنك تبسيط عملياتك وتعزيز رضا العملاء من خلال منصتنا سهلة الاستخدام.",
-  "Commencez GRATUITEMENT !": "ابدأ الان مجانا !",
+  "Créez un menu digital, générez des QR codes, recevez des commandes en ligne via votre site ou WhatsApp – sans aucune commission.": "قم بإنشاء قائمة طعام رقمية، توليد رموز QR، وتلقي الطلبات عبر الإنترنت من خلال موقع الويب الخاص بك أو WhatsApp – بدون أي عمولة.",
+  "Essayez gratuitement dès aujourd'hui": "جربه مجانًا اليوم",
   ":rate étoiles sur 5 d’après :total avis": ":rate من أصل 5 نجوم بناءً على :total تقييمًا",
   "Recommandé": "يوصى به",
 
@@ -124,7 +130,7 @@
   "Créez un compte GRATUIT maintenant !": "أنشئ حساباً مجاناً الآن!",
   "Voir plus de fonctionnalités": "اطلع على المزيد من المزايا",
 
-  "FEATURES":"المزايا",
+  "FONCTIONNALITES":"المزايا",
   "Fonctionnalités Spéciales de TResto": "ميزات TResto الخاصة",
   
   "Comment ça marche?": "كيف يعمل؟",

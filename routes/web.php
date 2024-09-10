@@ -26,11 +26,11 @@ Route::prefix('{locale}')->group(function () {
         return view('front.tarifs');
     })->name('tarifs');
     
-    Route::get('/blog', function () {
-        return view('front.blog');
-    })->name('blog');
+    // Route::get('/blog', function () {
+    //     return view('front.blog');
+    // })->name('blog');
     
-    Route::get('/post', function () {
-        return view('front.post');
-    })->name('post');
+    // Route::get('/post', function () {
+    //     return view('front.post');
+    // })->name('post');
 });

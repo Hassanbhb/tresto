@@ -10,7 +10,7 @@
 
         <meta property="og:title" content="@yield('title', 'Tresto')">
         <meta property="og:description" content="@yield('description', 'Tresto - Plateforme pour Gestion de Menus en Ligne')">
-        <meta property="og:image" content="https://tresto2.technopek.com/images/logo-04.png">
+        <meta property="og:image" content="https://tresto2.technopek.com/images/favicon/TResto-social-share.jpg">
         <meta property="og:url" content="{{ config('app.url') }}">
         <meta property="og:type" content="website">
 

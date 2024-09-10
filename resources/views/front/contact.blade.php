@@ -1,5 +1,5 @@
-@section('title', __('Contactez TResto - Assistance et Support pour Gestion de Menus en Ligne'))
-@section('description', __("Contactez TResto pour toute assistance ou question concernant la gestion de vos menus en ligne et commandes avec notre plateforme."))
+@section('title', __('Contactez TResto au Maroc: Assistance et Informations pour Votre Site de Restaurant'))
+@section('description', __("Besoin d'aide pour créer un site web de restaurant au Maroc ? Contactez l'équipe TResto pour plus d'informations sur nos services de menu digital et commande en ligne sans commissions."))
 
 <x-layouts.front>
   <div class="">

@@ -13,7 +13,7 @@
             </a>
           </li>
           <li class="text-white hover:text-opacity-70 transition duration-200"><a
-              href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Features') }}</a></li>
+              href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Fonctionnalités') }}</a></li>
           <li class="text-white hover:text-opacity-70 transition duration-200"><a
               href="{{ route('tarifs', ['locale' => app()->getLocale()]) }}#pricing">{{ __('Tarifs') }}</a></li>
           <li>
@@ -22,9 +22,9 @@
               <span class="text-white group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>
             </a>
           </li>
-          <li class="text-white hover:text-opacity-70 transition duration-200"><a
+          {{-- <li class="text-white hover:text-opacity-70 transition duration-200"><a
               href="{{ route('blog', ['locale' => app()->getLocale()]) }}">{{ __('Blog') }}</a>
-          </li>
+          </li> --}}
         </ul>
         <div class="lg:col-span-2 flex gap-3 items-center">
           <div x-data="{ open: false }" class="relative inline-block text-left">
@@ -108,7 +108,7 @@
           </a>
         </li>
         <li class="hover:text-opacity-70 transition duration-200"><a
-            href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Features') }}</a></li>
+            href="{{ route('features', ['locale' => app()->getLocale()]) }}">{{ __('Fonctionnalités') }}</a></li>
         <li class="hover:text-opacity-70 transition duration-200"><a
             href="{{ route('tarifs', ['locale' => app()->getLocale()]) }}#pricing"> {{ __('Tarifs') }} </a></li>
         <li>
@@ -117,8 +117,8 @@
             <span class="group-hover:text-opacity-70 transition duration-200">{{ __('Contact') }}</span>
           </a>
         </li>
-        <li class="hover:text-opacity-70 transition duration-200"><a
-            href="{{ route('blog', ['locale' => app()->getLocale()]) }}">{{ __('Blog') }}</a></li>
+        {{-- <li class="hover:text-opacity-70 transition duration-200"><a
+            href="{{ route('blog', ['locale' => app()->getLocale()]) }}">{{ __('Blog') }}</a></li> --}}
 
       </ul>
       <div class="flex flex-col gap-3">

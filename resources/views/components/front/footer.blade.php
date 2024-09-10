@@ -21,12 +21,12 @@
             <li class="text-white font-medium">{{ __("Platform")}}</li>
             <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('home', ['locale' => app()->getLocale()])}}">{{ __("Accueil")}}</a>
             </li>
-            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('features', ['locale' => app()->getLocale()])}}">{{ __("Features")}}</a>
+            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('features', ['locale' => app()->getLocale()])}}">{{ __("Fonctionnalités")}}</a>
             </li>
             <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('tarifs', ['locale' => app()->getLocale()])}}#pricing">{{ __("Tarifs")}}</a>
             </li>
-            <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('blog', ['locale' => app()->getLocale()])}}">{{ __("Blog")}}</a>
-            </li>
+            {{-- <li><a class="text-tresto-200 hover:text-white transition duration-200" href="{{route('blog', ['locale' => app()->getLocale()])}}">{{ __("Blog")}}</a>
+            </li> --}}
             {{-- <li><a class="text-tresto-200 hover:text-white transition duration-200" href="#">Events</a></li> --}}
           </ul>
           <ul class="col-span-3 flex flex-col gap-6 p-4">
